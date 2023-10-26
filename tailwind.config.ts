@@ -54,10 +54,6 @@ module.exports = {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
-      backgroundImage: {
-        dark: "url('/svg/blob-dark.svg')",
-        light: "url('/svg/blob-light.svg')",
-      },
       fontFamily: {
         default: ['var(--font-inter)', ...fontFamily.sans],
       },

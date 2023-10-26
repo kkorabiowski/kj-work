@@ -1,5 +1,10 @@
-type Props = { children: React.ReactNode | React.ReactNode[] };
+import { cn } from '@/lib/utils';
 
-export const Container = ({ children }: Props) => (
-  <div className="container px-2.5 md:px-5">{children}</div>
+type Props = {
+  children: React.ReactNode | React.ReactNode[];
+  className?: string;
+};
+
+export const Container = ({ children, className }: Props) => (
+  <div className={cn('container px-2.5 md:px-5', className)}>{children}</div>
 );

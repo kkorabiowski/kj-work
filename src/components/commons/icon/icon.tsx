@@ -15,7 +15,7 @@ export const Icon = ({ name, className, ...delegated }: IconProps) => (
       ...delegated,
       src: `/svg/${name}.svg`,
       className: cn('h-auto', className),
-      loader: <Skeleton className="h-10 w-10 rounded-md" />,
+      loader: <Skeleton className="h-10 w-10 rounded-full" />,
     }}
   />
 );

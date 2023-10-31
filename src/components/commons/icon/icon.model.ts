@@ -5,4 +5,9 @@ export type IconProps = {
   className?: string;
 };
 
-export const iconNames = ['facebook'] as const;
+export const iconNames = [
+  'career-progress',
+  'coffee-break',
+  'job-offers',
+  'facebook',
+] as const;

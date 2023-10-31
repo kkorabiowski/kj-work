@@ -7,18 +7,23 @@ import { cn } from '@/lib/utils';
 type Props = {
   label: string;
   href: string;
+  className?: string;
+  isFooter?: boolean;
 };
 
-export const NavItem = ({ href, label }: Props) => {
+export const NavItem = ({ href, label, className, isFooter }: Props) => {
   const pathname = usePathname();
   const isActive = pathname === href;
   return (
     <Link
+      href={href}
       className={cn(
-        'text-muted-foreground font-medium',
-        isActive && 'text-secondary font-bold'
+        'font-semibold text-lg text-muted-foreground',
+        isActive && !isFooter && 'text-primary font-extrabold',
+        isFooter &&
+          'text-muted-foreground font-normal block hover:text-white transition-all duration-250',
+        className
       )}
-      href="#"
     >
       {label}
     </Link>

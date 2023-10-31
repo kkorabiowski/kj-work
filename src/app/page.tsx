@@ -1,9 +1,5 @@
-import { Container } from '@/components/container';
+import { redirect } from 'next/navigation';
 
-export default function HomePage() {
-  return (
-    <Container>
-      <h1>Home</h1>
-    </Container>
-  );
+export default function RootPage() {
+  return redirect('/');
 }

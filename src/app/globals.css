@@ -21,7 +21,7 @@
     --primary: 225 33% 14%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 242 71% 37%;
+    --secondary: 262 83% 56%;
     --secondary-foreground: 210 13% 13%;
 
     --muted: 210 40% 96.1%;
@@ -77,11 +77,11 @@
   }
 
   body {
-    @apply bg-background font-default text-base font-normal text-foreground;
+    @apply bg-background font-default text-primary text-base font-normal text-foreground;
   }
 
   p {
-    @apply font-default text-base leading-tight md:leading-7;
+    @apply font-default text-primary text-base leading-tight md:leading-7;
   }
 
   blockquote {
@@ -89,27 +89,27 @@
   }
 
   h1 {
-    @apply scroll-m-20 font-default text-4xl font-extrabold tracking-tight lg:text-5xl;
+    @apply scroll-m-20 font-default text-primary text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
 
   h2 {
-    @apply scroll-m-20 font-default text-xl font-semibold tracking-tight md:text-3xl;
+    @apply scroll-m-20 font-default text-primary text-xl font-extrabold tracking-tight md:text-3xl;
   }
 
   h3 {
-    @apply scroll-m-20 font-default text-lg font-semibold tracking-tight md:text-2xl;
+    @apply scroll-m-20 font-default text-primary text-lg font-extrabold tracking-tight md:text-2xl;
   }
 
   h4 {
-    @apply scroll-m-20 font-default text-base font-semibold tracking-tight md:text-xl;
+    @apply scroll-m-20 font-default text-primary text-base font-extrabold tracking-tight md:text-xl;
   }
 
   h5 {
-    @apply scroll-m-20 font-default text-lg font-semibold tracking-tight;
+    @apply scroll-m-20 font-default text-primary text-lg font-extrabold tracking-tight;
   }
 
   h6 {
-    @apply scroll-m-20 font-default text-base font-semibold tracking-tight;
+    @apply scroll-m-20 font-default text-primary text-base font-extrabold tracking-tight;
   }
 
   input {

@@ -1,12 +1,14 @@
-import { Inter } from 'next/font/google';
+import { Inter as FontSans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 
 import { Footer } from '@/components/footer/footer';
 import { Navigation } from '@/components/navigation/navigation';
 
-const inter = Inter({ subsets: ['latin'] });
-
+export const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
 const locales = ['pl', 'de'];
 
 export function generateStaticParams() {
@@ -34,13 +36,11 @@ export default async function LocaleLayout({
     notFound();
   }
   return (
-    <html lang={locale} className={inter.className}>
+    <html lang={locale} className={fontSans.variable}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navigation />
-          <main className="flex min-h-screen flex-col items-center justify-between">
-            {children}
-          </main>
+          <main className="min-h-screen">{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

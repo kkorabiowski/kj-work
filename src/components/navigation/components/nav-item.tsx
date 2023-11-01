@@ -18,7 +18,7 @@ export const NavItem = ({ href, label, className, isFooter }: Props) => {
     <Link
       href={href}
       className={cn(
-        'font-semibold text-lg text-muted-foreground',
+        'font-semibold text-lg text-primary/60',
         isActive && !isFooter && 'text-primary font-extrabold',
         isFooter &&
           'text-muted-foreground font-normal block hover:text-white transition-all duration-250',

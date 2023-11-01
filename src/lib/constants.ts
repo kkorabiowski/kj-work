@@ -24,11 +24,6 @@ export const navItems = [
     label: 'Kontakt',
     href: '/kontakt',
   },
-  {
-    id: 6,
-    label: 'Oferty pracy',
-    href: '/oferty-pracy',
-  },
 ];
 
 export const footerLinks = {

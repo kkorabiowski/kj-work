@@ -1,5 +1,41 @@
 {
   "home": {
     "title": "Hello Polska!"
+  },
+  "aboutUs": {
+    "title": "O nas"
+  },
+  "offer": {
+    "apply": "Aplikuj",
+    "form": {
+      "headline": "Aplikuj na to stanowisko",
+      "subHeadline": "Aby aplikować wypełnij poniższy formularz"
+    },
+    "header": {
+      "industry": "Branża",
+      "agreement_type": "Typ umowy",
+      "expiration_date": "Oferta wygasa",
+      "location": "Lokalizacja"
+    }
+  },
+  "offers": {},
+  "contact": {
+    "form": {
+      "headline": "Masz pytanie?",
+      "subHeadline": "Napisz do nas, a nasz zespół skontaktuje się z Tobą",
+      "send": "Wyślij",
+      "maxLength1000": "Wiadomość nie powinna przekraczać 1000 znaków"
+    }
+  },
+  "error": {
+    "message": "Strona o podanym adresie nie istnieje",
+    "back": "Powrót na",
+    "home": "stronę główną"
+  },
+  "employeeZone": {
+    "title": "Strefa pracownika"
+  },
+  "employerZone": {
+    "title": "Strefa pracodawcy"
   }
 }

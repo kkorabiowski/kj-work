@@ -51,23 +51,25 @@ export const OfferItem = ({
                 <MapPin className="inline-block w-3 h-3" />
                 <p className="text-muted-foreground">{location}</p>
               </div>
+            </div>
+            <div className="flex items-center gap-2.5">
+              {category ? (
+                <div className="flex items-center gap-1.5">
+                  <Briefcase className="inline-block w-3 h-3" />
+                  <p className="text-muted-foreground">{category}</p>
+                </div>
+              ) : null}
               <div className="flex items-center gap-1.5">
                 <Clock4 className="inline-block w-3 h-3" />
                 <p className="text-muted-foreground">
-                  Dodano: {created_at?.toDateString()}
+                  Dodano: {created_at?.toISOString()}
                 </p>
               </div>
             </div>
-            {category ? (
-              <div className="flex items-center gap-1.5">
-                <Briefcase className="inline-block w-3 h-3" />
-                <p className="text-muted-foreground">{category}</p>
-              </div>
-            ) : null}
           </div>
         </div>
         <Link href={`/oferty-pracy/${id}`}>
-          <Button>Zaaplikuj</Button>
+          <Button variant="default">Zaaplikuj</Button>
         </Link>
       </div>
     </Card>

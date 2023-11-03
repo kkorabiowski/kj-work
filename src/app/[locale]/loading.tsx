@@ -1,13 +1,14 @@
+import { Container } from '@/components/commons/container';
 import { Skeleton } from '@/components/commons/skeleton';
-import { Container } from '@/components/container';
 
 export default function Loading() {
   return (
     <Container>
       <div className="space-y-3 mt-10">
-        {[1, 2, 3, 4, 5].map(item => (
-          <Skeleton key={item} className="w-full h-12" />
-        ))}
+        <Skeleton className="w-1/4 mx-auto h-12" />
+        <div className="mt-5">
+          <Skeleton className="w-full h-40" />
+        </div>
       </div>
     </Container>
   );

@@ -16,14 +16,14 @@ export const getPlaceholder = (variant: Variant) => {
 
 export const getLabel = (variant: Variant) => {
   if (variant === 'name') {
-    return 'Imię';
+    return 'Imię*';
   } else if (variant === 'email') {
-    return 'Email';
+    return 'Email*';
   } else if (variant === 'message') {
-    return 'Wiadomość';
+    return 'Wiadomość*';
   } else if (variant === 'phone') {
     return 'Nr telefonu';
   } else if (variant === 'subject') {
-    return 'Temat';
+    return 'Temat*';
   }
 };

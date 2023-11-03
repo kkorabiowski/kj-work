@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-import { Container } from '@/components/container';
+import { Container } from '@/components/commons/container';
 
 export default function GlobalErrorPage({
   error,

@@ -1,67 +1,28 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Container } from '@/components/commons/container';
 
-import { ContactForm } from './contact-form/contact-form';
-import { Container } from '../container';
+import { ContactForm } from './components/contact-form/contact-form';
+import { ContactInfo } from './components/contact-info/contact-info';
+import { Team } from './components/team';
 
-export const Contact = () => {
-  return (
-    <Container className="pt-10 pb-20">
-      <h1>Kontakt</h1>
-      <main className="flex h-full gap-5 ">
-        <div className="w-1/2">
-          <ContactForm />
+export const Contact = () => (
+  <Container className="pt-10 pb-20">
+    <h1 className="text-center pb-20">Kontakt</h1>
+    <div className="flex h-full gap-10">
+      <div className="flex-1">
+        <ContactForm />
+      </div>
+      <div className="flex-1 flex flex-col gap-10">
+        <div className="space-y-2.5">
+          <h3>Zapraszamy do kontaktu</h3>
+          <p>
+            Szukasz informacji, potrzebujesz pomocy, lub chcesz nawiązać
+            współpracę? Jesteśmy tu, aby Ci pomóc! Wypełnij formularz kontaktowy
+            lub skorzystaj z innych dostępnych opcji kontaktu.
+          </p>
         </div>
-        <div className="w-1/2 flex gap-5 justify-evenly">
-          <section className="space-y-2.5">
-            <div>
-              <h3>KJ WORK GROUP</h3>
-            </div>
-            <div className="flex items-center gap-5">
-              <MapPin />
-              <div>
-                <p>ul. Kowalskiego 20</p>
-                <p>Poznań, 61-627</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-5">
-              <Phone />
-              <div>
-                <p>+48 572 291 847</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-5">
-              <Mail />
-              <div>
-                <p>biuro@adwork.com.pl</p>
-              </div>
-            </div>
-          </section>
-          <section className="space-y-2.5">
-            <div>
-              <h3>ZESPÓŁ</h3>
-            </div>
-            <div className="flex items-center gap-5">
-              <MapPin />
-              <div>
-                <p>ul. Kowalskiego 20</p>
-                <p>Poznań, 61-627</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-5">
-              <Phone />
-              <div>
-                <p>+48 572 291 847</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-5">
-              <Mail />
-              <div>
-                <p>biuro@adwork.com.pl</p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </main>
-    </Container>
-  );
-};
+        <ContactInfo />
+        <Team />
+      </div>
+    </div>
+  </Container>
+);

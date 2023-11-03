@@ -1,10 +1,20 @@
-import { Briefcase, Clock4, MapPin, ScrollText } from 'lucide-react';
+'use client';
 
-import { Breadcrumbs } from '@/components/commons/breadcrumbs';
-import { Container } from '@/components/container';
-import { Input } from '@/components/ui/input';
+import { Container } from '@/components/commons/container';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
-type Props = {
+import { ApplyForm } from './components/apply-form/apply-form';
+import { OfferContentList } from './components/offer-content-list';
+import { OfferHeader } from './components/offer-header';
+
+export type TOffer = {
+  content?: {
+    description: string;
+    requirements?: string[];
+    duties?: string[];
+    offer?: string[];
+    summary?: string[];
+  };
   title: string;
   agreement_type: string;
   location: string;
@@ -17,97 +27,67 @@ type Props = {
   };
 };
 
-export const Offer = ({
-  agreement_type,
-  category,
-  company,
-  location,
-  title,
-  expiration_date,
-}: Props) => {
+const duties = {
+  label: 'Obowiązki',
+  list: [
+    'Wykonywanie prac budowlanych zgodnie z projektem i instrukcjami przełożonych.',
+    'Przygotowywanie miejsc budowy, w tym wykopów, fundamentów, konstrukcji itp.',
+    'Montaż i demontaż rusztowań oraz innych narzędzi i urządzeń budowlanych.',
+  ],
+};
+
+const requirements = {
+  label: 'Wymagania',
+  list: [
+    'Wykonywanie prac budowlanych zgodnie z projektem i instrukcjami przełożonych.',
+    'Przygotowywanie miejsc budowy, w tym wykopów, fundamentów, konstrukcji itp.',
+    'Montaż i demontaż rusztowań oraz innych narzędzi i urządzeń budowlanych.',
+  ],
+};
+
+const offer = {
+  label: 'Oferujemy',
+  list: [
+    'Wykonywanie prac budowlanych zgodnie z projektem i instrukcjami przełożonych.',
+    'Przygotowywanie miejsc budowy, w tym wykopów, fundamentów, konstrukcji itp.',
+    'Montaż i demontaż rusztowań oraz innych narzędzi i urządzeń budowlanych.',
+  ],
+};
+
+const summary = `Jeśli jesteś doświadczonym budowlańcem i spełniasz powyższe wymagania, zachęcamy do przesłania swojego CV i listu motywacyjnego na adres [adres e-mail] lub skontaktowania się z nami telefonicznie pod numerem [numer telefonu].`;
+
+export const Offer = ({ content, ...rest }: TOffer) => {
   return (
     <Container className="pt-10 pb-20">
       <div>
-        <Breadcrumbs />
-        <div className="pt-5 pb-10">
-          <h1>{title}</h1>
-          <h5 className="text-muted-foreground">{company?.name}</h5>
-        </div>
-        <div className="grid grid-cols-4 gap-10">
-          <div className="p-5 bg-primary rounded-md flex items-center gap-4 justify-center">
-            <Briefcase
-              size={32}
-              className="inline-block text-primary-foreground"
-            />
-            <div>
-              <p className="text-primary-foreground/50">Branża</p>
-              <p className="text-primary-foreground">{category}</p>
-            </div>
-          </div>
-          <div className="p-5 bg-primary rounded-md flex items-center gap-4 justify-center">
-            <ScrollText
-              size={32}
-              className="inline-block text-primary-foreground"
-            />
-            <div>
-              <p className="text-primary-foreground/50">Typ umowy</p>
-              <p className="text-primary-foreground">{agreement_type}</p>
-            </div>
-          </div>
-          <div className="p-5 bg-primary rounded-md flex items-center gap-4 justify-center">
-            <MapPin
-              size={32}
-              className="inline-block text-primary-foreground"
-            />
-            <div>
-              <p className="text-primary-foreground/50">Lokalizacja</p>
-              <p className="text-primary-foreground">{location}</p>
-            </div>
-          </div>
-          <div className="p-5 bg-primary rounded-md flex items-center gap-4 justify-center">
-            <Clock4
-              size={32}
-              className="inline-block text-primary-foreground"
-            />
-            <div>
-              <p className="text-primary-foreground/50">Ważna do</p>
-              <p className="text-primary-foreground">{expiration_date}</p>
-            </div>
-          </div>
-        </div>
+        <OfferHeader {...rest} />
         <section className="flex gap-10 pt-10 pb-20">
-          <div className="w-1/2 space-y-5">
-            <h2>Opis stanowiska</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
-              consequuntur est minima, repellendus nobis vel ipsa enim dolorum
-              inventore ratione iste quod. Voluptates necessitatibus nostrum vel
-              magni delectus incidunt consectetur.
-            </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
-              consequuntur est minima, repellendus nobis vel ipsa enim dolorum
-              inventore ratione iste quod. Voluptates necessitatibus nostrum vel
-              magni delectus incidunt consectetur.
-            </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
-              consequuntur est minima, repellendus nobis vel ipsa enim dolorum
-              inventore ratione iste quod. Voluptates necessitatibus nostrum vel
-              magni delectus incidunt consectetur.
-            </p>
+          <div className="w-7/12 space-y-5">
+            <Card>
+              <CardHeader>
+                <h2>Opis stanowiska</h2>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-5">
+                  <p>
+                    Poszukujemy doświadczonego budowlańca, który będzie
+                    odpowiedzialny za różne zadania związane z budową i
+                    remontem. Nasza firma specjalizuje się w projektach
+                    budowlanych, od mniejszych remontów po większe budowy.
+                    Oczekujemy od kandydata, że będzie w stanie pracować zarówno
+                    samodzielnie, jak i w zespole, dostosowując się do różnych
+                    projektów.
+                  </p>
+                  {duties ? <OfferContentList {...duties} /> : null}
+                  {requirements ? <OfferContentList {...requirements} /> : null}
+                  {offer ? <OfferContentList {...offer} /> : null}
+                  {summary ? <p>{summary}</p> : null}
+                </div>
+              </CardContent>
+            </Card>
           </div>
-          <div className="w-1/2 space-y-5">
-            <h2>Formularz kontaktowy</h2>
-            <p>
-              Podoba Ci się ta oferta? Wypełnij poniższy formularzy, nasz zespół
-              się z Tobą skontaktuje
-            </p>
-            <div>
-              <Input placeholder="Twoję imię" />
-              <Input placeholder="Twój adres email" />
-              <Input placeholder="Numer telefonu" />
-            </div>
+          <div className="w-5/12 space-y-5">
+            <ApplyForm />
           </div>
         </section>
       </div>

@@ -7,7 +7,17 @@ export type IconProps = {
 
 export const iconNames = [
   'career-progress',
-  'coffee-break',
-  'job-offers',
+  'breadcrumbs-arrow',
+  'users-per-minute',
+  'world-analytics',
   'facebook',
+  'poland',
+  'germany',
+  'uk',
+  'undraw-check',
+  'smiley-face',
+  'contact-us',
+  'envelope',
+  'undraw-solution',
+  'undraw-hunt',
 ] as const;

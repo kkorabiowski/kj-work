@@ -1,18 +1,29 @@
-import { Inter as FontSans } from 'next/font/google';
+import { Raleway as FontSans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 
-import { Footer } from '@/components/footer/footer';
-import { Navigation } from '@/components/navigation/navigation';
+import { ContactSection } from '@/components/layout/contact/contact-section';
+import { Footer } from '@/components/layout/footer/footer';
+import { Navigation } from '@/components/layout/navigation/navigation';
 
 export const fontSans = FontSans({
-  subsets: ['latin'],
+  subsets: ['latin-ext'],
   variable: '--font-sans',
 });
 const locales = ['pl', 'de'];
 
 export function generateStaticParams() {
   return [{ locale: 'pl' }, { locale: 'de' }];
+}
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  return {
+    title: 'KJ WORK GROUP',
+  };
 }
 
 type Props = {
@@ -41,6 +52,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navigation />
           <main className="min-h-screen">{children}</main>
+          <ContactSection />
           <Footer />
         </NextIntlClientProvider>
       </body>

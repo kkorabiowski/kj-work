@@ -1,24 +1,6 @@
-import { FilterItem } from './filter-item';
+import { filters } from '@/lib/constants';
 
-const filters = [
-  {
-    groupLabel: 'Tryb zatrudnienia',
-    items: [
-      { label: 'Full-time', value: 'full-time' },
-      { label: 'Part-time', value: 'part-time' },
-      { label: 'Contract', value: 'contract' },
-    ],
-  },
-  {
-    groupLabel: 'Branża',
-    items: [
-      { label: 'Budownictwo', value: 'Budownictwo' },
-      { label: 'Transport', value: 'Transport' },
-      { label: 'Gastronomia', value: 'Gastronomia' },
-      { label: 'IT', value: 'IT' },
-    ],
-  },
-];
+import { FilterItem } from './filter-item';
 
 export const OffersFilters = () => (
   <div className="w-80 space-y-3">

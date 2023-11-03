@@ -1,10 +1,7 @@
-import { Container } from '@/components/container';
+import { EmployeeZone } from '@/components/employee-zone/employee-zone';
 
 const EmployeeZonePage = () => {
-  return (
-    <Container>
-      <h1>EmployeeZonePage</h1>
-    </Container>
-  );
+  return <EmployeeZone />;
 };
+
 export default EmployeeZonePage;

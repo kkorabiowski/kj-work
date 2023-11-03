@@ -14,10 +14,10 @@ const pros = {
 const employees = {
   label: 'Branże, w których możemy Ci pomóc',
   profits: [
-    'Motoryzacja – kierowca, mechanik, mechatronik, elektryk',
-    'Produkcja – operator maszyn, pracownik produkcji',
-    'Opieka nad seniorem – opiekun, opiekunka, pielęgniarka',
-    'Stanowiska rzemieślnicze – spawacz, ślusarz, lakiernik itp.',
+    'Motoryzacja - kierowca, mechanik, mechatronik, elektryk',
+    'Produkcja - operator maszyn, pracownik produkcji',
+    'Opieka nad seniorem - opiekun, opiekunka, pielęgniarka',
+    'Stanowiska rzemieślnicze - spawacz, ślusarz, lakiernik itp.',
   ],
 };
 

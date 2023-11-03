@@ -12,7 +12,7 @@ export const Footer = () => {
         <footer className="h-full">
           <div className="flex gap-2.5 pb-5">
             <div className="w-1/2 space-y-3">
-              <h6 className="text-muted">Logo</h6>
+              <h6 className="text-muted">KJ WORK GROUP</h6>
               <p className="text-muted-foreground w-3/4 text-base">
                 Nasza agencja pracy to brama do niemieckiego rynku pracy.
                 Oferujemy różnorodne stanowiska w Niemczech, zapewniając

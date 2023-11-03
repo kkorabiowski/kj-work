@@ -1,5 +1,5 @@
 import { OfferItem } from './offer-item';
-const offers = [
+export const offers = [
   {
     id: '1',
     title: 'Software Engineer',
@@ -8,7 +8,7 @@ const offers = [
       picture: 'techco.png',
     },
     agreement_type: 'Full-time',
-    location: 'San Francisco',
+    location: 'Hamburg',
     category: 'Information Technology',
     created_at: new Date('2023-10-31'),
   },
@@ -20,7 +20,7 @@ const offers = [
       picture: 'designfirm.png',
     },
     agreement_type: 'Part-time',
-    location: 'New York',
+    location: 'Berlin',
     category: 'Design',
     created_at: new Date('2023-10-30'),
   },
@@ -32,7 +32,7 @@ const offers = [
       picture: 'marketmasters.png',
     },
     agreement_type: 'Contract',
-    location: 'Los Angeles',
+    location: 'Nurnberg',
     created_at: new Date('2023-10-29'),
   },
   {
@@ -43,7 +43,7 @@ const offers = [
       picture: 'financecorp.png',
     },
     agreement_type: 'Full-time',
-    location: 'Chicago',
+    location: 'Munich',
     category: 'Finance',
     created_at: new Date('2023-10-28'),
   },

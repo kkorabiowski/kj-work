@@ -61,8 +61,8 @@ export const Offer = ({ content, ...rest }: TOffer) => {
     <Container className="pt-10 pb-20">
       <div>
         <OfferHeader {...rest} />
-        <section className="flex gap-10 pt-10 pb-20">
-          <div className="w-7/12 space-y-5">
+        <section className="flex flex-col md:flex-row gap-10 pt-10 pb-10 md:pb-20">
+          <div className="flex-1 md:w-7/12 space-y-5">
             <Card>
               <CardHeader>
                 <h2>Opis stanowiska</h2>
@@ -86,7 +86,7 @@ export const Offer = ({ content, ...rest }: TOffer) => {
               </CardContent>
             </Card>
           </div>
-          <div className="w-5/12 space-y-5">
+          <div className="flex-1 md:w-5/12 space-y-5">
             <ApplyForm />
           </div>
         </section>

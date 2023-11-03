@@ -1,9 +1,33 @@
 {
   "home": {
-    "title": "Hello Polska!"
+    "title": "Hello Polska!",
+    "whoAreWe": "Kim jesteśmy?",
+    "whoAreWeDesc": "Jesteśmy młodą, ambitną firmą. Spośród innych agencji pośrednictwa pracy tymczasowej wyróżnia nas świeże spojrzenie. Jesteśmy nastawieni w 100% na skuteczność. Korzystają z niej firmy z różnych branż, działających lokalnie i globalnie.",
+    "specialization": {
+      "headline": "W czym się specjalizujemy?",
+      "temporaryWorkLabel": "Praca tymczasowa",
+      "temporaryWorkDesc": "Wyszukujemy pracowników do pracy tymczasowej. Znajdujemy dokładnie takich ludzi, jakich potrzebujesz. Zawsze na czas.",
+      "suitableWorkLabel": "Praca dopasowana do Twoich potrzeb",
+      "suitableWorkDesc": "Doskonale znamy rynek. Wiemy, jak dobrać dla Ciebie pracodawcę, u którego będzie Ci najlepiej!",
+      "managerPositionLabel": "Stanowiska menedżerskie",
+      "managerPositionDesc": " Prowadzimy rekrutacje na stanowiska kierownicze (dyrektorzy, management), które wymagają specjalistycznych kompetencji i umiejętności. Znajdujemy osoby niezwykle skuteczne w tym, co robią. Osoby, godne zaufania, którym można przekazać odpowiedzialność za firmę.",
+      "careerPathLabel": "Optymalne ścieżki kariery",
+      "careerPathDesc": " Pomożemy Ci wejść na ścieżkę kariery, która szybciej doprowadzi Cię do upragnionego celu. Będzie to też przyjemniejsza podróż, a na pewno bardziej do Ciebie dopasowana. Zdziwisz się, jak bardzo wpłynie to na Twoje życie!"
+    },
+    "offers": {
+      "headline": "Sprawdź nasze najnowsze oferty",
+      "seeAll": "Zobacz wszystkie"
+    }
   },
   "aboutUs": {
-    "title": "O nas"
+    "title": "O nas",
+    "whatWeDoLabel": "Czym się zajmujemy?",
+    "leasing": "Leasing pracowniczy",
+    "recruitment": "Rekrutacja stała",
+    "temporaryWork": "Praca tymczasowa",
+    "training": "Szkolenia",
+    "howWeWorkLabel": "Jak Pracujemy?",
+    "howWeWorkDesc": "Stosujemy najnowsze i sprawdzone metody w poszukiwaniu najlepszych pracowników. Koncentrujemy się na łączeniu właściwych ludzi z właściwą pracą. Nasz zespół składa się m.in. z psychologów, którzy weryfikują kompetencje kandydatów przy pomocy stworzonych do tego celu narzędzi i technik psychologicznych oraz headhunterskich. Kandydatów na stanowiska wyższego szczebla weryfikujemy wielopoziomowo, co daje gwarancję niezawodności."
   },
   "offer": {
     "apply": "Aplikuj",
@@ -24,8 +48,11 @@
       "headline": "Masz pytanie?",
       "subHeadline": "Napisz do nas, a nasz zespół skontaktuje się z Tobą",
       "send": "Wyślij",
-      "maxLength1000": "Wiadomość nie powinna przekraczać 1000 znaków"
-    }
+      "maxLength1000": "Wiadomość nie powinna przekraczać 1000 znaków",
+      "requiredFields": "pola wymagane"
+    },
+    "questions": "Masz pytanie?",
+    "formInfo": "Wypełnij formularz, a nasz zespół odezwie się do Ciebie"
   },
   "error": {
     "message": "Strona o podanym adresie nie istnieje",
@@ -33,9 +60,26 @@
     "home": "stronę główną"
   },
   "employeeZone": {
-    "title": "Strefa pracownika"
+    "title": "Strefa pracownika",
+    "rightPlace": "Jesteś we właściwym miejscu",
+    "rightPlaceDesc": "Cieszymy się, że tu jesteś. Szukasz pracy - pierwszej lub kolejnej lub może chcesz zmienić pracę na inną. Możesz mieć pewność, że jesteś we właściwym miejscu. Przekonasz się, że proces szukania lub zmiany pracy może być ciekawą przygodą, która zmieni Twoje życie na lepsze!",
+    "weLiekYou": "Lubimy Cię!",
+    "weLikeYouDesc": "Pracujemy z Tobą i dla Ciebie. Chcemy Cię dobrze poznać i polubić, bo tylko wtedy możemy działać skutecznie. Pragniemy, aby na każdym etapie towarzyszyło Ci zadowolenie.",
+    "helpMessage": "Pomożemy Ci we wszystkim i o wszystko możesz nas zapytać."
   },
   "employerZone": {
-    "title": "Strefa pracodawcy"
+    "title": "Strefa pracodawcy",
+    "forEmployers": "Dla pracodawców",
+    "forEmployersDesc": "Nasza agencja pracy kieruje swoją ofertę również do Pracodawców, którzy poszukują wykwalifikowanych pracowników. Czy potrzebujesz lojalnych pracowników do długotrwałych zleceń? A może zauważyłeś nagły wzrost zamówień i potrzebujesz dodatkowych pracowników natychmiast? Mamy dla Ciebie doświadczonych specjalistów!",
+    "whyBroker": "Dlaczego warto skorzystać z pomocy pośrednika?",
+    "ourPriority": "Naszym priorytetem jest, aby Twój biznes mógł rozwijać się właściwie",
+    "lookForMessage": "Jeśli poszukujesz informatyka, kierownika, mechatronika lub pracownika produkcji, to my znajdziemy go dla Ciebie!",
+    "qualifiedWorkers": "Chcemy, abyś mógł współpracować z wykwalifikowanymi specjalistami, z których każdy jest zdolny przynieść cenne i wartościowe osiągnięcia Twojemu zespołowi, co w konsekwencji podniesie Twój biznes na nowy, wyższy poziom. Jeśli pragniesz mieć spokojną głowę i pewność co do jakości swojego zespołu pracowniczego, prosimy o wypełnienie formularza poniżej, a my skontaktujemy się z Tobą",
+    "profits": "Co dzięki nam zyskasz?"
+  },
+  "footer": {
+    "kjworkgroup": "KJ WORK GROUP",
+    "kjworkgroupDesc": "Nasza agencja pracy to brama do niemieckiego rynku pracy. Oferujemy różnorodne stanowiska w Niemczech, zapewniając wsparcie w procesie rekrutacji i integracji za granicą. Pomagamy zdobyć cenne doświadczenie zawodowe w dynamicznym środowisku niemieckim.",
+    "rightsReserved": "2023 © KJ Work Group, wszystkie prawa zastrzeżone"
   }
 }

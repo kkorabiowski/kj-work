@@ -17,7 +17,7 @@ export const ContactInfoItem = ({
   headquarters,
   phone,
 }: Props) => (
-  <div>
+  <div className="space-y-2 md:space-y-0">
     <h5>{headquarters}</h5>
     <div className="flex items-center gap-5">
       <MapPin />

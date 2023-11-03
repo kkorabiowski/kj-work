@@ -6,5 +6,5 @@ type Props = {
 };
 
 export const Container = ({ children, className }: Props) => (
-  <div className={cn('container px-2.5 md:px-5', className)}>{children}</div>
+  <div className={cn('container px-4 md:px-5', className)}>{children}</div>
 );

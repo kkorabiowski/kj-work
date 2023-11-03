@@ -35,7 +35,7 @@ export const Profits = () => {
         </Container>
       </div>
       <Container>
-        <div className="py-20 flex gap-10">
+        <div className="py-20 flex-col md:flex-row flex gap-10">
           <ProfitList {...pros} />
           <ProfitList {...employees} />
         </div>

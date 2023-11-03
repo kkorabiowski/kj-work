@@ -7,7 +7,7 @@ import { HomeOffers } from './components/home-offers';
 
 export const Home = () => (
   <div className="bg-background w-full">
-    <Container>
+    <Container className="mt-8">
       <Hero />
       <WhoAreWe />
       <Specialization />

@@ -20,8 +20,6 @@ import { useContactForm } from './contact-form.controller';
 export function ContactForm() {
   const { fields, form, onSubmit, t } = useContactForm();
 
-  console.log(form.formState.errors);
-
   return (
     <Card>
       <CardHeader>
@@ -62,7 +60,7 @@ export function ContactForm() {
               />
             ))}
             <div>
-              <p className="text-sm">* - pola wymagane</p>
+              <p className="text-sm">* - {t('requiredFields')}</p>
             </div>
             <div className="flex justify-center">
               <Button type="submit" variant="accent" size="lg" className="w-56">

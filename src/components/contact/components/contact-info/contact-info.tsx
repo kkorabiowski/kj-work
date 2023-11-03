@@ -6,7 +6,7 @@ export const ContactInfo = () => {
       <div>
         <h3>KJ WORK GROUP</h3>
       </div>
-      <div className="gap-10 grid grid-cols-2 justify-evenly">
+      <div className="gap-10 grid grid-cols-1 md:grid-cols-2 justify-evenly">
         <ContactInfoItem
           headquarters="Siedziba w Polsce"
           email="kontakt@kjworkgroup.com"

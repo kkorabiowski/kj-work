@@ -33,7 +33,7 @@ export const OfferHeader = ({
         <h1>{title}</h1>
         <h5 className="text-muted-foreground">{company?.name}</h5>
       </div>
-      <div className="grid grid-cols-4 gap-10">
+      <div className="grid gap-5 md:grid-cols-4 md:gap-10">
         <OfferHeaderItem
           {...{ category, name: t('industry'), icon: Briefcase }}
         />

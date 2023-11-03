@@ -1,4 +1,6 @@
 'use client';
+import { usePathname } from 'next/navigation';
+
 import { getPlaceholder } from '@/lib/helpers';
 
 import { Button } from '@/components/ui/button';

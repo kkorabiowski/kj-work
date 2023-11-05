@@ -1,5 +1,3 @@
-import { ArrowUpDown } from 'lucide-react';
-
 import { cn } from '@/lib/utils';
 
 import {
@@ -15,21 +13,19 @@ type Props = {
   isMobile?: boolean;
 };
 
-export const SortSelect = ({ isMobile }: Props) => {
+export const CitySelect = ({ isMobile }: Props) => {
   return (
     <div>
       <div className="flex gap-1.5 items-center">
-        {!isMobile ? (
-          <ArrowUpDown className="text-muted-foreground w-5 h-5" />
-        ) : null}
         <Select>
-          <SelectTrigger className={cn('w-[180px]', isMobile && 'w-full')}>
-            <SelectValue defaultValue="new" placeholder="Sortuj po:" />
+          <SelectTrigger className={cn(isMobile && 'w-full')}>
+            <SelectValue defaultValue="new" placeholder="Wybierz miasto" />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectItem value="new">Od najnowszych</SelectItem>
-              <SelectItem value="old">Od najstarszych</SelectItem>
+              <SelectItem value="hamburg">Hamburg</SelectItem>
+              <SelectItem value="berlin">Berlin</SelectItem>
+              <SelectItem value="munich">Munich</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>

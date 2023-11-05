@@ -13,8 +13,8 @@ export const Specialization = () => {
           <p>{t('temporaryWorkDesc')}</p>
         </div>
         <div>
-          <h4>{t('temporaryWorkLabel')}</h4>
-          <p>{t('temporaryWorkDesc')}</p>
+          <h4>{t('suitableWorkLabel')}</h4>
+          <p>{t('suitableWorkDesc')}</p>
         </div>
         <div>
           <h4>{t('managerPositionLabel')}</h4>
@@ -26,7 +26,7 @@ export const Specialization = () => {
         </div>
       </div>
       <div className="flex-1 flex justify-center">
-        <Icon className="w-5/6 md:w-4/6" name="users-per-minute" />
+        <Icon className="w-5/6 md:w-5/6 lg:md:w-4/6" name="users-per-minute" />
       </div>
     </section>
   );

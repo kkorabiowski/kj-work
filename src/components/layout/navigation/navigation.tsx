@@ -4,7 +4,7 @@ import React from 'react';
 
 import { cn } from '@/lib/utils';
 import { useWindowScroll } from '@/hooks/use-scroll';
-import { useWindowSize } from '@/hooks/use-width';
+import { useWindowSize } from '@/hooks/use-window-size';
 
 import { Container } from '@/components/commons/container';
 

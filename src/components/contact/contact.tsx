@@ -3,6 +3,7 @@ import { Container } from '@/components/commons/container';
 import { ContactForm } from './components/contact-form/contact-form';
 import { ContactInfo } from './components/contact-info/contact-info';
 import { Team } from './components/team';
+import { MyMap } from '../commons/google-map';
 
 export const Contact = () => {
   return (
@@ -25,6 +26,7 @@ export const Contact = () => {
           <Team />
         </div>
       </div>
+      <MyMap />
     </Container>
   );
 };

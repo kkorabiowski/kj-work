@@ -5,6 +5,7 @@ import { useLocale } from 'next-intl';
 import { languages } from '@/lib/constants';
 
 import { Icon } from '@/components/commons/icon/icon';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +13,6 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 import { LanguageItem } from './language-item';
-import { Button } from '../ui/button';
 
 export const LanguageSelect = () => {
   const locale = useLocale();

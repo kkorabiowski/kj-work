@@ -88,9 +88,4 @@ export const languages: Omit<LanguageItemType, 'handleClick'>[] = [
     label: 'DE',
     iconName: 'germany',
   },
-  {
-    locale: 'en',
-    label: 'EN',
-    iconName: 'uk',
-  },
 ];

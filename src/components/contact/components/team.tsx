@@ -26,7 +26,7 @@ export const Team = () => (
     <div>
       <h3>ZESPÓŁ</h3>
     </div>
-    <div className="gap-10 grid grid-cols-1 md:grid-cols-2 justify-evenly">
+    <div className="gap-10 grid grid-cols-1 sm:grid-cols-2 justify-evenly">
       {members.map(member => (
         <TeamMember key={member.email} {...member} />
       ))}

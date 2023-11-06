@@ -1,37 +1,85 @@
 {
   "home": {
-    "title": "Hello Polska!"
+    "title": "Hallo Polska!",
+    "whoAreWe": "Wer sind wir?",
+    "whoAreWeDesc": "Wir sind ein junges, ehrgeiziges Unternehmen. Wir heben uns von anderen Zeitarbeitsagenturen durch unseren frischen Ansatz ab. Wir sind zu 100% auf Effektivität ausgerichtet. Unternehmen aus verschiedenen Branchen, die lokal und global tätig sind, profitieren davon.",
+    "specialization": {
+      "headline": "Worin sind wir spezialisiert?",
+      "temporaryWorkLabel": "Zeitarbeit",
+      "temporaryWorkDesc": "Wir finden Mitarbeiter für Zeitarbeitsstellen. Wir finden genau die Menschen, die Sie benötigen. Immer pünktlich.",
+      "suitableWorkLabel": "Arbeit, die zu Ihren Bedürfnissen passt",
+      "suitableWorkDesc": "Wir kennen den Markt ausgezeichnet. Wir wissen, wie wir den richtigen Arbeitgeber für Sie finden, bei dem Sie sich am besten aufgehoben fühlen!",
+      "managerPositionLabel": "Führungsjobs",
+      "managerPositionDesc": "Wir rekrutieren für Führungspositionen (Direktoren, Management), die spezielle Fähigkeiten und Kompetenzen erfordern. Wir finden äußerst effektive Menschen in dem, was sie tun. Vertrauenswürdige Personen, denen Sie die Verantwortung für Ihr Unternehmen übertragen können.",
+      "careerPathLabel": "Optimale Karrierewege",
+      "careerPathDesc": "Wir helfen Ihnen, auf den Karriereweg einzusteigen, der Sie schneller zu Ihrem gewünschten Ziel führt. Es wird auch eine angenehmere Reise sein, die besser zu Ihnen passt. Sie werden überrascht sein, wie sehr sich dies auf Ihr Leben auswirken wird!"
+    },
+    "offers": {
+      "headline": "Überprüfen Sie unsere neuesten Angebote",
+      "seeAll": "Alle anzeigen"
+    }
+  },
+  "aboutUs": {
+    "title": "Über uns",
+    "whatWeDoLabel": "Was machen wir?",
+    "leasing": "Arbeitsleasing",
+    "recruitment": "Permanente Rekrutierung",
+    "temporaryWork": "Zeitarbeit",
+    "training": "Schulungen",
+    "howWeWorkLabel": "Wie arbeiten wir?",
+    "howWeWorkDesc": "Wir verwenden die neuesten und bewährten Methoden, um die besten Mitarbeiter zu finden. Wir konzentrieren uns darauf, die richtigen Menschen mit der richtigen Arbeit zu verbinden. Unser Team besteht unter anderem aus Psychologen, die die Fähigkeiten der Kandidaten mithilfe spezieller psychologischer und headhunting-Methoden und -Techniken überprüfen. Kandidaten für Führungspositionen werden auf mehreren Ebenen überprüft, was Zuverlässigkeit garantiert."
   },
   "offer": {
-    "apply": "Aplikuj",
+    "apply": "Bewerben",
     "form": {
-      "headline": "Aplikuj na to stanowisko",
-      "subHeadline": "Aby aplikować wypełnij poniższy formularz"
+      "headline": "Bewerben Sie sich für diese Position",
+      "subHeadline": "Bitte füllen Sie das folgende Formular aus, um sich zu bewerben"
     },
     "header": {
-      "industry": "Branża",
-      "agreement_type": "Typ umowy",
-      "expiration_date": "Oferta wygasa",
-      "location": "Lokalizacja"
+      "industry": "Branche",
+      "agreement_type": "Vertragstyp",
+      "expiration_date": "Angebot endet",
+      "location": "Standort"
     }
   },
+  "offers": {},
   "contact": {
     "form": {
-      "headline": "Masz pytanie?",
-      "subHeadline": "Napisz do nas, a nasz zespół skontaktuje się z Tobą",
-      "send": "Wyślij",
-      "maxLength1000": "Wiadomość nie powinna przekraczać 1000 znaków"
-    }
+      "headline": "Haben Sie Fragen?",
+      "subHeadline": "Schreiben Sie uns, unser Team wird sich bei Ihnen melden",
+      "send": "Senden",
+      "maxLength1000": "Die Nachricht darf nicht mehr als 1000 Zeichen enthalten",
+      "requiredFields": "Pflichtfelder"
+    },
+    "questions": "Haben Sie Fragen?",
+    "formInfo": "Füllen Sie das Formular aus, unser Team wird sich bei Ihnen melden"
   },
   "error": {
-    "message": "Strona o podanym adresie nie istnieje",
-    "back": "Powrót na",
-    "home": "stronę główną"
+    "message": "Die angeforderte Seite existiert nicht",
+    "back": "Zurück zur",
+    "home": "Startseite"
   },
   "employeeZone": {
-    "title": "Strefa pracownika"
+    "title": "Mitarbeiterbereich",
+    "rightPlace": "Sie sind am richtigen Ort",
+    "rightPlaceDesc": "Wir freuen uns, dass Sie hier sind. Suchen Sie nach Arbeit, sei es Ihre erste oder eine weitere, oder möchten Sie den Job wechseln? Sie können sicher sein, dass Sie am richtigen Ort sind. Sie werden feststellen, dass der Prozess der Jobsuche oder -wechsel eine spannende Reise sein kann, die Ihr Leben zum Besseren verändern wird!",
+    "weLiekYou": "Wir mögen Sie!",
+    "weLikeYouDesc": "Wir arbeiten mit Ihnen und für Sie. Wir möchten Sie gut kennenlernen und mögen, denn nur so können wir effektiv arbeiten. Wir möchten, dass Sie in jedem Schritt zufrieden sind.",
+    "helpMessage": "Wir helfen Ihnen bei allem, und Sie können uns alles fragen."
   },
   "employerZone": {
-    "title": "Strefa pracodawcy"
+    "title": "Arbeitgeberbereich",
+    "forEmployers": "Für Arbeitgeber",
+    "forEmployersDesc": "Unsere Arbeitsagentur richtet ihr Angebot auch an Arbeitgeber, die qualifizierte Mitarbeiter suchen. Benötigen Sie loyale Mitarbeiter für langfristige Aufträge? Oder haben Sie einen plötzlichen Anstieg der Bestellungen bemerkt und benötigen sofort zusätzliche Mitarbeiter? Wir haben erfahrene Spezialisten für Sie!",
+    "whyBroker": "Warum sollten Sie die Hilfe eines Vermittlers in Anspruch nehmen?",
+    "ourPriority": "Unsere Priorität ist, dass Ihr Unternehmen sich richtig entwickeln kann",
+    "lookForMessage": "Wenn Sie nach Informatikern, Managern, Mechatronikern oder Produktionsmitarbeitern suchen, finden wir sie für Sie!",
+    "qualifiedWorkers": "Wir möchten, dass Sie mit qualifizierten Spezialisten zusammenarbeiten, von denen jeder wertvolle Leistungen für Ihr Team erbringen kann, was letztendlich Ihr Unternehmen auf ein neues, höheres Niveau hebt. Wenn Sie sich in Bezug auf die Qualität Ihres Mitarbeiter-Teams sicher fühlen möchten, füllen Sie bitte das unten stehende Formular aus, und wir werden uns bei Ihnen melden.",
+    "profits": "Was gewinnen Sie durch uns?"
+  },
+  "footer": {
+    "kjworkgroup": "KJ WORK GROUP",
+    "kjworkgroupDesc": "Unsere Arbeitsagentur ist das Tor zum deutschen Arbeitsmarkt. Wir bieten vielfältige Positionen in Deutschland und unterstützen Sie bei der Rekrutierung und Integration im Ausland. Wir helfen Ihnen, wertvolle berufliche Erfahrungen in der dynamischen deutschen Umgebung zu sammeln.",
+    "rightsReserved": "2023 © KJ Work Group, alle Rechte vorbehalten"
   }
 }

@@ -9,7 +9,6 @@ import { OffersFilters } from './components/offers-filters';
 import { OffersListing } from './components/offers-listing';
 import { SearchPanel } from './components/search-panel';
 
-// TODO: ADD MOBILE FILTERS (DIALOG OR SHEET)
 // TODO: CHANGE LANGUAGE SELECT
 // TODO: MENU DYNAMIC IMPORT
 

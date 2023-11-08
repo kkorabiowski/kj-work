@@ -1,6 +1,10 @@
 import Link from 'next/link';
 
-export const Breadcrumbs = () => {
+type Props = {
+  offerId: string;
+};
+
+export const Breadcrumbs = ({ offerId }: Props) => {
   return (
     <ol
       className="flex items-center whitespace-nowrap min-w-0"
@@ -56,7 +60,7 @@ export const Breadcrumbs = () => {
         className="text-sm font-semibold text-gray-800 truncate dark:text-gray-200"
         aria-current="page"
       >
-        Oferta #123
+        Oferta #{offerId}
       </li>
     </ol>
   );

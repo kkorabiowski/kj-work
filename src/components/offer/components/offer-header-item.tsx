@@ -12,7 +12,7 @@ export const OfferHeaderItem = ({ category, icon: Icon, name }: Props) => {
       <Icon size={32} className="inline-block text-primary-foreground" />
       <div>
         <p className="text-primary-foreground/60">{name}</p>
-        <p className="text-primary-foreground">{category}</p>
+        <p className="text-primary-foreground">{category || 'brak danych'}</p>
       </div>
     </div>
   );

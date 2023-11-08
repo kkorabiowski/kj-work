@@ -15,9 +15,10 @@ type Props = Pick<
   | 'agreement_type'
   | 'location'
   | 'expiration_date'
->;
+> & { id: string };
 
 export const OfferHeader = ({
+  id,
   agreement_type,
   category,
   company,
@@ -26,16 +27,21 @@ export const OfferHeader = ({
   expiration_date,
 }: Props) => {
   const t = useTranslations('offer.header');
+  console.log(id);
   return (
     <div>
-      <Breadcrumbs />
+      <Breadcrumbs offerId={id} />
       <div className="pt-5 pb-10">
         <h1>{title}</h1>
         <h5 className="text-muted-foreground">{company?.name}</h5>
       </div>
       <div className="grid gap-5 md:grid-cols-4 md:gap-10">
         <OfferHeaderItem
-          {...{ category, name: t('industry'), icon: Briefcase }}
+          {...{
+            category: category,
+            name: t('industry'),
+            icon: Briefcase,
+          }}
         />
         <OfferHeaderItem
           {...{

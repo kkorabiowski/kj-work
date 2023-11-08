@@ -12,7 +12,9 @@ export const ContactSection = () => {
   const pathname = usePathname();
   const t = useTranslations('contact');
 
-  if (['/kontakt'].includes(pathname)) {
+  if (
+    ['/kontakt', '/dashboard', '/dashboard/dodaj-oferte'].includes(pathname)
+  ) {
     return null;
   }
 

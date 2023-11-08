@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
@@ -20,8 +20,8 @@ type Props = {
   };
   agreement_type: string;
   location: string;
-  category?: string;
-  created_at?: Date;
+  industry?: string;
+  created_at?: string;
 };
 
 export const OfferItem = ({
@@ -30,7 +30,7 @@ export const OfferItem = ({
   company,
   id,
   location,
-  category,
+  industry,
   created_at,
 }: Props) => {
   return (
@@ -38,9 +38,8 @@ export const OfferItem = ({
       <div className="flex justify-between items-center gap-5 p-2.5">
         <div className="flex items-center gap-5">
           <div>
-            <Avatar className="w-12 h-12 md:w-16 md:h-16">
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-              <AvatarFallback></AvatarFallback>
+            <Avatar className="w-12 h-12 md:w-16 md:h-16 flex items-center bg-accent justify-center">
+              <Briefcase className="text-accent-foreground" size={30} />
             </Avatar>
           </div>
           <div>
@@ -59,18 +58,18 @@ export const OfferItem = ({
               </div>
             </div>
             <div className="flex items-center gap-2.5">
-              {category ? (
+              {industry ? (
                 <div className="flex items-center gap-1.5">
                   <Briefcase className="inline-block w-3 h-3" />
                   <p className="text-sm md:text-base text-muted-foreground">
-                    {category}
+                    {industry}
                   </p>
                 </div>
               ) : null}
               <div className="hidden md:flex items-center gap-1.5">
                 <Clock4 className="inline-block w-3 h-3" />
                 <p className="text-muted-foreground">
-                  Dodano: {created_at?.toDateString()}
+                  Dodano: {created_at?.slice(0, 10)}
                 </p>
               </div>
             </div>

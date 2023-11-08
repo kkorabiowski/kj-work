@@ -1,0 +1,230 @@
+[
+  {
+    "title": "Software Engineer",
+    "company": {
+      "name": "TechCorp"
+    },
+    "agreement_type": "Full-time",
+    "location": "San Francisco, CA",
+    "industry": "Information Technology",
+    "description": "Join our team of talented software engineers and work on cutting-edge projects.",
+    "duties": [
+      "Develop and maintain software applications",
+      "Collaborate with cross-functional teams"
+    ],
+    "requirements": [
+      "Bachelor's degree in Computer Science",
+      "3+ years of experience in software development"
+    ],
+    "offer": ["Competitive salary", "Healthcare benefits"],
+    "summary": "Exciting opportunity for a software engineer in San Francisco."
+  },
+  {
+    "title": "Marketing Manager",
+    "company": {
+      "name": "AdvertiseNow"
+    },
+    "agreement_type": "Full-time",
+    "location": "New York, NY",
+    "industry": "Marketing",
+    "description": "Lead marketing campaigns and drive brand growth.",
+    "duties": ["Develop marketing strategies", "Manage a team of marketers"],
+    "requirements": [
+      "Bachelor's degree in Marketing or related field",
+      "5+ years of marketing experience"
+    ],
+    "offer": ["Competitive salary", "Bonus incentives"],
+    "summary": "Exciting opportunity for a marketing manager in New York."
+  },
+  {
+    "title": "Data Analyst",
+    "company": {
+      "name": "Data Insights Inc."
+    },
+    "agreement_type": "Contract",
+    "location": "Los Angeles, CA",
+    "industry": "Data Analysis",
+    "description": "Analyze data and provide valuable insights for our clients.",
+    "duties": [
+      "Collect and analyze data",
+      "Create data reports and visualizations"
+    ],
+    "requirements": [
+      "Bachelor's degree in Statistics or related field",
+      "2+ years of data analysis experience"
+    ],
+    "offer": ["Hourly rate", "Flexible work hours"],
+    "summary": "Contract opportunity for a data analyst in Los Angeles."
+  },
+  {
+    "title": "Graphic Designer",
+    "company": {
+      "name": "Creative Designs Co."
+    },
+    "agreement_type": "Part-time",
+    "location": "Chicago, IL",
+    "industry": "Design",
+    "description": "Create visually appealing designs and graphics for various projects.",
+    "duties": [
+      "Design marketing materials",
+      "Collaborate with clients on design concepts"
+    ],
+    "requirements": [
+      "Bachelor's degree in Graphic Design",
+      "1+ year of design experience"
+    ],
+    "offer": ["Hourly wage", "Flexible part-time schedule"],
+    "summary": "Part-time opportunity for a graphic designer in Chicago."
+  },
+  {
+    "title": "Sales Representative",
+    "company": {
+      "name": "Sales Pros LLC"
+    },
+    "agreement_type": "Commission-based",
+    "location": "Miami, FL",
+    "industry": "Sales",
+    "description": "Identify and pursue sales opportunities to drive revenue.",
+    "duties": [
+      "Prospect and acquire new clients",
+      "Meet and exceed sales targets"
+    ],
+    "requirements": [
+      "High school diploma or equivalent",
+      "Sales experience is a plus"
+    ],
+    "offer": ["Commission-based earnings", "Training and support"],
+    "summary": "Commission-based sales opportunity in Miami."
+  },
+  {
+    "title": "HR Manager",
+    "company": {
+      "name": "PeopleFirst Inc."
+    },
+    "agreement_type": "Full-time",
+    "location": "Seattle, WA",
+    "industry": "Human Resources",
+    "description": "Lead and manage human resources activities within the organization.",
+    "duties": [
+      "Recruit and onboard new employees",
+      "Oversee HR policies and procedures"
+    ],
+    "requirements": [
+      "Bachelor's degree in HR or related field",
+      "3+ years of HR management experience"
+    ],
+    "offer": ["Competitive salary", "Comprehensive benefits package"],
+    "summary": "Exciting HR manager role in Seattle."
+  },
+  {
+    "title": "Financial Analyst",
+    "company": {
+      "name": "Finance Solutions Corp."
+    },
+    "agreement_type": "Full-time",
+    "location": "Boston, MA",
+    "industry": "Finance",
+    "description": "Analyze financial data and provide insights to support decision-making.",
+    "duties": ["Conduct financial modeling", "Prepare financial reports"],
+    "requirements": [
+      "Bachelor's degree in Finance or related field",
+      "2+ years of financial analysis experience"
+    ],
+    "offer": ["Competitive salary", "401(k) matching"],
+    "summary": "Financial analyst position in Boston, MA."
+  },
+  {
+    "title": "Customer Service Representative",
+    "company": {
+      "name": "Service Plus Inc."
+    },
+    "agreement_type": "Full-time",
+    "location": "Houston, TX",
+    "industry": "Customer Service",
+    "description": "Provide exceptional customer service and support to clients.",
+    "duties": [
+      "Respond to customer inquiries",
+      "Resolve customer issues and concerns"
+    ],
+    "requirements": [
+      "High school diploma or equivalent",
+      "Customer service experience is a plus"
+    ],
+    "offer": ["Competitive salary", "Health insurance"],
+    "summary": "Customer service role in Houston, TX."
+  },
+  {
+    "title": "Product Manager",
+    "company": {
+      "name": "InnovateTech Ltd."
+    },
+    "agreement_type": "Full-time",
+    "location": "San Jose, CA",
+    "industry": "Product Management",
+    "description": "Lead the development and launch of innovative products.",
+    "duties": [
+      "Define product strategy",
+      "Collaborate with engineering and marketing teams"
+    ],
+    "requirements": [
+      "Bachelor's degree in Business or related field",
+      "5+ years of product management experience"
+    ],
+    "offer": ["Competitive salary", "Stock options"],
+    "summary": "Exciting product manager position in San Jose."
+  },
+  {
+    "title": "Nurse Practitioner",
+    "company": {
+      "name": "HealthCare Services"
+    },
+    "agreement_type": "Full-time",
+    "location": "Philadelphia, PA",
+    "industry": "Healthcare",
+    "description": "Provide healthcare services and support to patients.",
+    "duties": [
+      "Conduct patient assessments",
+      "Prescribe and administer treatments"
+    ],
+    "requirements": [
+      "Master's degree in Nursing",
+      "Nurse Practitioner certification"
+    ],
+    "offer": ["Competitive salary", "Medical benefits"],
+    "summary": "Nurse practitioner role in Philadelphia."
+  },
+  {
+    "title": "Legal Counsel",
+    "company": {
+      "name": "Law Firm Associates"
+    },
+    "agreement_type": "Full-time",
+    "location": "Washington, D.C.",
+    "industry": "Legal",
+    "description": "Provide legal advice and representation to clients.",
+    "duties": [
+      "Research legal issues",
+      "Prepare legal documents and contracts"
+    ],
+    "requirements": ["Juris Doctor (JD) degree", "Bar admission in D.C."],
+    "offer": ["Competitive salary", "Professional development opportunities"],
+    "summary": "Legal counsel position in Washington, D.C."
+  },
+  {
+    "title": "Teacher",
+    "company": {
+      "name": "EducateNow School"
+    },
+    "agreement_type": "Full-time",
+    "location": "Denver, CO",
+    "industry": "Education",
+    "description": "Inspire and educate students in a supportive learning environment.",
+    "duties": ["Plan and deliver lessons", "Assess student progress"],
+    "requirements": [
+      "Bachelor's degree in Education",
+      "Teaching certification"
+    ],
+    "offer": ["Competitive salary", "Summer vacation"],
+    "summary": "Teaching opportunity in Denver, CO."
+  }
+]

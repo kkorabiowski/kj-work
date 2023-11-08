@@ -1,58 +1,44 @@
-import { OfferItem } from './offer-item';
-export const offers = [
-  {
-    id: '1',
-    title: 'Software Engineer',
-    company: {
-      name: 'TechCo',
-      picture: 'techco.png',
-    },
-    agreement_type: 'Full-time',
-    location: 'Hamburg',
-    category: 'Information Technology',
-    created_at: new Date('2023-10-31'),
-  },
-  {
-    id: '2',
-    title: 'Graphic Designer',
-    company: {
-      name: 'DesignFirm',
-      picture: 'designfirm.png',
-    },
-    agreement_type: 'Part-time',
-    location: 'Berlin',
-    category: 'Design',
-    created_at: new Date('2023-10-30'),
-  },
-  {
-    id: '3',
-    title: 'Marketing Specialist',
-    company: {
-      name: 'MarketMasters',
-      picture: 'marketmasters.png',
-    },
-    agreement_type: 'Contract',
-    location: 'Nurnberg',
-    created_at: new Date('2023-10-29'),
-  },
-  {
-    id: '4',
-    title: 'Accountant',
-    company: {
-      name: 'FinanceCorp',
-      picture: 'financecorp.png',
-    },
-    agreement_type: 'Full-time',
-    location: 'Munich',
-    category: 'Finance',
-    created_at: new Date('2023-10-28'),
-  },
-];
+import { useOffersQuery } from '@/hooks/queries/use-offers-query';
 
-export const OffersListing = () => (
-  <div className="space-y-2.5">
-    {offers.map(offer => (
-      <OfferItem key={offer.id} {...offer} />
-    ))}
-  </div>
-);
+import { Skeleton } from '@/components/commons/skeleton';
+
+import { OfferItem } from './offer-item';
+
+export type Offer = {
+  id: string;
+  title: string;
+  company: {
+    name: string;
+    picture: string;
+  };
+  agreement_type: string;
+  location: string;
+  category: string;
+  created_at?: string;
+};
+
+export const OffersListing = () => {
+  const { data, error, isLoading } = useOffersQuery();
+
+  if (error) {
+    return <h1>Coś poszło nie tak...</h1>;
+  }
+
+  if (isLoading) {
+    return (
+      <div className="space-y-2.5 mt-10">
+        <Skeleton className="w-full h-10" />
+        <Skeleton className="w-full h-20" />
+        <Skeleton className="w-full h-20" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-2.5">
+      {data?.offers?.map((offer: Offer) => (
+        <OfferItem key={offer.id} {...offer} />
+      ))}
+    </div>
+  );
+};

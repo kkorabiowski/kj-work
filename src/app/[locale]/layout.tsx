@@ -6,6 +6,8 @@ import { ContactSection } from '@/components/layout/contact/contact-section';
 import { Footer } from '@/components/layout/footer/footer';
 import { Navigation } from '@/components/layout/navigation/navigation';
 
+import { QueryProvider } from '@/context/query-client-provider';
+
 type Props = {
   children: React.ReactNode | React.ReactNode[];
   params: {
@@ -45,10 +47,12 @@ export default async function LocaleLayout({
     <html lang={locale} className={fontSans.variable}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navigation />
-          <main className="min-h-screen">{children}</main>
-          <ContactSection />
-          <Footer />
+          <QueryProvider>
+            <Navigation />
+            <main className="min-h-screen">{children}</main>
+            <ContactSection />
+            <Footer />
+          </QueryProvider>
         </NextIntlClientProvider>
       </body>
     </html>

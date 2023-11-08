@@ -20,4 +20,5 @@ export const iconNames = [
   'envelope',
   'undraw-solution',
   'undraw-hunt',
+  'logo',
 ] as const;

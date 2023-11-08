@@ -1,29 +1,70 @@
-type Variant = 'name' | 'email' | 'phone' | 'subject' | 'message';
+type Variant =
+  | 'name'
+  | 'email'
+  | 'phone'
+  | 'subject'
+  | 'message'
+  | 'title'
+  | 'company'
+  | 'industry'
+  | 'location'
+  | 'agreement_type'
+  | 'expiration_date';
 
 export const getPlaceholder = (variant: Variant) => {
-  if (variant === 'name') {
-    return 'Wpisz imię';
-  } else if (variant === 'email') {
-    return 'Wpisz email';
-  } else if (variant === 'message') {
-    return 'Wpisz wiadomość';
-  } else if (variant === 'phone') {
-    return 'Wpisz nr telefonu';
-  } else if (variant === 'subject') {
-    return 'Wpisz temat wiadomości';
+  switch (variant) {
+    case 'name':
+      return 'Wpisz imię';
+    case 'email':
+      return 'Wpisz email';
+    case 'phone':
+      return 'Wpisz nr telefonu';
+    case 'subject':
+      return 'Wpisz temat wiadomości';
+    case 'message':
+      return 'Wpisz wiadomość';
+    case 'title':
+      return 'Wpisz tytuł';
+    case 'company':
+      return 'Wpisz nazwę firmy';
+    case 'industry':
+      return 'Wpisz branżę';
+    case 'location':
+      return 'Wpisz lokalizację';
+    case 'agreement_type':
+      return 'Wpisz rodzaj umowy';
+    case 'expiration_date':
+      return 'Wpisz datę wygaśnięcia';
+    default:
+      return '';
   }
 };
 
 export const getLabel = (variant: Variant) => {
-  if (variant === 'name') {
-    return 'Imię*';
-  } else if (variant === 'email') {
-    return 'Email*';
-  } else if (variant === 'message') {
-    return 'Wiadomość*';
-  } else if (variant === 'phone') {
-    return 'Nr telefonu';
-  } else if (variant === 'subject') {
-    return 'Temat*';
+  switch (variant) {
+    case 'name':
+      return 'Imię*';
+    case 'email':
+      return 'Email*';
+    case 'phone':
+      return 'Nr telefonu';
+    case 'subject':
+      return 'Temat*';
+    case 'message':
+      return 'Wiadomość*';
+    case 'title':
+      return 'Tytuł';
+    case 'company':
+      return 'Nazwa firmy';
+    case 'industry':
+      return 'Branża';
+    case 'location':
+      return 'Lokalizacja';
+    case 'agreement_type':
+      return 'Rodzaj umowy';
+    case 'expiration_date':
+      return 'Data wygaśnięcia';
+    default:
+      return '';
   }
 };

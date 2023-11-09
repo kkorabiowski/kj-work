@@ -20,5 +20,7 @@ export const iconNames = [
   'envelope',
   'undraw-solution',
   'undraw-hunt',
+  'logo-cropped-ext',
+  'logo-cropped-transparent',
   'logo',
 ] as const;

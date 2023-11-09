@@ -3,8 +3,11 @@ import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
+import { useContactQuestionMutation } from '@/hooks/mutations/use-contact-question';
+
 export const useContactForm = () => {
   const t = useTranslations('contact.form');
+  const { mutate, isPending, isSuccess } = useContactQuestionMutation();
 
   const fields = ['name', 'email', 'phone', 'subject', 'message'] as const;
 
@@ -25,9 +28,6 @@ export const useContactForm = () => {
       .min(10, {
         message: 'Minimum 10 znaków',
       })
-      .min(10, {
-        message: 'Minimum 10 znaków',
-      })
       .max(1000, {
         message: 'Maksymalnie 1000 znaków',
       }),
@@ -45,8 +45,8 @@ export const useContactForm = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    mutate(values);
   }
 
-  return { fields, form, onSubmit, t };
+  return { fields, form, onSubmit, t, isSuccess, isPending };
 };

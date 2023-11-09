@@ -14,12 +14,12 @@ export const TeamMember = ({ email, full_name, position, phone }: Props) => (
       <p>{position}</p>
       <div className="flex items-center gap-2.5">
         <Mail size={20} />
-        {email}
+        <a href={`mailto:${email}`}>{email}</a>
       </div>
       {phone ? (
         <div className="flex items-center gap-2.5">
           <Phone size={20} />
-          {phone}
+          <a href={`tel:${phone}`}>{phone}</a>
         </div>
       ) : null}
     </div>

@@ -3,8 +3,11 @@ import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
-export const useApplyForm = () => {
+import { useApplyMutation } from '@/hooks/mutations/use-apply-mutation';
+
+export const useApplyForm = (offerId: string) => {
   const t = useTranslations('offer');
+  const { mutate, isPending, isSuccess } = useApplyMutation();
   const fields = ['name', 'email', 'phone'] as const;
 
   const formSchema = z.object({
@@ -25,8 +28,8 @@ export const useApplyForm = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    mutate({ ...values, offerId });
   }
 
-  return { fields, form, onSubmit, t };
+  return { fields, form, t, isPending, isSuccess, onSubmit };
 };

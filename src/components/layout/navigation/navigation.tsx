@@ -7,6 +7,7 @@ import { useWindowScroll } from '@/hooks/use-scroll';
 import { useWindowSize } from '@/hooks/use-window-size';
 
 import { Container } from '@/components/commons/container';
+import { Icon } from '@/components/commons/icon/icon';
 
 import { DesktopMenu } from './components/desktop-menu';
 import { MobileMenu } from './components/mobile-menu';
@@ -25,7 +26,7 @@ export const Navigation = () => {
       <Container className="flex justify-between items-center gap-5">
         <div>
           <Link href="/">
-            <h3>Logo</h3>
+            <Icon name="logo-cropped-transparent" className="h-full w-44" />
           </Link>
         </div>
 

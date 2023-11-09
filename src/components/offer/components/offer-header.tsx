@@ -27,7 +27,6 @@ export const OfferHeader = ({
   expiration_date,
 }: Props) => {
   const t = useTranslations('offer.header');
-  console.log(id);
   return (
     <div>
       <Breadcrumbs offerId={id} />

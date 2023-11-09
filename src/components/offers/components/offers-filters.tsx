@@ -1,5 +1,7 @@
 import { filters } from '@/lib/constants';
 
+import { Button } from '@/components/ui/button';
+
 import { FilterItem } from './filter-item';
 
 export const OffersFilters = () => (
@@ -13,5 +15,8 @@ export const OffersFilters = () => (
         ))}
       </div>
     ))}
+    <div className="pt-10">
+      <Button>Zapisz</Button>
+    </div>
   </div>
 );

@@ -23,21 +23,21 @@ const items = [
   { label: 'IT', id: 'it' },
 ] as const;
 
-const FormSchema = z.object({
+const formSchema = z.object({
   items: z.array(z.string()).refine(value => value.some(item => item), {
     message: 'You have to select at least one item.',
   }),
 });
 
 export const IndustryFilters = () => {
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       items: ['recents', 'home'],
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
+  function onSubmit(data: z.infer<typeof formSchema>) {
     console.log(data);
   }
 

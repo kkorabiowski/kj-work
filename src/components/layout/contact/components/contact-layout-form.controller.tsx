@@ -3,8 +3,11 @@ import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
+import { useContactLayoutFormMutation } from '@/hooks/mutations/use-contact-layout-mutation';
+
 export const useContactLayoutForm = () => {
   const t = useTranslations('contact.form');
+  const { mutate } = useContactLayoutFormMutation();
 
   const fields = ['name', 'email', 'phone'] as const;
 
@@ -26,7 +29,7 @@ export const useContactLayoutForm = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    mutate(values);
   }
 
   return { fields, form, onSubmit, t };

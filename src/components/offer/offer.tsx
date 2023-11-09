@@ -30,7 +30,7 @@ export type TOffer = {
 };
 
 export const Offer = ({ id }: { id: string }) => {
-  const { data, error, isLoading } = useOfferQuery(id);
+  const { data, error } = useOfferQuery(id);
   const offer: TOffer = data?.offer;
 
   if (error) {
@@ -73,7 +73,7 @@ export const Offer = ({ id }: { id: string }) => {
               </Card>
             </div>
             <div className="flex-1 md:w-5/12 space-y-5">
-              <ApplyForm />
+              <ApplyForm offerId={id} />
             </div>
           </section>
         </div>

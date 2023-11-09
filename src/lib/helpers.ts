@@ -9,7 +9,11 @@ type Variant =
   | 'industry'
   | 'location'
   | 'agreement_type'
-  | 'expiration_date';
+  | 'expiration_date'
+  | 'duties'
+  | 'requirements'
+  | 'offer'
+  | 'summary';
 
 export const getPlaceholder = (variant: Variant) => {
   switch (variant) {
@@ -35,6 +39,14 @@ export const getPlaceholder = (variant: Variant) => {
       return 'Wpisz rodzaj umowy';
     case 'expiration_date':
       return 'Wpisz datę wygaśnięcia';
+    case 'duties':
+      return 'Wpisz obowiązki';
+    case 'requirements':
+      return 'Wpisz wymagania';
+    case 'offer':
+      return 'Wpisz ofertę';
+    case 'summary':
+      return 'Wpisz podsumowanie';
     default:
       return '';
   }
@@ -64,6 +76,14 @@ export const getLabel = (variant: Variant) => {
       return 'Rodzaj umowy';
     case 'expiration_date':
       return 'Data wygaśnięcia';
+    case 'duties':
+      return 'Obowiązki';
+    case 'requirements':
+      return 'Wymagania';
+    case 'offer':
+      return 'Oferta';
+    case 'summary':
+      return 'Podsumowanie';
     default:
       return '';
   }

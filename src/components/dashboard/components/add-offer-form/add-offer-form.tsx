@@ -14,11 +14,13 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 import { useAddOfferForm } from './add-offer-form.controller';
 
 export const AddOfferForm = () => {
-  const { fields, form, onSubmit, isPending } = useAddOfferForm();
+  const { fields, form, onSubmit, isPending, textAreaFields } =
+    useAddOfferForm();
 
   return (
     <Card className="mx-auto w-full max-w-lg mt-5">
@@ -39,6 +41,27 @@ export const AddOfferForm = () => {
                     <FormControl>
                       <Input
                         placeholder={getPlaceholder(fieldName)}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            ))}
+
+            {textAreaFields.map(fieldName => (
+              <FormField
+                key={fieldName}
+                control={form.control}
+                name={fieldName}
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>{getLabel(fieldName)}</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        placeholder={getPlaceholder(fieldName)}
+                        className="resize-none"
                         {...field}
                       />
                     </FormControl>

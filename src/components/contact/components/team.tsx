@@ -5,19 +5,19 @@ const members = [
     full_name: 'Hubert Jacek',
     position: 'Prezes zarządu',
     email: 'h.jacek@kjworkgroup.pl',
-    phone: '+48 789 789 789',
+    phone: '+48789789789',
   },
   {
     full_name: 'Jan Kowalski',
     position: 'Dyrektor',
     email: 'j.kowalski@kjworkgroup.pl',
-    phone: '+48 789 789 789',
+    phone: '+48789789789',
   },
   {
     full_name: 'Anna Kowalska',
     position: 'Prezes zarządu',
     email: 'anna.kowalska@kjworkgroup.pl',
-    phone: '+48 789 789 789',
+    phone: '+48789789789',
   },
 ];
 

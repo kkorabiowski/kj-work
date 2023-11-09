@@ -30,6 +30,10 @@ export const useAddOfferForm = () => {
     expiration_date: z.string().min(1, {
       message: 'Pole wymagane',
     }),
+    duties: z.string().optional(),
+    requirements: z.string().optional(),
+    offer: z.string().optional(),
+    summary: z.string().optional(),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -41,6 +45,10 @@ export const useAddOfferForm = () => {
       location: '',
       agreement_type: '',
       expiration_date: '',
+      duties: '',
+      requirements: '',
+      offer: '',
+      summary: '',
     },
   });
 
@@ -66,7 +74,12 @@ export const useAddOfferForm = () => {
     'location',
   ] as const;
 
-  const textAreaFields = ['title', 'company', 'industry'];
+  const textAreaFields = [
+    'duties',
+    'requirements',
+    'offer',
+    'summary',
+  ] as const;
 
   return { form, onSubmit, fields, textAreaFields, isPending };
 };

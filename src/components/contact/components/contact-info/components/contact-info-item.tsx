@@ -31,13 +31,13 @@ export const ContactInfoItem = ({
     <div className="flex items-center gap-5">
       <Phone />
       <div>
-        <p>{phone}</p>
+        <a href={`tel:${phone}`}>{phone}</a>
       </div>
     </div>
     <div className="flex items-center gap-5">
       <Mail />
       <div>
-        <p>{email}</p>
+        <a href={`mailto:${email}`}>{email}</a>
       </div>
     </div>
   </div>

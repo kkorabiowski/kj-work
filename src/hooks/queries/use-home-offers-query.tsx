@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 
 const fetchOffers = async () => {
   try {
-    const response = await fetch('/api/offers?page=1&take=10');
+    const response = await fetch('/api/offers/home');
     const data = await response.json();
     return data;
   } catch (error) {
@@ -11,6 +11,6 @@ const fetchOffers = async () => {
   }
 };
 
-export const useOffersQuery = () => {
-  return useQuery({ queryKey: ['offers'], queryFn: fetchOffers });
+export const useHomeOffersQuery = () => {
+  return useQuery({ queryKey: ['home-offers'], queryFn: fetchOffers });
 };

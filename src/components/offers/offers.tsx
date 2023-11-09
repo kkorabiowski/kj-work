@@ -8,12 +8,13 @@ import { OffersFilterBar } from './components/offers-filter-bar';
 import { OffersFilters } from './components/offers-filters';
 import { OffersListing } from './components/offers-listing';
 import { SearchPanel } from './components/search-panel';
+import { useOffers } from './offers.controller';
 
-// TODO: CHANGE LANGUAGE SELECT
 // TODO: MENU DYNAMIC IMPORT
 
 export const Offers = () => {
   const size = useWindowSize();
+  const { form, onSubmit } = useOffers();
 
   return (
     <Container className="mt-10">

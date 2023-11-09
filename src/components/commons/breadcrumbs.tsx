@@ -1,10 +1,12 @@
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   offerId: string;
 };
 
 export const Breadcrumbs = ({ offerId }: Props) => {
+  const t = useTranslations('breadcrumbs');
   return (
     <ol
       className="flex items-center whitespace-nowrap min-w-0"
@@ -15,7 +17,7 @@ export const Breadcrumbs = ({ offerId }: Props) => {
           className="flex items-center text-gray-500 hover:text-primary"
           href="/"
         >
-          Strona Główna
+          {t('home')}
           <svg
             className="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400 dark:text-gray-600"
             width="16"
@@ -38,7 +40,7 @@ export const Breadcrumbs = ({ offerId }: Props) => {
           className="flex items-center text-gray-500 hover:text-primary"
           href="/oferty-pracy"
         >
-          Oferty pracy
+          {t('offers')}
           <svg
             className="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400 dark:text-gray-600"
             width="16"

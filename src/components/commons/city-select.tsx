@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl';
+
 import { cn } from '@/lib/utils';
 
 import {
@@ -14,12 +16,13 @@ type Props = {
 };
 
 export const CitySelect = ({ isMobile }: Props) => {
+  const t = useTranslations('form');
   return (
     <div>
       <div className="flex gap-1.5 items-center">
         <Select>
           <SelectTrigger className={cn(isMobile && 'w-full')}>
-            <SelectValue defaultValue="new" placeholder="Wybierz miasto" />
+            <SelectValue defaultValue="new" placeholder={t('chooseCity')} />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>

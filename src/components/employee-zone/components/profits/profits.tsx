@@ -1,36 +1,19 @@
+import { useTranslations } from 'next-intl';
+
 import { Container } from '@/components/commons/container';
 
 import { ProfitList } from './components/profit-list';
-
-const pros = {
-  label: 'PRACOWNIKOM GWARANTUJEMY',
-  profits: [
-    'Niemiecką umowę',
-    'Bezpieczeństwo zatrudnienia',
-    'Wysokie zarobki',
-    'Atrakcyjne oferty pracy',
-    'Elastyczne godziny pracy',
-    'Doradztwo zawodowe',
-  ],
-};
-
-const employees = {
-  label: 'NASI PRACOWNICY DOCENIAJĄ',
-  profits: [
-    'Stałe wsparcie naszej firmy',
-    'Szeroką baza ofert pracy',
-    'Profesjonalną koordynację naszych działań',
-    'Wysoką jakość naszych usług, które ciągle poszerzamy',
-  ],
-};
+import { useProfits } from './profits.controller';
 
 export const Profits = () => {
+  const t = useTranslations('employeeZone.profits');
+  const { employees, pros } = useProfits();
   return (
     <section>
       <div className="bg-accent py-16">
         <Container>
           <h1 className="text-accent-foreground text-center">
-            Co dzięki nam zyskasz?
+            {t('profitsHeadline')}
           </h1>
         </Container>
       </div>

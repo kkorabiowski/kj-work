@@ -1,4 +1,5 @@
 import { ArrowUpDown } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 import { cn } from '@/lib/utils';
 
@@ -16,6 +17,7 @@ type Props = {
 };
 
 export const SortSelect = ({ isMobile }: Props) => {
+  const t = useTranslations('form.sort');
   return (
     <div>
       <div className="flex gap-1.5 items-center">
@@ -24,12 +26,12 @@ export const SortSelect = ({ isMobile }: Props) => {
         ) : null}
         <Select>
           <SelectTrigger className={cn('w-[180px]', isMobile && 'w-full')}>
-            <SelectValue defaultValue="new" placeholder="Sortuj po:" />
+            <SelectValue defaultValue="new" placeholder={t('sortBy')} />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectItem value="new">Od najnowszych</SelectItem>
-              <SelectItem value="old">Od najstarszych</SelectItem>
+              <SelectItem value="new">{t('newest')}</SelectItem>
+              <SelectItem value="old">{t('oldest')}</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>

@@ -6,30 +6,30 @@ import * as z from 'zod';
 import { useContactQuestionMutation } from '@/hooks/mutations/use-contact-question';
 
 export const useContactForm = () => {
-  const t = useTranslations('contact.form');
+  const t = useTranslations('form.validation');
   const { mutate, isPending, isSuccess } = useContactQuestionMutation();
 
   const fields = ['name', 'email', 'phone', 'subject', 'message'] as const;
 
   const formSchema = z.object({
     name: z.string().min(2, {
-      message: 'Imię powinno zawierać przynajmniej 2 znaki',
+      message: t('min2Length'),
     }),
-    email: z.string().email({ message: 'Wpisz prawidłowy adres email' }),
+    email: z.string().email({ message: t('correctEmail') }),
     phone: z.string(),
     subject: z
       .string()
       .min(10, {
-        message: 'Minimum 10 znaków',
+        message: t('min10Length'),
       })
-      .max(255, { message: 'Maksymalnie 255 znaków' }),
+      .max(255, { message: t('max255Length') }),
     message: z
       .string()
       .min(10, {
-        message: 'Minimum 10 znaków',
+        message: t('min10Length'),
       })
       .max(1000, {
-        message: 'Maksymalnie 1000 znaków',
+        message: t('max1000Length'),
       }),
   });
 

@@ -16,7 +16,13 @@
     },
     "offers": {
       "headline": "Sprawdź nasze najnowsze oferty",
-      "seeAll": "Zobacz wszystkie"
+      "seeAll": "Zobacz wszystkie",
+      "error": "Coś poszło nie tak..."
+    },
+    "hero": {
+      "headline": "Do <span>sukcesu</span> może być dalej lub <span>bliżej</span>",
+      "closer": "... a z nami jest tylko bliżej",
+      "description": "Agencja pracy dla osób poszukujących pracy w Niemczech, oferującazatrudnienie w oparciu o <span>niemiecką umowę</span>"
     }
   },
   "aboutUs": {
@@ -27,7 +33,9 @@
     "temporaryWork": "Praca tymczasowa",
     "training": "Szkolenia",
     "howWeWorkLabel": "Jak Pracujemy?",
-    "howWeWorkDesc": "Stosujemy najnowsze i sprawdzone metody w poszukiwaniu najlepszych pracowników. Koncentrujemy się na łączeniu właściwych ludzi z właściwą pracą. Nasz zespół składa się m.in. z psychologów, którzy weryfikują kompetencje kandydatów przy pomocy stworzonych do tego celu narzędzi i technik psychologicznych oraz headhunterskich. Kandydatów na stanowiska wyższego szczebla weryfikujemy wielopoziomowo, co daje gwarancję niezawodności."
+    "howWeWorkDesc": "Stosujemy najnowsze i sprawdzone metody w poszukiwaniu najlepszych pracowników. Koncentrujemy się na łączeniu właściwych ludzi z właściwą pracą. Nasz zespół składa się m.in. z psychologów, którzy weryfikują kompetencje kandydatów przy pomocy stworzonych do tego celu narzędzi i technik psychologicznych oraz headhunterskich. Kandydatów na stanowiska wyższego szczebla weryfikujemy wielopoziomowo, co daje gwarancję niezawodności.",
+    "quote": "Dzięki niepowtarzalnym kompetencjom i potencjałowi poszczególnych pracowników możemy dla Ciebie świadczyć usługi, które nie mają sobie równych na rynku.",
+    "trustedUs": "Zaufali nam"
   },
   "offer": {
     "apply": "Aplikuj",
@@ -44,15 +52,31 @@
   },
   "offers": {},
   "contact": {
+    "contact": "Kontakt",
+    "contactInvitation": "Zapraszamy do kontaktu",
+    "contactInvitationDesc": "Szukasz informacji, potrzebujesz pomocy, lub chcesz nawiązać współpracę? Jesteśmy tu, aby Ci pomóc! Wypełnij formularz kontaktowy lub skorzystaj z innych dostępnych opcji kontaktu.",
+    "questions": "Masz pytanie?",
+    "formInfo": "Wypełnij formularz, a nasz zespół odezwie się do Ciebie",
     "form": {
       "headline": "Masz pytanie?",
       "subHeadline": "Napisz do nas, a nasz zespół skontaktuje się z Tobą",
       "send": "Wyślij",
       "maxLength1000": "Wiadomość nie powinna przekraczać 1000 znaków",
-      "requiredFields": "pola wymagane"
+      "requiredFields": "pola wymagane",
+      "thankYouMsg": "Dziękujemy za wypełnienie formularza",
+      "thankYouMsgDesc": "Nasz zespół się wkrótce do Ciebie odezwie!"
     },
-    "questions": "Masz pytanie?",
-    "formInfo": "Wypełnij formularz, a nasz zespół odezwie się do Ciebie"
+    "info": {
+      "polandHeadquarters": "Siedziba w Polsce",
+      "germanyHeadquarters": "Siedziba w Niemczech"
+    },
+    "team": {
+      "team": "Zespół",
+      "position": {
+        "ceo": "Prezes zarządu",
+        "director": "Dyrektor"
+      }
+    }
   },
   "error": {
     "message": "Strona o podanym adresie nie istnieje",
@@ -65,7 +89,50 @@
     "rightPlaceDesc": "Cieszymy się, że tu jesteś. Szukasz pracy - pierwszej lub kolejnej lub może chcesz zmienić pracę na inną. Możesz mieć pewność, że jesteś we właściwym miejscu. Przekonasz się, że proces szukania lub zmiany pracy może być ciekawą przygodą, która zmieni Twoje życie na lepsze!",
     "weLiekYou": "Lubimy Cię!",
     "weLikeYouDesc": "Pracujemy z Tobą i dla Ciebie. Chcemy Cię dobrze poznać i polubić, bo tylko wtedy możemy działać skutecznie. Pragniemy, aby na każdym etapie towarzyszyło Ci zadowolenie.",
-    "helpMessage": "Pomożemy Ci we wszystkim i o wszystko możesz nas zapytać."
+    "helpMessage": "Pomożemy Ci we wszystkim i o wszystko możesz nas zapytać.",
+    "quote": "\"Dobry pracownik to osoba, która potrafi efektywnie współpracować z innymi, rozwiązywać problemy i być zaangażowana w rozwijanie swoich umiejętności.\" - John C. Maxwell",
+    "profits": {
+      "profitsHeadline": "Co dzięki nam zyskasz?",
+      "pros": {
+        "label": "Pracownikom gwarantujemy",
+        "germanAgreement": "Niemiecką umowę",
+        "employmentSecurity": "Bezpieczeństwo zatrudnienia",
+        "salary": "Wysokie zarobki",
+        "attractiveOffers": "Atrakcyjne oferty pracy",
+        "hours": "Elastyczne godziny pracy",
+        "support": "Doradztwo zawodowe"
+      },
+      "employees": {
+        "label": "Nasi pracownicy doceniają",
+        "support": "Stałe wsparcie naszej firmy",
+        "offers": "Szeroką baza ofert pracy",
+        "coordination": "Profesjonalną koordynację naszych działań",
+        "quality": "Wysoką jakość naszych usług, które ciągle poszerzamy"
+      }
+    },
+    "recruitment": {
+      "headline": "Jak przebiega proces rekrutacji?",
+      "step1": {
+        "headline": "Wypełnij formularz aplikujący na stronie danej oferty",
+        "description": "Jeśli chcesz ubiegać się o pracę za granicą korzystając z pośrednictwa naszej agencji - już dziś prześlij dokumenty drogą mailową lub wygodnie zaaplikuj przez nasz system HR. Będziemy potrzebować CV w języku polskim lub w języku niemieckim oraz świadectwa pracy / referencje potwierdzające wymagane kwalifikacje."
+      },
+      "step2": {
+        "headline": "Skontaktujemy się z Tobą",
+        "description": "W przeciągu kilku dni skontaktuje się z Tobą nasz rekruter i przeprowadzi pierwszą rozmowę - zweryfikuje dane zawarte w CV, wypyta o interesujące Cię oferty pracy, odpowie na Twoje pytania. Będziesz mógł poznać szczegóły dotyczące naszych ofert pracy."
+      },
+      "step3": {
+        "headline": "Wyślemy Twoje CV dla pracodawcy",
+        "description": "W kolejnym etapie Twoje CV zostanie wysłane do pracodawcy."
+      },
+      "step4": {
+        "headline": "Umówimy Cię na rozmowę rekrutacyjną",
+        "description": "Jeśli pracodawca będzie zainteresowany Twoją kandydaturą - umówimy Cię na rozmowę rekrutacyjną w języku niemieckim. Rozmowa odbędzie się przez telefon lub komunikator internetowy."
+      },
+      "step5": {
+        "headline": "Podpisujemy umowę i zaczynasz pracę",
+        "description": "Jeśli zarówno Ty jak i pracodawca będziecie zainteresowani współpracą - podpisujemy umowę i zaczynasz pracę!"
+      }
+    }
   },
   "employerZone": {
     "title": "Strefa pracodawcy",
@@ -75,11 +142,71 @@
     "ourPriority": "Naszym priorytetem jest, aby Twój biznes mógł rozwijać się właściwie",
     "lookForMessage": "Jeśli poszukujesz informatyka, kierownika, mechatronika lub pracownika produkcji, to my znajdziemy go dla Ciebie!",
     "qualifiedWorkers": "Chcemy, abyś mógł współpracować z wykwalifikowanymi specjalistami, z których każdy jest zdolny przynieść cenne i wartościowe osiągnięcia Twojemu zespołowi, co w konsekwencji podniesie Twój biznes na nowy, wyższy poziom. Jeśli pragniesz mieć spokojną głowę i pewność co do jakości swojego zespołu pracowniczego, prosimy o wypełnienie formularza poniżej, a my skontaktujemy się z Tobą",
-    "profits": "Co dzięki nam zyskasz?"
+    "profits": "Co dzięki nam zyskasz?",
+    "quote": "\"Pracodawca, który inwestuje w ludzi, jest kluczem do sukcesu. Troszczy się o rozwój swoich pracowników, daje im okazję do nauki i rozwoju oraz stwarza warunki do osiągnięcia pełnego potencjału.\" - Richard Branson",
+    "list": {
+      "pros": {
+        "label": "Co cenią współpracujący z nami pracodawcy",
+        "proffessionals": "Szeroką bazę ofert fachowców",
+        "shortTime": "Krótki czas wykonania zlecenia",
+        "value": "Dysponujemy dużą liczbą wykwalifikowanych specjalistów w wielu dziedzinach",
+        "improvement": "Ciągle się rozwijamy"
+      },
+      "industries": {
+        "label": "Branże, w których możemy Ci pomóc",
+        "moto": "Motoryzacja - kierowca, mechanik, mechatronik, elektryk",
+        "production": "Produkcja - operator maszyn, pracownik produkcji",
+        "help": "Opieka nad seniorem - opiekun, opiekunka, pielęgniarka",
+        "crafting": "Stanowiska rzemieślnicze - spawacz, ślusarz, lakiernik itp."
+      }
+    },
+    "process": {
+      "headline": "Jak przebiega proces rekrutacji?",
+      "step1": {
+        "headline": "Wypełnij formularz aplikujący na stronie danej oferty",
+        "description": "Jeśli chcesz ubiegać się o pracę za granicą korzystając z pośrednictwa naszej agencji - już dziś prześlij dokumenty drogą mailową lub wygodnie zaaplikuj przez nasz system HR. Będziemy potrzebować CV w języku polskim lub w języku niemieckim oraz świadectwa pracy / referencje potwierdzające wymagane kwalifikacje."
+      },
+      "step2": {
+        "headline": "Skontaktujemy się z Tobą",
+        "description": "W przeciągu kilku dni skontaktuje się z Tobą nasz rekruter i przeprowadzi pierwszą rozmowę - zweryfikuje dane zawarte w CV, wypyta o interesujące Cię oferty pracy, odpowie na Twoje pytania. Będziesz mógł poznać szczegóły dotyczące naszych ofert pracy."
+      },
+      "step3": {
+        "headline": "Wyślemy Twoje CV dla pracodawcy",
+        "description": "W kolejnym etapie Twoje CV zostanie wysłane do pracodawcy."
+      },
+      "step4": {
+        "headline": "Umówimy Cię na rozmowę rekrutacyjną",
+        "description": "Jeśli pracodawca będzie zainteresowany Twoją kandydaturą - umówimy Cię na rozmowę rekrutacyjną w języku niemieckim. Rozmowa odbędzie się przez telefon lub komunikator internetowy."
+      },
+      "step5": {
+        "headline": "Podpisujemy umowę i zaczynasz pracę",
+        "description": "Jeśli zarówno Ty jak i pracodawca będziecie zainteresowani współpracą - podpisujemy umowę i zaczynasz pracę!"
+      }
+    }
   },
   "footer": {
     "kjworkgroup": "KJ WORK GROUP",
     "kjworkgroupDesc": "Nasza agencja pracy to brama do niemieckiego rynku pracy. Oferujemy różnorodne stanowiska w Niemczech, zapewniając wsparcie w procesie rekrutacji i integracji za granicą. Pomagamy zdobyć cenne doświadczenie zawodowe w dynamicznym środowisku niemieckim.",
     "rightsReserved": "2023 © KJ Work Group, wszystkie prawa zastrzeżone"
+  },
+  "breadcrumbs": {
+    "home": "Strona główna",
+    "offers": "Oferty pracy"
+  },
+  "form": {
+    "chooseCity": "Wybierz miasto",
+    "sort": {
+      "sortBy": "Sortuj",
+      "oldest": "Od najstarszych",
+      "newest": "On najnowszych"
+    },
+    "validation": {
+      "min2Length": "Minimum 2 znaki",
+      "min10Length": "Minimum 10 znaków",
+      "max255Length": "Maksymlanie 255 znaków",
+      "max1000Length": "Maksymlanie 1000 znaków",
+      "required": "Pole wymagane",
+      "correctEmail": "Wpisz prawidłowy adres email"
+    }
   }
 }

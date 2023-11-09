@@ -1,6 +1,9 @@
+import { useTranslations } from 'next-intl';
+
 import { ContactInfoItem } from './components/contact-info-item';
 
 export const ContactInfo = () => {
+  const t = useTranslations('contact.info')
   return (
     <section className="space-y-2.5">
       <div>
@@ -8,7 +11,7 @@ export const ContactInfo = () => {
       </div>
       <div className="gap-10 grid grid-cols-1 sm:grid-cols-2 justify-evenly">
         <ContactInfoItem
-          headquarters="Siedziba w Polsce"
+          headquarters={t('polandHeadquarters')}
           email="kontakt@kjworkgroup.com"
           phone="+48788788788"
           address={{
@@ -18,7 +21,7 @@ export const ContactInfo = () => {
           }}
         />
         <ContactInfoItem
-          headquarters="Siedziba w Niemczech"
+          headquarters={t('germanyHeadquarters')}
           email="kontakt@kjworkgroup.com"
           phone="+48788788788"
           address={{

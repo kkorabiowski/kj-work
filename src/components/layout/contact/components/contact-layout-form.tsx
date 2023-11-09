@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { getPlaceholder } from '@/lib/helpers';
 
 import { Button } from '@/components/ui/button';
@@ -16,7 +18,8 @@ import { Input } from '@/components/ui/input';
 import { useContactLayoutForm } from './contact-layout-form.controller';
 
 export const ContactLayoutForm = () => {
-  const { fields, form, onSubmit, t } = useContactLayoutForm();
+  const t = useTranslations('contact.form');
+  const { fields, form, onSubmit } = useContactLayoutForm();
 
   return (
     <Card>

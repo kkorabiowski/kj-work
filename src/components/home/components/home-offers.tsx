@@ -1,4 +1,5 @@
 'use client';
+import { Container } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
@@ -14,7 +15,11 @@ export const HomeOffers = () => {
   const { data, error } = useHomeOffersQuery();
 
   if (error) {
-    return <h1>Coś poszło nie tak...</h1>;
+    return (
+      <Container>
+        <h1>{t('error')}</h1>
+      </Container>
+    );
   }
 
   return (

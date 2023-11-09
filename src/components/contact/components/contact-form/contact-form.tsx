@@ -1,4 +1,6 @@
 'use client';
+import { useTranslations } from 'next-intl';
+
 import { getLabel, getPlaceholder } from '@/lib/helpers';
 
 import { Icons } from '@/components/commons/icons';
@@ -19,7 +21,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { useContactForm } from './contact-form.controller';
 
 export function ContactForm() {
-  const { fields, form, onSubmit, t, isSuccess, isPending } = useContactForm();
+  const { fields, form, onSubmit, isSuccess, isPending } = useContactForm();
+  const t = useTranslations('contact.form');
 
   return (
     <Card>
@@ -30,8 +33,8 @@ export function ContactForm() {
       <CardContent>
         {isSuccess ? (
           <div className="pt-10 pb-20 space-y-5">
-            <h2>Dziękujemy za wypełnienie formularza</h2>
-            <h3>Nasz zespół się wkrótce do Ciebie odezwie!</h3>
+            <h2>{t('thankYouMsg')}</h2>
+            <h3>{t('thankYouMsgDesc')}</h3>
           </div>
         ) : (
           <Form {...form}>

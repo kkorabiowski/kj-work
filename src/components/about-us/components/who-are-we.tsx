@@ -11,7 +11,6 @@ export const WhoAreWe = () => {
         <h5>{t('whoAreWeDesc')}</h5>
       </div>
       <div className="flex-1 flex justify-center">
-        {/* <Icon className="w-3/4 md:w-4/6" name="logo-cropped-ext" /> */}
         <Icon className="w-3/4 md:w-4/6" name="logo-cropped-ext" />
       </div>
     </section>

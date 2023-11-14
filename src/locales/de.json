@@ -2,84 +2,252 @@
   "home": {
     "title": "Hallo Polska!",
     "whoAreWe": "Wer sind wir?",
-    "whoAreWeDesc": "Wir sind ein junges, ehrgeiziges Unternehmen. Wir heben uns von anderen Zeitarbeitsagenturen durch unseren frischen Ansatz ab. Wir sind zu 100% auf Effektivität ausgerichtet. Unternehmen aus verschiedenen Branchen, die lokal und global tätig sind, profitieren davon.",
+    "whoAreWeDesc": "Wir sind ein junges, ehrgeiziges Unternehmen. Unser frischer Blick unterscheidet uns von anderen Zeitarbeitsagenturen. Wir sind zu 100 % auf Effektivität ausgerichtet. Unternehmen verschiedener Branchen, die lokal und global tätig sind, profitieren davon.",
     "specialization": {
       "headline": "Worin sind wir spezialisiert?",
       "temporaryWorkLabel": "Zeitarbeit",
-      "temporaryWorkDesc": "Wir finden Mitarbeiter für Zeitarbeitsstellen. Wir finden genau die Menschen, die Sie benötigen. Immer pünktlich.",
-      "suitableWorkLabel": "Arbeit, die zu Ihren Bedürfnissen passt",
-      "suitableWorkDesc": "Wir kennen den Markt ausgezeichnet. Wir wissen, wie wir den richtigen Arbeitgeber für Sie finden, bei dem Sie sich am besten aufgehoben fühlen!",
-      "managerPositionLabel": "Führungsjobs",
-      "managerPositionDesc": "Wir rekrutieren für Führungspositionen (Direktoren, Management), die spezielle Fähigkeiten und Kompetenzen erfordern. Wir finden äußerst effektive Menschen in dem, was sie tun. Vertrauenswürdige Personen, denen Sie die Verantwortung für Ihr Unternehmen übertragen können.",
+      "temporaryWorkDesc": "Wir finden Mitarbeiter für temporäre Arbeit. Wir suchen genau die Menschen, die Sie brauchen. Immer pünktlich.",
+      "suitableWorkLabel": "Auf Ihre Bedürfnisse zugeschnittene Arbeit",
+      "suitableWorkDesc": "Wir kennen den Markt perfekt. Wir wissen, wie wir den für Sie besten Arbeitgeber auswählen können.",
+      "managerPositionLabel": "Managerpositionen",
+      "managerPositionDesc": "Wir führen Rekrutierungen für Führungspositionen (Direktoren, Management) durch, die spezialisierte Fähigkeiten und Kompetenzen erfordern. Wir finden äußerst effektive Personen, die vertrauenswürdig sind und die Verantwortung für das Unternehmen übernehmen können.",
       "careerPathLabel": "Optimale Karrierewege",
-      "careerPathDesc": "Wir helfen Ihnen, auf den Karriereweg einzusteigen, der Sie schneller zu Ihrem gewünschten Ziel führt. Es wird auch eine angenehmere Reise sein, die besser zu Ihnen passt. Sie werden überrascht sein, wie sehr sich dies auf Ihr Leben auswirken wird!"
+      "careerPathDesc": "Wir helfen Ihnen, einen Karriereweg einzuschlagen, der Sie schneller zu Ihrem gewünschten Ziel führt. Dies wird auch eine angenehmere Reise sein und sicherlich besser zu Ihnen passen. Sie werden überrascht sein, wie sehr dies Ihr Leben beeinflusst!"
     },
     "offers": {
-      "headline": "Überprüfen Sie unsere neuesten Angebote",
-      "seeAll": "Alle anzeigen"
+      "headline": "Entdecken Sie unsere neuesten Angebote",
+      "seeAll": "Alle anzeigen",
+      "error": "Etwas ist schiefgelaufen..."
+    },
+    "hero": {
+      "headline": "Zum <span>Erfolg</span> kann es weiter oder <span>näher</span> sein",
+      "closer": "... und mit uns ist es nur näher",
+      "description": "Arbeitsagentur für Personen, die in Deutschland Arbeit suchen, bietet Beschäftigung auf der Grundlage eines <span>deutschen Vertrags</span>."
     }
   },
   "aboutUs": {
     "title": "Über uns",
     "whatWeDoLabel": "Was machen wir?",
-    "leasing": "Arbeitsleasing",
+    "leasing": "Leasing von Arbeitskräften",
     "recruitment": "Permanente Rekrutierung",
     "temporaryWork": "Zeitarbeit",
     "training": "Schulungen",
-    "howWeWorkLabel": "Wie arbeiten wir?",
-    "howWeWorkDesc": "Wir verwenden die neuesten und bewährten Methoden, um die besten Mitarbeiter zu finden. Wir konzentrieren uns darauf, die richtigen Menschen mit der richtigen Arbeit zu verbinden. Unser Team besteht unter anderem aus Psychologen, die die Fähigkeiten der Kandidaten mithilfe spezieller psychologischer und headhunting-Methoden und -Techniken überprüfen. Kandidaten für Führungspositionen werden auf mehreren Ebenen überprüft, was Zuverlässigkeit garantiert."
+    "howWeWorkLabel": "Wie wir arbeiten",
+    "howWeWorkDesc": "Wir verwenden die neuesten und bewährten Methoden, um die besten Mitarbeiter zu finden. Wir konzentrieren uns darauf, die richtigen Menschen mit der richtigen Arbeit zu verbinden. Unser Team besteht unter anderem aus Psychologen, die die Fähigkeiten der Kandidaten mit speziell entwickelten psychologischen und headhuntermäßigen Werkzeugen und Techniken überprüfen. Kandidaten für Führungspositionen werden mehrstufig überprüft, was eine zuverlässige Garantie bietet.",
+    "quote": "Dank der einzigartigen Kompetenzen und des Potenzials einzelner Mitarbeiter können wir Ihnen Dienstleistungen anbieten, die auf dem Markt unübertroffen sind.",
+    "trustedUs": "Vertrauen uns"
   },
   "offer": {
     "apply": "Bewerben",
+    "jobDescription": "Stellenbeschreibung",
+    "check": "Überprüfen",
+    "added": "Hinzugefügt",
     "form": {
-      "headline": "Bewerben Sie sich für diese Position",
-      "subHeadline": "Bitte füllen Sie das folgende Formular aus, um sich zu bewerben"
+      "headline": "Für diese Position bewerben",
+      "subHeadline": "Um sich zu bewerben, füllen Sie bitte das folgende Formular aus"
     },
     "header": {
       "industry": "Branche",
       "agreement_type": "Vertragstyp",
-      "expiration_date": "Angebot endet",
-      "location": "Standort"
+      "expiration_date": "Angebot läuft ab",
+      "location": "Ort"
+    },
+    "list": {
+      "duties": "Aufgaben",
+      "requirements": "Anforderungen",
+      "offer": "Angebot"
     }
   },
-  "offers": {},
-  "contact": {
-    "form": {
-      "headline": "Haben Sie Fragen?",
-      "subHeadline": "Schreiben Sie uns, unser Team wird sich bei Ihnen melden",
-      "send": "Senden",
-      "maxLength1000": "Die Nachricht darf nicht mehr als 1000 Zeichen enthalten",
-      "requiredFields": "Pflichtfelder"
+  "offers": {
+    "agreementType": "Vertragstyp",
+    "filters": {
+      "headlineFilters": "Ergebnisse filtern",
+      "saveFilters": "Filter speichern",
+      "clearFilters": "Filter löschen",
+      "availableOffers": "Verfügbare Angebote",
+      "results": "{results} Angebote gefunden",
+      "filters": "Filter",
+      "save": "Speichern",
+      "searchByName": "Nach Stellenbezeichnung suchen",
+      "typeName": "Stellenbezeichnung eingeben",
+      "search": "Suchen"
     },
+    "findYourOfferHeadline": "Finden Sie das passende Angebot und",
+    "findYourOfferDesc": "Durchsuchen Sie unsere Angebote und finden Sie etwas Passendes für sich",
+    "apply": "bewerben Sie sich"
+  },
+  "contact": {
+    "contact": "Kontakt",
+    "contactInvitation": "Wir laden Sie zum Kontakt ein",
+    "contactInvitationDesc": "Suchen Sie Informationen, benötigen Sie Hilfe oder möchten Sie eine Zusammenarbeit beginnen? Wir sind hier, um Ihnen zu helfen! Füllen Sie das Kontaktformular aus oder nutzen Sie andere verfügbare Kontaktmöglichkeiten.",
     "questions": "Haben Sie Fragen?",
-    "formInfo": "Füllen Sie das Formular aus, unser Team wird sich bei Ihnen melden"
+    "formInfo": "Füllen Sie das Formular aus, und unser Team wird sich bei Ihnen melden",
+    "form": {
+      "headline": "Haben Sie eine Frage?",
+      "subHeadline": "Schreiben Sie uns, und unser Team wird sich mit Ihnen in Verbindung setzen",
+      "send": "Senden",
+      "maxLength1000": "Die Nachricht sollte nicht mehr als 1000 Zeichen enthalten",
+      "requiredFields": "Pflichtfelder",
+      "thankYouMsg": "Vielen Dank für das Ausfüllen des Formulars",
+      "thankYouMsgDesc": "Unser Team wird sich bald bei Ihnen melden!",
+      "contactFormLabel": "Kontaktformular",
+      "contactFormThankYouMsg": "Vielen Dank für das Ausfüllen des Kontaktformulars",
+      "msg": "Unser Team wird sich bald mit Ihnen in Verbindung setzen"
+    },
+    "info": {
+      "polandHeadquarters": "Hauptsitz in Polen",
+      "germanyHeadquarters": "Hauptsitz in Deutschland"
+    },
+    "team": {
+      "team": "Team",
+      "position": {
+        "ceo": "CEO",
+        "director": "Direktor"
+      }
+    }
   },
   "error": {
-    "message": "Die angeforderte Seite existiert nicht",
+    "message": "Die Seite unter der angegebenen Adresse existiert nicht",
     "back": "Zurück zur",
     "home": "Startseite"
   },
   "employeeZone": {
     "title": "Mitarbeiterbereich",
-    "rightPlace": "Sie sind am richtigen Ort",
-    "rightPlaceDesc": "Wir freuen uns, dass Sie hier sind. Suchen Sie nach Arbeit, sei es Ihre erste oder eine weitere, oder möchten Sie den Job wechseln? Sie können sicher sein, dass Sie am richtigen Ort sind. Sie werden feststellen, dass der Prozess der Jobsuche oder -wechsel eine spannende Reise sein kann, die Ihr Leben zum Besseren verändern wird!",
-    "weLiekYou": "Wir mögen Sie!",
-    "weLikeYouDesc": "Wir arbeiten mit Ihnen und für Sie. Wir möchten Sie gut kennenlernen und mögen, denn nur so können wir effektiv arbeiten. Wir möchten, dass Sie in jedem Schritt zufrieden sind.",
-    "helpMessage": "Wir helfen Ihnen bei allem, und Sie können uns alles fragen."
+    "rightPlace": "Du bist am richtigen Ort",
+    "rightPlaceDesc": "Wir freuen uns, dass du hier bist. Suchen Sie nach Arbeit - der ersten oder einer weiteren - oder möchten Sie möglicherweise Ihren Job wechseln? Sie können sicher sein, dass Sie am richtigen Ort sind. Sie werden feststellen, dass die Suche oder der Wechsel des Jobs zu einem spannenden Abenteuer werden kann, das Ihr Leben zum Besseren verändert!",
+    "weLiekYou": "Wir mögen dich!",
+    "weLikeYouDesc": "Wir arbeiten mit Ihnen und für Sie. Wir möchten Sie gut kennenlernen und mögen, denn nur dann können wir effektiv arbeiten. Wir möchten, dass Sie während jeder Phase Zufriedenheit erleben.",
+    "helpMessage": "Wir helfen Ihnen bei allem, und Sie können uns alles fragen.",
+    "quote": "\"Ein guter Mitarbeiter ist jemand, der effektiv mit anderen zusammenarbeiten, Probleme lösen und sich darauf konzentrieren kann, seine Fähigkeiten zu entwickeln.\" - John C. Maxwell",
+    "profits": {
+      "profitsHeadline": "Was gewinnen Sie durch uns?",
+      "pros": {
+        "label": "Wir garantieren Mitarbeitern",
+        "germanAgreement": "Deutschen Vertrag",
+        "employmentSecurity": "Beschäftigungssicherheit",
+        "salary": "Hohe Gehälter",
+        "attractiveOffers": "Attraktive Jobangebote",
+        "hours": "Flexible Arbeitszeiten",
+        "support": "Berufsberatung"
+      },
+      "employees": {
+        "label": "Unsere Mitarbeiter schätzen",
+        "support": "Ständige Unterstützung unseres Unternehmens",
+        "offers": "Ein breites Angebot an Jobmöglichkeiten",
+        "coordination": "Professionelle Koordination unserer Aktivitäten",
+        "quality": "Hohe Qualität unserer ständig erweiterten Dienstleistungen"
+      }
+    },
+    "recruitment": {
+      "headline": "Wie läuft der Rekrutierungsprozess ab?",
+      "step1": {
+        "headline": "Füllen Sie das Bewerbungsformular auf der Seite des entsprechenden Angebots aus",
+        "description": "Wenn Sie sich um Arbeit im Ausland bewerben möchten, nutzen Sie noch heute unsere Agentur. Senden Sie Ihre Unterlagen per E-Mail oder bewerben Sie sich bequem über unser HR-System. Wir benötigen einen Lebenslauf in polnischer oder deutscher Sprache sowie Arbeitszeugnisse/Referenzen, die Ihre erforderlichen Qualifikationen bestätigen."
+      },
+      "step2": {
+        "headline": "Wir setzen uns mit Ihnen in Verbindung",
+        "description": "Innerhalb weniger Tage wird sich unser Recruiter mit Ihnen in Verbindung setzen und das erste Gespräch führen. Wir überprüfen die in Ihrem Lebenslauf enthaltenen Informationen, erkundigen uns nach den für Sie interessanten Jobangeboten und beantworten Ihre Fragen. Sie erhalten detaillierte Informationen zu unseren Jobangeboten."
+      },
+      "step3": {
+        "headline": "Wir senden Ihren Lebenslauf an den Arbeitgeber",
+        "description": "In einem weiteren Schritt wird Ihr Lebenslauf an den Arbeitgeber gesendet."
+      },
+      "step4": {
+        "headline": "Wir vereinbaren ein Vorstellungsgespräch",
+        "description": "Wenn der Arbeitgeber an Ihrer Kandidatur interessiert ist, vereinbaren wir ein Vorstellungsgespräch auf Deutsch. Das Gespräch findet telefonisch oder über einen Online-Messenger statt."
+      },
+      "step5": {
+        "headline": "Wir unterzeichnen den Vertrag, und Sie beginnen zu arbeiten",
+        "description": "Wenn sowohl Sie als auch der Arbeitgeber an einer Zusammenarbeit interessiert sind, unterzeichnen wir den Vertrag, und Sie können Ihre Arbeit aufnehmen!"
+      }
+    }
   },
   "employerZone": {
-    "title": "Arbeitgeberbereich",
+    "title": "Arbeitgeberzone",
     "forEmployers": "Für Arbeitgeber",
-    "forEmployersDesc": "Unsere Arbeitsagentur richtet ihr Angebot auch an Arbeitgeber, die qualifizierte Mitarbeiter suchen. Benötigen Sie loyale Mitarbeiter für langfristige Aufträge? Oder haben Sie einen plötzlichen Anstieg der Bestellungen bemerkt und benötigen sofort zusätzliche Mitarbeiter? Wir haben erfahrene Spezialisten für Sie!",
-    "whyBroker": "Warum sollten Sie die Hilfe eines Vermittlers in Anspruch nehmen?",
-    "ourPriority": "Unsere Priorität ist, dass Ihr Unternehmen sich richtig entwickeln kann",
-    "lookForMessage": "Wenn Sie nach Informatikern, Managern, Mechatronikern oder Produktionsmitarbeitern suchen, finden wir sie für Sie!",
-    "qualifiedWorkers": "Wir möchten, dass Sie mit qualifizierten Spezialisten zusammenarbeiten, von denen jeder wertvolle Leistungen für Ihr Team erbringen kann, was letztendlich Ihr Unternehmen auf ein neues, höheres Niveau hebt. Wenn Sie sich in Bezug auf die Qualität Ihres Mitarbeiter-Teams sicher fühlen möchten, füllen Sie bitte das unten stehende Formular aus, und wir werden uns bei Ihnen melden.",
-    "profits": "Was gewinnen Sie durch uns?"
+    "forEmployersDesc": "Unsere Arbeitsvermittlungsagentur bietet auch Dienstleistungen für Arbeitgeber an, die qualifizierte Mitarbeiter suchen. Benötigen Sie zuverlässige Arbeitskräfte für langfristige Aufträge? Oder haben Sie einen plötzlichen Anstieg der Bestellungen bemerkt und benötigen sofort zusätzliche Mitarbeiter? Wir haben erfahrene Fachleute für Sie!",
+    "whyBroker": "Warum es sich lohnt, die Hilfe eines Vermittlers in Anspruch zu nehmen?",
+    "ourPriority": "Unsere Priorität ist es, sicherzustellen, dass Ihr Unternehmen sich optimal entwickeln kann",
+    "lookForMessage": "Wenn Sie nach einem Informatiker, Manager, Mechatroniker oder Produktionsmitarbeiter suchen, werden wir ihn für Sie finden!",
+    "qualifiedWorkers": "Wir möchten, dass Sie mit qualifizierten Fachleuten zusammenarbeiten, von denen jeder in der Lage ist, wertvolle Beiträge zu Ihrem Team zu leisten, was letztendlich Ihr Unternehmen auf ein neues, höheres Niveau hebt. Wenn Sie Ruhe und Gewissheit in Bezug auf die Qualität Ihres Mitarbeiterteams haben möchten, füllen Sie bitte das unten stehende Formular aus, und wir werden uns mit Ihnen in Verbindung setzen.",
+    "profits": "Was werden Sie durch uns gewinnen?",
+    "quote": "\"Ein Arbeitgeber, der in Menschen investiert, ist der Schlüssel zum Erfolg. Er kümmert sich um die Entwicklung seiner Mitarbeiter, gibt ihnen die Möglichkeit zu lernen und sich weiterzuentwickeln, und schafft Bedingungen, um ihr volles Potenzial zu entfalten.\" - Richard Branson",
+    "list": {
+      "pros": {
+        "label": "Was unsere Zusammenarbeit für Arbeitgeber wertvoll macht",
+        "professionals": "Breite Palette von Fachleuten",
+        "shortTime": "Kurze Bearbeitungszeit",
+        "value": "Wir verfügen über viele qualifizierte Fachleute in verschiedenen Bereichen",
+        "improvement": "Wir entwickeln uns ständig weiter"
+      },
+      "industries": {
+        "label": "Branchen, in denen wir Ihnen helfen können",
+        "moto": "Automobilindustrie - Fahrer, Mechaniker, Mechatroniker, Elektriker",
+        "production": "Produktion - Maschinenbediener, Produktionsmitarbeiter",
+        "help": "Seniorenbetreuung - Betreuer, Pfleger, Krankenschwester",
+        "crafting": "Handwerksberufe - Schweißer, Schlosser, Lackierer usw."
+      }
+    },
+    "process": {
+      "headline": "Wie sieht der Prozess der Mitarbeitergewinnung aus?",
+      "step1": {
+        "headline": "Informationsgespräch",
+        "description": "Der erste Schritt ist ein Informationsgespräch, das entweder in unserem Büro oder online stattfinden kann. In diesem Gespräch besprechen wir Ihre Bedürfnisse und Anforderungen in Bezug auf die Einstellung von Fachkräften."
+      },
+      "step2": {
+        "headline": "Durchsuchen der Kandidatendatenbank",
+        "description": "Anschließend durchsucht unser auf das jeweilige Fachgebiet spezialisierter Personalvermittler die Kandidatendatenbank, um Ihnen die besten Lösungen anzubieten. Wir verfügen über eigene Mitarbeiterdatenbanken, was es uns ermöglicht, erstklassige Dienstleistungen anzubieten."
+      },
+      "step3": {
+        "headline": "Auswahl des Kandidaten",
+        "description": "Nachdem der geeignete Kandidat gefunden wurde, stellen wir ihn unter festgelegten Bedingungen ein. Nach jeder Arbeitsperiode stellen wir Ihnen eine Rechnung aus, um alles transparent und gemäß Vertrag zu halten."
+      },
+      "step4": {
+        "headline": "Wir kümmern uns um die Zufriedenheit von Arbeitgeber und Mitarbeiter",
+        "description": "Wir stehen in ständigem Kontakt sowohl mit dem Arbeitgeber als auch dem Mitarbeiter und achten auf die Qualität der erbrachten Dienstleistungen. Wertvolles Feedback von Ihnen ist für uns äußerst wichtig, da es uns hilft, unsere Dienstleistungen kontinuierlich zu verbessern."
+      }
+    }
   },
   "footer": {
     "kjworkgroup": "KJ WORK GROUP",
-    "kjworkgroupDesc": "Unsere Arbeitsagentur ist das Tor zum deutschen Arbeitsmarkt. Wir bieten vielfältige Positionen in Deutschland und unterstützen Sie bei der Rekrutierung und Integration im Ausland. Wir helfen Ihnen, wertvolle berufliche Erfahrungen in der dynamischen deutschen Umgebung zu sammeln.",
-    "rightsReserved": "2023 © KJ Work Group, alle Rechte vorbehalten"
+    "kjworkgroupDesc": "Unsere Arbeitsagentur ist das Tor zum deutschen Arbeitsmarkt. Wir bieten vielfältige Positionen in Deutschland an und unterstützen Sie bei der Rekrutierung und Integration im Ausland. Wir helfen Ihnen, wertvolle berufliche Erfahrungen in der dynamischen deutschen Umgebung zu sammeln.",
+    "rightsReserved": "2023 © KJ Work Group, alle Rechte vorbehalten",
+    "links": "Links",
+    "resources": "Ressourcen",
+    "aboutUs": "Über uns",
+    "offers": "Stellenangebote",
+    "contact": "Kontakt",
+    "employeeZone": "Für Mitarbeiter",
+    "employerZone": "Für Arbeitgeber"
+  },
+  "breadcrumbs": {
+    "home": "Startseite",
+    "offers": "Stellenangebote"
+  },
+  "form": {
+    "chooseCity": "Stadt auswählen",
+    "sort": {
+      "sortBy": "Sortieren nach",
+      "oldest": "Älteste zuerst",
+      "newest": "Neueste zuerst"
+    },
+    "validation": {
+      "min2Length": "Mindestens 2 Zeichen",
+      "min10Length": "Mindestens 10 Zeichen",
+      "max255Length": "Maximal 255 Zeichen",
+      "max1000Length": "Maximal 1000 Zeichen",
+      "required": "Pflichtfeld",
+      "correctEmail": "Geben Sie eine gültige E-Mail-Adresse ein"
+    }
+  },
+  "layout": {
+    "offersLabel": "Stellenangebote",
+    "navigation": {
+      "home": "Startseite",
+      "aboutUs": "Über uns",
+      "employeeZone": "Für Mitarbeiter",
+      "employerZone": "Für Arbeitgeber",
+      "contact": "Kontakt"
+    }
   }
 }

@@ -1,4 +1,5 @@
 import { Filter } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -12,13 +13,14 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 
-import { AgreementTypeMobileFilters } from './agreement-type-mobile-filters';
-import { IndustryFilters } from './industry-filters';
+import { AgreementTypeMobileFilters } from './agreement-type-mobile-filters/agreement-type-mobile-filters';
+import { IndustryFilters } from './industry-filters/industry-filters';
 
 // TODO: CREATE MOBILE FILTERS FORM
 // TODO: DYNAMIC IMPORT FOR FILTERS
 
 export const MobileFilters = () => {
+  const t = useTranslations('offers.filters');
   return (
     <Dialog>
       <DialogTrigger>
@@ -26,7 +28,7 @@ export const MobileFilters = () => {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Filtruj wyniki wyszukiwania</DialogTitle>
+          <DialogTitle>{t('headlineFilters')}</DialogTitle>
         </DialogHeader>
         <DialogDescription>
           <div className="space-y-5">
@@ -36,8 +38,8 @@ export const MobileFilters = () => {
           </div>
         </DialogDescription>
         <DialogFooter className="flex-row justify-end gap-2.5">
-          <Button>Zapisz filtry</Button>
-          <Button variant="destructive">Wyczyść filtry</Button>
+          <Button>{t('saveFilters')}</Button>
+          <Button variant="destructive">{t('clearFilters')}</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

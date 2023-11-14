@@ -39,6 +39,9 @@
   },
   "offer": {
     "apply": "Aplikuj",
+    "jobDescription": "Opis stanowiska",
+    "check": "Sprawdź",
+    "added": "Dodano",
     "form": {
       "headline": "Aplikuj na to stanowisko",
       "subHeadline": "Aby aplikować wypełnij poniższy formularz"
@@ -48,9 +51,31 @@
       "agreement_type": "Typ umowy",
       "expiration_date": "Oferta wygasa",
       "location": "Lokalizacja"
+    },
+    "list": {
+      "duties": "Obowiązki",
+      "requirements": "Wymagania",
+      "offer": "Oferta"
     }
   },
-  "offers": {},
+  "offers": {
+    "agreementType": "Typ umowy",
+    "filters": {
+      "headlineFilters": "Filtruj wyniki wyszukiwania",
+      "saveFilters": "Zapisz filtry",
+      "clearFilters": "Wyczyść filtry",
+      "availableOffers": "Dostępne oferty",
+      "results": "Znaleziono {results} oferty",
+      "filters": "Filtry",
+      "save": "Zapisz",
+      "searchByName": "Szukaj po nazwie stanowiska",
+      "typeName": "Wpisz nazwę stanowiska",
+      "search": "Szukaj"
+    },
+    "findYourOfferHeadline": "Znajdź odpowiednią ofertę i",
+    "findYourOfferDesc": "Przeszukaj nasze oferty i znajdź coś dla siebie",
+    "apply": "zaaplikuj"
+  },
   "contact": {
     "contact": "Kontakt",
     "contactInvitation": "Zapraszamy do kontaktu",
@@ -64,7 +89,10 @@
       "maxLength1000": "Wiadomość nie powinna przekraczać 1000 znaków",
       "requiredFields": "pola wymagane",
       "thankYouMsg": "Dziękujemy za wypełnienie formularza",
-      "thankYouMsgDesc": "Nasz zespół się wkrótce do Ciebie odezwie!"
+      "thankYouMsgDesc": "Nasz zespół się wkrótce do Ciebie odezwie!",
+      "contactFormLabel": "Formularz kontaktowy",
+      "contactFormThankYouMsg": "Dziękujemy za wypełnienia fomrularza kontaktowego",
+      "msg": "Nasz zespół wkrótce skontaktuje się z Tobą"
     },
     "info": {
       "polandHeadquarters": "Siedziba w Polsce",
@@ -147,7 +175,7 @@
     "list": {
       "pros": {
         "label": "Co cenią współpracujący z nami pracodawcy",
-        "proffessionals": "Szeroką bazę ofert fachowców",
+        "professionals": "Szeroką bazę ofert fachowców",
         "shortTime": "Krótki czas wykonania zlecenia",
         "value": "Dysponujemy dużą liczbą wykwalifikowanych specjalistów w wielu dziedzinach",
         "improvement": "Ciągle się rozwijamy"
@@ -161,33 +189,36 @@
       }
     },
     "process": {
-      "headline": "Jak przebiega proces rekrutacji?",
+      "headline": "Jak wygląda proces zatrudnienia pracownika?",
       "step1": {
-        "headline": "Wypełnij formularz aplikujący na stronie danej oferty",
-        "description": "Jeśli chcesz ubiegać się o pracę za granicą korzystając z pośrednictwa naszej agencji - już dziś prześlij dokumenty drogą mailową lub wygodnie zaaplikuj przez nasz system HR. Będziemy potrzebować CV w języku polskim lub w języku niemieckim oraz świadectwa pracy / referencje potwierdzające wymagane kwalifikacje."
+        "headline": "Spotkanie informacyjne",
+        "description": "Pierwszy krok to spotkanie informacyjne, które może odbyć się w naszej siedzibie lub online. Na tym spotkaniu omawiamy Państwa potrzeby i wymagania związane z zatrudnieniem specjalistów."
       },
       "step2": {
-        "headline": "Skontaktujemy się z Tobą",
-        "description": "W przeciągu kilku dni skontaktuje się z Tobą nasz rekruter i przeprowadzi pierwszą rozmowę - zweryfikuje dane zawarte w CV, wypyta o interesujące Cię oferty pracy, odpowie na Twoje pytania. Będziesz mógł poznać szczegóły dotyczące naszych ofert pracy."
+        "headline": "Przeszukanie bazy Kandydatów",
+        "description": "Następnie nasz rekruter specjalizujący się w danej dziedzinie przystępuje do przeszukiwania bazy kandydatów, aby zaproponować Państwu najlepsze rozwiązania. Dysponujemy własnymi bazami pracowników, co pozwala nam świadczyć usługi na najwyższym poziomie."
       },
       "step3": {
-        "headline": "Wyślemy Twoje CV dla pracodawcy",
-        "description": "W kolejnym etapie Twoje CV zostanie wysłane do pracodawcy."
+        "headline": "Wybór Kandydata",
+        "description": "Po znalezieniu odpowiedniego kandydata, zatrudniamy go na określonych warunkach. Po każdym okresie pracy wystawiamy Państwu fakturę, aby wszystko było transparentne i zgodne z umową."
       },
       "step4": {
-        "headline": "Umówimy Cię na rozmowę rekrutacyjną",
-        "description": "Jeśli pracodawca będzie zainteresowany Twoją kandydaturą - umówimy Cię na rozmowę rekrutacyjną w języku niemieckim. Rozmowa odbędzie się przez telefon lub komunikator internetowy."
-      },
-      "step5": {
-        "headline": "Podpisujemy umowę i zaczynasz pracę",
-        "description": "Jeśli zarówno Ty jak i pracodawca będziecie zainteresowani współpracą - podpisujemy umowę i zaczynasz pracę!"
+        "headline": "Dbamy o zadowolenie Pracodawcy i Pracownika",
+        "description": "Jesteśmy w stałym kontakcie zarówno z Pracodawcą, jak i Pracownikiem, dbając o jakość świadczonych usług. Cenne informacje zwrotne od Państwa są dla nas niezwykle istotne, ponieważ pomagają nam ciągle doskonalić nasze usługi."
       }
     }
   },
   "footer": {
     "kjworkgroup": "KJ WORK GROUP",
     "kjworkgroupDesc": "Nasza agencja pracy to brama do niemieckiego rynku pracy. Oferujemy różnorodne stanowiska w Niemczech, zapewniając wsparcie w procesie rekrutacji i integracji za granicą. Pomagamy zdobyć cenne doświadczenie zawodowe w dynamicznym środowisku niemieckim.",
-    "rightsReserved": "2023 © KJ Work Group, wszystkie prawa zastrzeżone"
+    "rightsReserved": "2023 © KJ Work Group, wszystkie prawa zastrzeżone",
+    "links": "Linki",
+    "resources": "Zasoby",
+    "aboutUs": "O nas",
+    "offers": "Oferty pracy",
+    "contact": "Kontakt",
+    "employeeZone": "Dla pracownika",
+    "employerZone": "Dla pracodawcy"
   },
   "breadcrumbs": {
     "home": "Strona główna",
@@ -207,6 +238,16 @@
       "max1000Length": "Maksymlanie 1000 znaków",
       "required": "Pole wymagane",
       "correctEmail": "Wpisz prawidłowy adres email"
+    }
+  },
+  "layout": {
+    "offersLabel": "Oferty pracy",
+    "navigation": {
+      "home": "Strona główna",
+      "aboutUs": "O nas",
+      "employeeZone": "Dla pracownika",
+      "employerZone": "Dla pracodawcy",
+      "contact": "Kontakt"
     }
   }
 }

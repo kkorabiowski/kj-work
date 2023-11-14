@@ -24,7 +24,7 @@ export const ContactLayoutForm = () => {
   return (
     <Card>
       <CardHeader>
-        <h2 className="text-center">Formularz kontaktowy</h2>
+        <h2 className="text-center">{t('contactFormLabel')}</h2>
       </CardHeader>
       <CardContent>
         {!form.formState.isSubmitSuccessful ? (
@@ -48,7 +48,6 @@ export const ContactLayoutForm = () => {
                   )}
                 />
               ))}
-
               <div className="flex justify-center">
                 <Button
                   type="submit"
@@ -63,12 +62,8 @@ export const ContactLayoutForm = () => {
           </Form>
         ) : (
           <div className="space-y-5">
-            <h3 className="text-center">
-              Dziękujemy za wypełnienia fomrularza kontaktowego
-            </h3>
-            <h5 className="text-center">
-              Nasz zespół wkrótce skontaktuje się z Tobą
-            </h5>
+            <h3 className="text-center">{t('contactFormThankYouMsg')}</h3>
+            <h5 className="text-center">{t('msg')}</h5>
           </div>
         )}
       </CardContent>

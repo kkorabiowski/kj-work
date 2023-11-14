@@ -5,7 +5,8 @@ import {
   MapPin,
   ScrollText,
 } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 import { Avatar } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -33,6 +34,7 @@ export const OfferItem = ({
   industry,
   created_at,
 }: Props) => {
+  const t = useTranslations('offer');
   return (
     <Card>
       <div className="flex justify-between items-center gap-5 p-2.5">
@@ -69,7 +71,7 @@ export const OfferItem = ({
               <div className="hidden md:flex items-center gap-1.5">
                 <Clock4 className="inline-block w-3 h-3" />
                 <p className="text-muted-foreground">
-                  Dodano: {created_at?.slice(0, 10)}
+                  {t('added')}: {created_at?.slice(0, 10)}
                 </p>
               </div>
             </div>
@@ -77,7 +79,7 @@ export const OfferItem = ({
         </div>
         <Link href={`/oferty-pracy/${id}`}>
           <Button variant="default" className="hidden md:inline-flex">
-            Sprawdź
+            {t('check')}
           </Button>
           <Button variant="default" size="icon" className="md:hidden">
             <ChevronRightCircle size={20} />

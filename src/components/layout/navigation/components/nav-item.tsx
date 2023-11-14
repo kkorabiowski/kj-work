@@ -1,8 +1,9 @@
 'use client';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useSelectedLayoutSegment } from 'next/navigation';
 
 import { cn } from '@/lib/utils';
+
+import { Link } from '@/navigation';
 
 type Props = {
   label: string;
@@ -12,7 +13,8 @@ type Props = {
 };
 
 export const NavItem = ({ href, label, className, isFooter }: Props) => {
-  const pathname = usePathname();
+  const selectedLayoutSegment = useSelectedLayoutSegment();
+  const pathname = selectedLayoutSegment ? `/${selectedLayoutSegment}` : '/';
   const isActive = pathname === href;
   return (
     <Link

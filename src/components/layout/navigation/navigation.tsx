@@ -1,5 +1,4 @@
 'use client';
-import Link from 'next/link';
 import React from 'react';
 
 import { cn } from '@/lib/utils';
@@ -8,6 +7,8 @@ import { useWindowSize } from '@/hooks/use-window-size';
 
 import { Container } from '@/components/commons/container';
 import { Icon } from '@/components/commons/icon/icon';
+
+import { Link } from '@/navigation';
 
 import { DesktopMenu } from './components/desktop-menu';
 import { MobileMenu } from './components/mobile-menu';

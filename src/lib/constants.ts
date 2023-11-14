@@ -28,33 +28,6 @@ export const navItems = [
   },
 ];
 
-export const footerLinks = {
-  links: [
-    {
-      label: 'O nas',
-      href: '/o-nas',
-    },
-    {
-      label: 'Oferty pracy',
-      href: '/oferty-pracy',
-    },
-    {
-      label: 'Kontakt',
-      href: '/kontakt',
-    },
-  ],
-  resources: [
-    {
-      label: 'Dla pracownika',
-      href: '/dla-pracownika',
-    },
-    {
-      label: 'Dla pracodawcy',
-      href: '/dla-pracodawcy',
-    },
-  ],
-};
-
 export const filters = [
   {
     groupLabel: 'Tryb zatrudnienia',

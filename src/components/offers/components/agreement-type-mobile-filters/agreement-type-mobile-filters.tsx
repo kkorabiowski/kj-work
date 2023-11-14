@@ -1,8 +1,6 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
+import { useTranslations } from 'next-intl';
 
 import { Checkbox } from '@/components/ui/checkbox';
 import {
@@ -14,36 +12,15 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 
-const items = [
-  { label: 'Budownictwo', id: 'construction' },
-  { label: 'Transport', id: 'transport' },
-  { label: 'Gastronomia', id: 'gastronomy' },
-  { label: 'Logistyka', id: 'logistic' },
-  { label: 'Produkcja', id: 'production' },
-  { label: 'IT', id: 'it' },
-] as const;
+import { useAgreementTypeMobileFilters } from './agreement-type-mobile-filters.controller';
 
-const formSchema = z.object({
-  items: z.array(z.string()).refine(value => value.some(item => item), {
-    message: 'You have to select at least one item.',
-  }),
-});
-
-export const IndustryFilters = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      items: ['recents', 'home'],
-    },
-  });
-
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    console.log(data);
-  }
+export const AgreementTypeMobileFilters = () => {
+  const t = useTranslations('offers');
+  const { form, items, onSubmit } = useAgreementTypeMobileFilters();
 
   return (
     <div className="space-y-4">
-      <h6>Typ umowy</h6>
+      <h6>{t('agreementType')}</h6>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField

@@ -1,6 +1,6 @@
 'use client';
 import { Container } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 
 import { useHomeOffersQuery } from '@/hooks/queries/use-home-offers-query';

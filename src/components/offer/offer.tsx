@@ -1,14 +1,16 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { useOfferQuery } from '@/hooks/queries/use-offer-query';
 
 import { Container } from '@/components/commons/container';
+import { Skeleton } from '@/components/commons/skeleton';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 import { ApplyForm } from './components/apply-form/apply-form';
 import { OfferContentList } from './components/offer-content-list';
 import { OfferHeader } from './components/offer-header';
-import { Skeleton } from '../commons/skeleton';
 
 export type TOffer = {
   id: string;
@@ -30,6 +32,7 @@ export type TOffer = {
 };
 
 export const Offer = ({ id }: { id: string }) => {
+  const t = useTranslations('offer');
   const { data, error } = useOfferQuery(id);
   const offer: TOffer = data?.offer;
 
@@ -50,22 +53,28 @@ export const Offer = ({ id }: { id: string }) => {
             <div className="flex-1 md:w-7/12 space-y-5">
               <Card>
                 <CardHeader>
-                  <h2>Opis stanowiska</h2>
+                  <h2>{t('jobDescription')}</h2>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-5">
                     <p>{offer.description}</p>
                     {offer.duties ? (
-                      <OfferContentList label="Obowiązki" list={offer.duties} />
+                      <OfferContentList
+                        label={t('list.duties')}
+                        list={offer.duties}
+                      />
                     ) : null}
                     {offer.requirements ? (
                       <OfferContentList
-                        label="Wymagania"
+                        label={t('list.requirements')}
                         list={offer.requirements}
                       />
                     ) : null}
                     {offer.offer ? (
-                      <OfferContentList label="Oferta" list={offer.offer} />
+                      <OfferContentList
+                        label={t('list.offer')}
+                        list={offer.offer}
+                      />
                     ) : null}
                     <p>{offer.summary}</p>
                   </div>

@@ -1,18 +1,20 @@
 import { Menu } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
-
-import { navItems } from '@/lib/constants';
 
 import { LanguageSelect } from '@/components/commons/language-select';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 import { NavItem } from './nav-item';
+import { useNavItems } from '../navigation.controller';
 
 export const MobileMenu = () => {
+  const t = useTranslations('layout');
   const [isOpen, setIsOpen] = useState(false);
+  const { navItems } = useNavItems();
   const pathname = usePathname();
 
   useEffect(() => {
@@ -34,7 +36,7 @@ export const MobileMenu = () => {
               <NavItem key={navItem.id} {...navItem} />
             ))}
             <Link href="/oferty-pracy">
-              <Button variant="accent">Oferty pracy</Button>
+              <Button variant="accent">{t('offersLabel')}</Button>
             </Link>
           </div>
         </SheetContent>

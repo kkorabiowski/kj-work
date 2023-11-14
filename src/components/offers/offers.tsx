@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import { useWindowSize } from '@/hooks/use-window-size';
 
 import { Container } from '@/components/commons/container';
@@ -13,6 +15,7 @@ import { useOffers } from './offers.controller';
 // TODO: MENU DYNAMIC IMPORT
 
 export const Offers = () => {
+  const t = useTranslations('offers');
   const size = useWindowSize();
   const { form, onSubmit } = useOffers();
 
@@ -20,11 +23,11 @@ export const Offers = () => {
     <Container className="mt-10">
       <div className="bg-text-muted space-y-2">
         <h1 className="text-primary text-center">
-          Znajdź odpowiednią ofertę i{' '}
-          <span className="text-accent">zaaplikuj</span>
+          {t('findYourOfferHeadline')}
+          <span className="text-accent">&nbsp;{t('apply')}</span>
         </h1>
         <p className="text-muted-foreground text-center">
-          Przeszukaj nasze oferty i znajdź coś dla siebie
+          {t('findYourOfferDesc')}
         </p>
       </div>
       <SearchPanel />

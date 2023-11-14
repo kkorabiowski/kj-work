@@ -1,13 +1,13 @@
 import { useTranslations } from 'next-intl';
 
-import { footerLinks } from '@/lib/constants';
-
 import { Container } from '@/components/commons/container';
 import { Icon } from '@/components/commons/icon/icon';
 
 import { FooterNavGroup } from './components/footer-nav-group';
+import { useFooter } from './footer.controller';
 
 export const Footer = () => {
+  const { footerLinks } = useFooter();
   const t = useTranslations('footer');
   return (
     <div className="bg-primary">
@@ -21,8 +21,11 @@ export const Footer = () => {
               </p>
             </div>
             <div className="md:w-1/2 md:flex-row flex-col flex gap-10">
-              <FooterNavGroup headline="Linki" items={footerLinks.links} />
-              <FooterNavGroup headline="Zasoby" items={footerLinks.resources} />
+              <FooterNavGroup headline={t('links')} items={footerLinks.links} />
+              <FooterNavGroup
+                headline={t('resources')}
+                items={footerLinks.resources}
+              />
             </div>
           </div>
           <div className="flex justify-between items-center py-5 border-t border-muted-foreground/20">

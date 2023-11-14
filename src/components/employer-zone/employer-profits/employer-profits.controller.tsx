@@ -5,7 +5,7 @@ export const useEmployerProfits = () => {
   const pros = {
     label: t('pros.label'),
     profits: [
-      t('pros.proffessionals'),
+      t('pros.professionals'),
       t('pros.shortTime'),
       t('pros.value'),
       t('pros.improvement'),

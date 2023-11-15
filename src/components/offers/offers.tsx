@@ -30,7 +30,7 @@ export const Offers = () => {
           {t('findYourOfferDesc')}
         </p>
       </div>
-      <SearchPanel />
+      <SearchPanel form={form} />
       <div className="pt-10 pb-20">
         <section className="space-y-2.5 rounded-sm">
           <div className="flex gap-5">

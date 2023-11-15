@@ -27,7 +27,10 @@ export const Navigation = () => {
       <Container className="flex justify-between items-center gap-5">
         <div>
           <Link href="/">
-            <Icon name="logo-cropped-transparent" className="h-full w-44" />
+            <Icon
+              name="logo-cropped-transparent"
+              className="h-full w-36 md:w-44"
+            />
           </Link>
         </div>
 

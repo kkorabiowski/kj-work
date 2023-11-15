@@ -49,7 +49,6 @@ export const AddOfferForm = () => {
                 )}
               />
             ))}
-
             {textAreaFields.map(fieldName => (
               <FormField
                 key={fieldName}

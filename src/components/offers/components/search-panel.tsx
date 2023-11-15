@@ -1,10 +1,16 @@
 import { useTranslations } from 'next-intl';
+import { UseFormReturn } from 'react-hook-form';
 
-import { CitySelect } from '@/components/commons/city-select';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-export const SearchPanel = () => {
+import { TOffersFormSchema } from '../offers.controller';
+
+type Props = {
+  form: UseFormReturn<TOffersFormSchema>;
+};
+
+export const SearchPanel = ({ form }: Props) => {
   const t = useTranslations('offers.filters');
   return (
     <div className="mt-5">
@@ -12,11 +18,12 @@ export const SearchPanel = () => {
         <h4 className="text-primary">{t('searchByName')}</h4>
         <div className="flex flex-col md:flex-row gap-2.5 md:items-center">
           <div className="flex-1">
-            <Input placeholder={t('typeName')} />
+            <Input
+              placeholder={t('typeName')}
+              {...form.register('filters.search')}
+            />
           </div>
-          <div className="md:w-56">
-            <CitySelect />
-          </div>
+
           <Button
             variant="accent"
             size="lg"

@@ -1,10 +1,12 @@
 import { Raleway as FontSans } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { createTranslator, NextIntlClientProvider } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 import { ContactSection } from '@/components/layout/contact/contact-section';
 import { Footer } from '@/components/layout/footer/footer';
 import { Navigation } from '@/components/layout/navigation/navigation';
+import { Toaster } from '@/components/ui/toaster';
 
 import { QueryProvider } from '@/context/query-client-provider';
 
@@ -28,12 +30,32 @@ export const fontSans = FontSans({
   variable: '--font-sans',
 });
 
-export async function generateMetadata({ params: { locale } }: Props) {
-  const messages = await getMessages(locale);
-  const t = createTranslator({ locale, messages });
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations('metadata.home');
 
   return {
-    title: 'KJ WORK GROUP',
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: t('url'),
+      siteName: t('websiteName'),
+      images: [
+        {
+          url: t('image'),
+          width: 1200,
+          height: 630,
+        },
+      ],
+      locale: locale,
+      type: 'website',
+    },
   };
 }
 
@@ -53,6 +75,7 @@ export default async function LocaleLayout({
             <ContactSection />
             <Footer />
           </QueryProvider>
+          <Toaster />
         </NextIntlClientProvider>
       </body>
     </html>

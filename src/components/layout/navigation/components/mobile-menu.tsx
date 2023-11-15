@@ -1,12 +1,15 @@
 import { Menu } from 'lucide-react';
-import { Link } from '@/navigation';
 import { usePathname } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 import { LanguageSelect } from '@/components/commons/language-select';
+import { LogOutBtn } from '@/components/commons/log-out-btn';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+
+import { Link } from '@/navigation';
 
 import { NavItem } from './nav-item';
 import { useNavItems } from '../navigation.controller';
@@ -16,6 +19,7 @@ export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { navItems } = useNavItems();
   const pathname = usePathname();
+  const session = useSession();
 
   useEffect(() => {
     setIsOpen(false);
@@ -38,6 +42,10 @@ export const MobileMenu = () => {
             <Link href="/oferty-pracy">
               <Button variant="accent">{t('offersLabel')}</Button>
             </Link>
+            <Link href="/dashboard">
+              <NavItem label="Dashboard" href="/dashboard" />
+            </Link>
+            {session.data ? <LogOutBtn /> : null}
           </div>
         </SheetContent>
       </Sheet>

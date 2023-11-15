@@ -1,7 +1,7 @@
-import { Link } from '@/navigation';
-
 import { Container } from '@/components/commons/container';
 import { Button } from '@/components/ui/button';
+
+import { Link } from '@/navigation';
 
 import OffersTable from './components/offers-table';
 

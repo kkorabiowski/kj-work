@@ -13,7 +13,15 @@ export const ContactSection = () => {
   const t = useTranslations('contact');
 
   if (
-    ['/kontakt', '/dashboard', '/dashboard/dodaj-oferte'].includes(pathname)
+    [
+      '/kontakt',
+      '/dashboard',
+      '/dashboard/dodaj-oferte',
+      '/login',
+      '/de/kontakt',
+      '/de/dashboard',
+      '/de/dashboard/dodaj-oferte',
+    ].includes(pathname)
   ) {
     return null;
   }

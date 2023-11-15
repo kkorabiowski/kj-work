@@ -1,15 +1,17 @@
 'use client';
-
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import { useLoginMutation } from '@/hooks/mutations/use-login-mutation';
 
+import { toast } from '@/components/ui/use-toast';
+
+import { useRouter } from '@/navigation';
+
 export const useLoginForm = () => {
-  const { mutate, isPending } = useLoginMutation();
   const router = useRouter();
+  const { mutate, isPending } = useLoginMutation();
 
   const formSchema = z.object({
     username: z.string().min(2, {
@@ -28,17 +30,30 @@ export const useLoginForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    mutate(values, {
-      onError: () => {
-        console.log('error!');
-        form.reset();
+  function onSubmit(credentials: z.infer<typeof formSchema>) {
+    mutate(
+      {
+        credentials,
       },
-      onSuccess: () => {
-        console.log('Success!');
-        router.push('/dashboard');
-      },
-    });
+      {
+        onError: () => {
+          toast({
+            variant: 'destructive',
+            title: 'Nieprawidłowe dane',
+            description: 'Wpisz dane ponownie',
+          });
+          form.reset();
+        },
+        onSuccess: () => {
+          toast({
+            title: 'Zalogowano',
+          });
+          setTimeout(() => {
+            router.push('/dashboard');
+          }, 1000);
+        },
+      }
+    );
   }
 
   const fields = ['username', 'password'] as const;

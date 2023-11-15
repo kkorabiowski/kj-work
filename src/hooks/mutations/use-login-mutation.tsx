@@ -1,28 +1,30 @@
+'use client';
+
 import { useMutation } from '@tanstack/react-query';
+import { signIn } from 'next-auth/react';
 
 type TCredentials = {
   username: string;
   password: string;
 };
 
-const login = async (credentials: TCredentials) => {
-  try {
-    const response = await fetch('/api/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(credentials),
-    });
+type Props = {
+  credentials: TCredentials;
+};
 
-    if (!response.ok) {
-      throw new Error('Something went wrong');
+const login = async ({ credentials }: Props) => {
+  await signIn('credentials', {
+    ...credentials,
+    callbackUrl: '/login',
+    redirect: false,
+  }).then(callback => {
+    if (callback?.error) {
+      throw new Error('Error creating review');
     }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    throw new Error('Something went wrong');
-  }
+    if (callback?.ok) {
+      console.log('ok');
+    }
+  });
 };
 
 export const useLoginMutation = () =>

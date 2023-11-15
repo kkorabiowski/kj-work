@@ -4,7 +4,8 @@ datasource db {
 }
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 model Offer {
@@ -21,6 +22,8 @@ model Offer {
   requirements   String[]
   offer          String[]
   summary        String
+
+  @@fulltext([title])
 }
 
 model User {

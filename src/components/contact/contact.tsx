@@ -1,10 +1,10 @@
 import { useTranslations } from 'next-intl';
 
 import { Container } from '@/components/commons/container';
-import { MyMap } from '@/components/commons/google-map';
 
 import { ContactForm } from './components/contact-form/contact-form';
 import { ContactInfo } from './components/contact-info/contact-info';
+import { MapComponent } from './components/google-map/google-map';
 import { Team } from './components/team/team';
 
 export const Contact = () => {
@@ -25,7 +25,9 @@ export const Contact = () => {
           <Team />
         </div>
       </div>
-      <MyMap />
+      <div className="py-10 h-96 md:mb-0 md:h-96">
+        <MapComponent />
+      </div>
     </Container>
   );
 };

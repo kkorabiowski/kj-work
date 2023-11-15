@@ -226,5 +226,224 @@
     ],
     "offer": ["Competitive salary", "Summer vacation"],
     "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "UX/UI Designer",
+    "company": {
+      "name": "Design Innovators Co."
+    },
+    "agreement_type": "Full-time",
+    "location": "Austin, TX",
+    "industry": "Design",
+    "description": "Create intuitive and visually appealing user interfaces for digital products.",
+    "duties": ["Design user experiences", "Collaborate with development teams"],
+    "requirements": [
+      "Bachelor's degree in Design",
+      "3+ years of UX/UI design experience"
+    ],
+    "offer": ["Competitive salary", "Health insurance"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "Operations Manager",
+    "company": {
+      "name": "Efficient Operations Solutions"
+    },
+    "agreement_type": "Full-time",
+    "location": "Atlanta, GA",
+    "industry": "Operations",
+    "description": "Oversee and optimize daily business operations for efficiency.",
+    "duties": ["Streamline processes", "Manage resources"],
+    "requirements": [
+      "Bachelor's degree in Business",
+      "4+ years of operations management"
+    ],
+    "offer": ["Competitive salary", "401(k) matching"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "Social Media Specialist",
+    "company": {
+      "name": "ConnectSocial Marketing"
+    },
+    "agreement_type": "Part-time",
+    "location": "San Diego, CA",
+    "industry": "Marketing",
+    "description": "Develop and implement social media strategies to enhance brand presence.",
+    "duties": ["Manage social media accounts", "Create engaging content"],
+    "requirements": [
+      "Bachelor's degree in Marketing",
+      "2+ years of social media experience"
+    ],
+    "offer": ["Hourly wage", "Flexible part-time schedule"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "IT Support Specialist",
+    "company": {
+      "name": "TechSupport Solutions"
+    },
+    "agreement_type": "Contract",
+    "location": "Dallas, TX",
+    "industry": "Information Technology",
+    "description": "Provide technical support and troubleshooting for IT issues.",
+    "duties": ["Resolve hardware and software issues"],
+    "requirements": [
+      "Relevant IT certifications",
+      "2+ years of IT support experience"
+    ],
+    "offer": ["Hourly rate", "Flexible work hours"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "Event Coordinator",
+    "company": {
+      "name": "Event Excellence Co."
+    },
+    "agreement_type": "Full-time",
+    "location": "Orlando, FL",
+    "industry": "Event Management",
+    "description": "Plan and execute successful events, ensuring a seamless experience.",
+    "duties": [
+      "Coordinate event logistics",
+      "Collaborate with vendors and clients"
+    ],
+    "requirements": [
+      "Bachelor's degree in Event Management",
+      "Event planning experience"
+    ],
+    "offer": ["Competitive salary", "Travel opportunities"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "Research Scientist",
+    "company": {
+      "name": "Scientific Discoveries Inc."
+    },
+    "agreement_type": "Full-time",
+    "location": "Research Triangle Park, NC",
+    "industry": "Research",
+    "description": "Conduct innovative research in various scientific domains.",
+    "duties": [
+      "Design and conduct experiments",
+      "Analyze and interpret research data"
+    ],
+    "requirements": [
+      "Ph.D. in a relevant scientific field",
+      "Research experience"
+    ],
+    "offer": ["Competitive salary", "Research grants"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "Content Writer",
+    "company": {
+      "name": "ContentCreators Agency"
+    },
+    "agreement_type": "Freelance",
+    "location": "Remote",
+    "industry": "Content Creation",
+    "description": "Produce high-quality and engaging content for various platforms.",
+    "duties": ["Write blog posts, articles, and marketing copy"],
+    "requirements": [
+      "Proven experience as a content writer",
+      "Portfolio of published articles"
+    ],
+    "offer": ["Per-word payment", "Flexible work arrangement"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "Quality Assurance Tester",
+    "company": {
+      "name": "QualityTech Solutions"
+    },
+    "agreement_type": "Contract",
+    "location": "Phoenix, AZ",
+    "industry": "Quality Assurance",
+    "description": "Test software applications to ensure they meet quality standards.",
+    "duties": ["Execute test cases", "Identify and report software defects"],
+    "requirements": [
+      "Bachelor's degree in Computer Science",
+      "QA testing experience"
+    ],
+    "offer": ["Hourly rate", "Opportunity for long-term contracts"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "Environmental Engineer",
+    "company": {
+      "name": "GreenSolutions Engineering"
+    },
+    "agreement_type": "Full-time",
+    "location": "Portland, OR",
+    "industry": "Environmental Engineering",
+    "description": "Design and implement environmentally friendly solutions.",
+    "duties": [
+      "Conduct environmental impact assessments",
+      "Develop sustainable practices"
+    ],
+    "requirements": [
+      "Bachelor's degree in Environmental Engineering",
+      "Professional Engineering license"
+    ],
+    "offer": ["Competitive salary", "Green initiative bonuses"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "Supply Chain Analyst",
+    "company": {
+      "name": "SupplyLink Logistics"
+    },
+    "agreement_type": "Full-time",
+    "location": "Minneapolis, MN",
+    "industry": "Supply Chain",
+    "description": "Optimize supply chain processes and enhance overall efficiency.",
+    "duties": [
+      "Analyze supply chain data",
+      "Collaborate with vendors and distributors"
+    ],
+    "requirements": [
+      "Bachelor's degree in Supply Chain Management",
+      "Analytical skills"
+    ],
+    "offer": ["Competitive salary", "Performance bonuses"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "Cybersecurity Analyst",
+    "company": {
+      "name": "SecureNet Solutions"
+    },
+    "agreement_type": "Full-time",
+    "location": "Raleigh, NC",
+    "industry": "Cybersecurity",
+    "description": "Protect organizational systems and data from cyber threats.",
+    "duties": [
+      "Monitor security infrastructure",
+      "Respond to security incidents"
+    ],
+    "requirements": [
+      "Bachelor's degree in Cybersecurity or related field",
+      "Cybersecurity certifications"
+    ],
+    "offer": ["Competitive salary", "Professional development opportunities"],
+    "summary": "Teaching opportunity in Denver, CO."
+  },
+  {
+    "title": "Biomedical Researcher",
+    "company": {
+      "name": "BioInnovations Research Institute"
+    },
+    "agreement_type": "Full-time",
+    "location": "Cambridge, MA",
+    "industry": "Biomedical Research",
+    "description": "Contribute to cutting-edge biomedical research projects.",
+    "duties": [
+      "Design and conduct experiments",
+      "Analyze and publish research findings"
+    ],
+    "requirements": ["Ph.D. in Biomedical Sciences", "Research experience"],
+    "offer": ["Competitive salary", "Research grants"],
+    "summary": "Teaching opportunity in Denver, CO."
   }
 ]

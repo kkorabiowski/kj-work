@@ -29,20 +29,14 @@ type Offer = {
 };
 
 const OffersTable = () => {
-  const { isLoading, data, error } = useOffersQuery();
+  const { data, error, refetch } = useOffersQuery();
+
+  const refresh = () => {
+    refetch();
+  };
 
   if (error) {
     return <h1>Coś poszło nie tak...</h1>;
-  }
-
-  if (isLoading) {
-    return (
-      <div className="space-y-2.5 mt-10">
-        <Skeleton className="w-full h-10" />
-        <Skeleton className="w-full h-20" />
-        <Skeleton className="w-full h-20" />
-      </div>
-    );
   }
 
   return (
@@ -61,30 +55,57 @@ const OffersTable = () => {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {data.offers.map(
-          ({
-            agreement_type,
-            category,
-            company,
-            created_at,
-            id,
-            location,
-            expiration_date,
-            title,
-          }: Offer) => (
-            <TableRow key={id}>
-              <TableCell className="font-medium">{id}</TableCell>
-              <TableCell>{title}</TableCell>
-              <TableCell>{company.name}</TableCell>
-              <TableCell>{category || 'brak'}</TableCell>
-              <TableCell>{created_at.toString().slice(0, 10)}</TableCell>
-              <TableCell>{expiration_date || 'brak'}</TableCell>
-              <TableCell>Aktywna</TableCell>
-              <TableCell className="text-right">
-                <RowAction />
-              </TableCell>
-            </TableRow>
+        {data?.offers ? (
+          data.offers.map(
+            ({
+              category,
+              company,
+              created_at,
+              id,
+              expiration_date,
+              title,
+            }: Offer) => (
+              <TableRow key={id}>
+                <TableCell className="font-medium">{id}</TableCell>
+                <TableCell>{title}</TableCell>
+                <TableCell>{company.name}</TableCell>
+                <TableCell>{category || 'brak'}</TableCell>
+                <TableCell>{created_at.toString().slice(0, 10)}</TableCell>
+                <TableCell>{expiration_date || 'brak'}</TableCell>
+                <TableCell>Aktywna</TableCell>
+                <TableCell className="text-right">
+                  <RowAction offerId={id} refresh={refresh} />
+                </TableCell>
+              </TableRow>
+            )
           )
+        ) : (
+          <TableRow className="space-y-2.5 mt-10">
+            <TableCell>
+              <Skeleton className="w-full h-10" />
+            </TableCell>
+            <TableCell>
+              <Skeleton className="w-full h-10" />
+            </TableCell>
+            <TableCell>
+              <Skeleton className="w-full h-10" />
+            </TableCell>
+            <TableCell>
+              <Skeleton className="w-full h-10" />
+            </TableCell>
+            <TableCell>
+              <Skeleton className="w-full h-10" />
+            </TableCell>
+            <TableCell>
+              <Skeleton className="w-full h-10" />
+            </TableCell>
+            <TableCell>
+              <Skeleton className="w-full h-10" />
+            </TableCell>
+            <TableCell>
+              <Skeleton className="w-full h-10" />
+            </TableCell>
+          </TableRow>
         )}
       </TableBody>
     </Table>

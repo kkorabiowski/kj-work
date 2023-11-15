@@ -26,15 +26,18 @@ export async function GET(request: NextRequest, { params }: TParams) {
       offer,
     });
   } catch (error) {
-    return NextResponse.json({
-      message: 'Failed',
-    });
+    return NextResponse.json(
+      {
+        message: 'Failed',
+      },
+      { status: 404 }
+    );
   }
 }
 
 export async function PATCH(request: NextRequest, { params }: TParams) {
   try {
-    const session = getServerSession();
+    const session = await getServerSession();
     const body = await request.json();
 
     if (!session) {
@@ -65,7 +68,7 @@ export async function PATCH(request: NextRequest, { params }: TParams) {
 
 export async function DELETE(request: NextRequest, { params }: TParams) {
   try {
-    const session = getServerSession();
+    const session = await getServerSession();
 
     if (!session) {
       throw new Error('Unauthorized');
@@ -82,8 +85,13 @@ export async function DELETE(request: NextRequest, { params }: TParams) {
       offer,
     });
   } catch (error) {
-    return NextResponse.json({
-      message: 'Failed',
-    });
+    return NextResponse.json(
+      {
+        message: 'Failed',
+      },
+      {
+        status: 404,
+      }
+    );
   }
 }

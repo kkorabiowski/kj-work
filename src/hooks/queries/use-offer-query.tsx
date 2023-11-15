@@ -8,13 +8,11 @@ const getOffer = async (offerId: string) => {
     if (!response.ok) {
       throw new Error('Failed to fetch');
     }
-    const data = await response.json();
-    return data;
+    return await response.json();
   } catch (error) {
     throw new Error('Failed to fetch');
   }
 };
 
-export const useOfferQuery = (offerId: string) => {
-  return useQuery({ queryKey: ['offer'], queryFn: () => getOffer(offerId) });
-};
+export const useOfferQuery = (offerId: string) =>
+  useQuery({ queryKey: ['offer'], queryFn: () => getOffer(offerId) });

@@ -42,6 +42,7 @@
     "jobDescription": "Stellenbeschreibung",
     "check": "Überprüfen",
     "added": "Hinzugefügt",
+    "offerNotExits": "Das Angebot existiert nicht",
     "form": {
       "headline": "Für diese Position bewerben",
       "subHeadline": "Um sich zu bewerben, füllen Sie bitte das folgende Formular aus"

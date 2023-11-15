@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  const requestBody = await req.json();
+  const body = await req.json();
 
   return NextResponse.json({
     message: 'Success!',

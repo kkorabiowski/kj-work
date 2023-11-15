@@ -42,6 +42,7 @@
     "jobDescription": "Opis stanowiska",
     "check": "Sprawdź",
     "added": "Dodano",
+    "offerNotExits": "Oferta nie istnieje",
     "form": {
       "headline": "Aplikuj na to stanowisko",
       "subHeadline": "Aby aplikować wypełnij poniższy formularz"

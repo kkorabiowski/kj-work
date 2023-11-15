@@ -2,6 +2,8 @@
 
 import { MoreHorizontal } from 'lucide-react';
 
+import { useDeleteOfferMutation } from '@/hooks/mutations/use-delete-offer-mutation';
+
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -9,8 +11,31 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { toast } from '@/components/ui/use-toast';
 
-export const RowAction = () => {
+type Props = {
+  offerId: string;
+  refresh: () => void;
+};
+
+export const RowAction = ({ offerId, refresh }: Props) => {
+  const { mutate } = useDeleteOfferMutation();
+  const handleClick = () => {
+    mutate(
+      { offerId },
+      {
+        onSuccess: () => {
+          console.log('success');
+          refresh();
+          toast({
+            title: 'Usunięto ofertę',
+            description: 'Oferta usunięta pomyślnie',
+          });
+        },
+      }
+    );
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -24,7 +49,9 @@ export const RowAction = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
         <DropdownMenuItem>Edytuj</DropdownMenuItem>
-        <DropdownMenuItem className="text-destructive">Usuń</DropdownMenuItem>
+        <DropdownMenuItem className="text-destructive" onClick={handleClick}>
+          Usuń
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -1,4 +1,4 @@
-import { PartyPopper, Slack } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 import { Container } from '@/components/commons/container';
@@ -15,11 +15,11 @@ export const TrustedUs = () => {
           {t('trustedUs')}
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-5">
-          <TrustedUsItem icon={Slack} companyName="Slack INC" />
-          <TrustedUsItem icon={PartyPopper} companyName="Party" />
-          <TrustedUsItem icon={Slack} companyName="Slack INC" />
-          <TrustedUsItem icon={PartyPopper} companyName="Party" />
-          <TrustedUsItem icon={Slack} companyName="Slack INC" />
+          <TrustedUsItem icon={Building2} companyName="Nazwa" />
+          <TrustedUsItem icon={Building2} companyName="Nazwa" />
+          <TrustedUsItem icon={Building2} companyName="Nazwa" />
+          <TrustedUsItem icon={Building2} companyName="Nazwa" />
+          <TrustedUsItem icon={Building2} companyName="Nazwa" />
         </div>
       </Container>
     </section>

@@ -1,6 +1,7 @@
 'use client';
 import { getLabel, getPlaceholder } from '@/lib/helpers';
 
+import { Icons } from '@/components/commons/icons';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
@@ -16,7 +17,8 @@ import { Input } from '@/components/ui/input';
 import { useApplyForm } from './apply-form-controller';
 
 export const ApplyForm = ({ offerId }: { offerId: string }) => {
-  const { fields, form, onSubmit, t, isSuccess } = useApplyForm(offerId);
+  const { fields, form, onSubmit, t, isSuccess, isPending } =
+    useApplyForm(offerId);
 
   return (
     <Card>
@@ -52,7 +54,15 @@ export const ApplyForm = ({ offerId }: { offerId: string }) => {
                   />
                 ))}
                 <div className="flex justify-center">
-                  <Button type="submit" variant="accent" className="w-44 h-12">
+                  <Button
+                    type="submit"
+                    variant="accent"
+                    disabled={isPending}
+                    className="w-44 h-12"
+                  >
+                    {isPending ? (
+                      <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                    ) : null}
                     {t('apply')}
                   </Button>
                 </div>

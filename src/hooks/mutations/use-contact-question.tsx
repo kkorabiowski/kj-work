@@ -10,7 +10,7 @@ type TBody = {
 
 const sendQuestion = async (body: TBody) => {
   try {
-    const response = await fetch('/api/contact-question', {
+    const response = await fetch('/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

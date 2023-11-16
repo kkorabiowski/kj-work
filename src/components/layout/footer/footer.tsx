@@ -34,10 +34,15 @@ export const Footer = () => {
             </p>
             <div className="text-muted-foreground">
               <div className="rounded-full bg-muted-foreground/20 h-10 w-10 flex items-center justify-center cursor-pointer">
-                <Icon
-                  name="facebook"
-                  className="hover:text-white transition-all duration-300"
-                />
+                <a
+                  href="https://www.facebook.com/holahola.poznan"
+                  target="_blank"
+                >
+                  <Icon
+                    name="facebook"
+                    className="hover:text-white transition-all duration-300"
+                  />
+                </a>
               </div>
             </div>
           </div>

@@ -11,6 +11,7 @@ import { OffersFilters } from './components/offers-filters';
 import { OffersListing } from './components/offers-listing';
 import { SearchPanel } from './components/search-panel';
 import { useOffers } from './offers.controller';
+import { Form } from '../ui/form';
 
 // TODO: MENU DYNAMIC IMPORT
 
@@ -30,20 +31,24 @@ export const Offers = () => {
           {t('findYourOfferDesc')}
         </p>
       </div>
-      <SearchPanel form={form} />
-      <div className="pt-10 pb-20">
-        <section className="space-y-2.5 rounded-sm">
-          <div className="flex gap-5">
-            {typeof size.width === 'number' && size?.width > 768 ? (
-              <OffersFilters />
-            ) : null}
-            <div className="w-full space-y-5">
-              <OffersFilterBar results={10} />
-              <OffersListing />
-            </div>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+          <SearchPanel form={form} />
+          <div className="pt-10 pb-20">
+            <section className="space-y-2.5 rounded-sm">
+              <div className="flex gap-5">
+                {typeof size.width === 'number' && size?.width > 768 ? (
+                  <OffersFilters />
+                ) : null}
+                <div className="w-full space-y-5">
+                  <OffersFilterBar results={10} />
+                  <OffersListing />
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
-      </div>
+        </form>
+      </Form>
     </Container>
   );
 };

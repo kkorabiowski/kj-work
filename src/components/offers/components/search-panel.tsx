@@ -20,14 +20,14 @@ export const SearchPanel = ({ form }: Props) => {
           <div className="flex-1">
             <Input
               placeholder={t('typeName')}
-              {...form.register('filters.search')}
+              {...form.register('filters.query')}
             />
           </div>
-
           <Button
             variant="accent"
             size="lg"
             className="mx-auto w-40 md:w-auto rounded-none"
+            type="submit"
           >
             {t('search')}
           </Button>

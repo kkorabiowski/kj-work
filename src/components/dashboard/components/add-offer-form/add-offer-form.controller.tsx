@@ -7,8 +7,13 @@ import { z } from 'zod';
 
 import { useAddOfferMutation } from '@/hooks/mutations/use-add-offer-mutation';
 
+import { toast } from '@/components/ui/use-toast';
+
 const formSchema = z.object({
   title: z.string().min(1, {
+    message: 'Pole wymagane',
+  }),
+  description: z.string().min(1, {
     message: 'Pole wymagane',
   }),
   company: z.string().min(1, {
@@ -42,6 +47,7 @@ export const useAddOfferForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       title: '',
+      description: '',
       company: '',
       industry: '',
       location: '',
@@ -54,27 +60,26 @@ export const useAddOfferForm = () => {
     },
   });
 
-  function onSubmit(values: AddOfferSchemaType) {
+  const onSubmit = (values: AddOfferSchemaType) => {
     mutate(values, {
       onError: () => {
-        console.log('error!');
-        form.reset();
+        toast({
+          variant: 'destructive',
+          title: 'Nieprawidłowe dane',
+          description: 'Sprawdź, czy dane w formularzu są prawidłowe',
+        });
       },
       onSuccess: () => {
-        console.log('Success!');
+        toast({
+          title: 'Oferta została dodana',
+        });
         router.push('/dashboard');
+        form.reset();
       },
     });
-  }
+  };
 
-  const fields = [
-    'title',
-    'company',
-    'industry',
-    'expiration_date',
-    'agreement_type',
-    'location',
-  ] as const;
+  const fields = ['title', 'company', 'location'] as const;
 
   return { form, fields, isPending, onSubmit };
 };

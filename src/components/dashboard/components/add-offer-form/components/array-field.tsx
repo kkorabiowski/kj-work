@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
 type Props = {
-  fieldName: 'requirements' | 'duties' | 'offers';
+  fieldName: 'requirements' | 'duties' | 'offer';
   label: string;
 };
 

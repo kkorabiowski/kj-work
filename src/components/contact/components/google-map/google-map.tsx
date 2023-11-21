@@ -9,7 +9,7 @@ export const MapComponent = () => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
   });
-  if (!isLoaded) return <div></div>;
+  if (!isLoaded) return <div />;
   return <Map />;
 };
 

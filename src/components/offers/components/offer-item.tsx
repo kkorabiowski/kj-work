@@ -5,12 +5,13 @@ import {
   MapPin,
   ScrollText,
 } from 'lucide-react';
-import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 
 import { Avatar } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+
+import { Link } from '@/navigation';
 
 type Props = {
   id: string;

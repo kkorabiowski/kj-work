@@ -1,5 +1,6 @@
+import { Button, ButtonProps } from '@/components/ui/button';
+
 import { Icons } from './icons';
-import { Button, ButtonProps } from '../ui/button';
 
 type Props = {
   isPending: boolean;

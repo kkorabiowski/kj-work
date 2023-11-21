@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { offerId, offerName, email, name, phone } = body;
+    const { offerId, email, name, phone } = body;
 
     const emailData = {
       from: email,
@@ -38,17 +38,19 @@ export async function POST(request: NextRequest) {
       host: 'sandbox.smtp.mailtrap.io',
       port: 2525,
       auth: {
-        user: 'e09a411ba6935b',
-        pass: 'd15ae8a281ea36',
+        user: process.env.MAILTRAP_USER,
+        pass: process.env.MAILTRAP_PASSWORD,
       },
     });
 
     await new Promise((resolve, reject) => {
       transporter.verify(function (error, success) {
         if (error) {
+          // eslint-disable-next-line no-console
           console.log(error);
           reject(error);
         } else {
+          // eslint-disable-next-line no-console
           console.log('Server is ready to take our messages');
           resolve(success);
         }
@@ -60,6 +62,7 @@ export async function POST(request: NextRequest) {
         if (err) {
           reject(err);
         } else {
+          // eslint-disable-next-line no-console
           console.log(info);
           resolve(info);
         }

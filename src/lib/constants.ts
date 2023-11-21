@@ -62,3 +62,26 @@ export const languages: Omit<LanguageItemType, 'handleClick'>[] = [
     iconName: 'germany',
   },
 ];
+
+export const industries = [
+  { label: 'Budownictwo', value: 'construction' },
+  { label: 'Transport', value: 'transport' },
+  { label: 'Gastronomia', value: 'gastronomy' },
+  { label: 'Logistyka', value: 'logistic' },
+  { label: 'Produkcja', value: 'production' },
+  { label: 'IT', value: 'it' },
+];
+
+export const agreement_types = [
+  { label: 'Umowa o pracę', value: 'contract-of-employment' },
+  { label: 'Umowa zlecenie', value: 'mandate-contract' },
+  { label: 'Tymczasowa', value: 'temporary' },
+];
+
+export const exp_dates = [
+  { label: '30 dni', value: '30d' },
+  { label: '60 dni', value: '60d' },
+  { label: '90 dni', value: '90d' },
+  { label: '120 dni', value: '120d' },
+  { label: '180 dni', value: '180d' },
+];

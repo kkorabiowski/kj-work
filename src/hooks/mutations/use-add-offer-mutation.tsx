@@ -11,7 +11,7 @@ type TAddOffer = {
 
 const addOffer = async (offerValues: TAddOffer) => {
   try {
-    const response = await fetch('/api/offer', {
+    const response = await fetch('/api/offers', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

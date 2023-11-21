@@ -1,6 +1,7 @@
 type Variant =
   | 'name'
   | 'email'
+  | 'description'
   | 'phone'
   | 'subject'
   | 'message'
@@ -29,16 +30,18 @@ export const getPlaceholder = (variant: Variant) => {
       return 'Wpisz wiadomość';
     case 'title':
       return 'Wpisz tytuł';
+    case 'description':
+      return 'Wpisz opis oferty';
     case 'company':
       return 'Wpisz nazwę firmy';
     case 'industry':
-      return 'Wpisz branżę';
+      return 'Wybierz branżę';
     case 'location':
       return 'Wpisz lokalizację';
     case 'agreement_type':
       return 'Wpisz rodzaj umowy';
     case 'expiration_date':
-      return 'Wpisz datę wygaśnięcia';
+      return 'Wybierz czas ważności oferty';
     case 'duties':
       return 'Wpisz obowiązki';
     case 'requirements':
@@ -64,6 +67,8 @@ export const getLabel = (variant: Variant) => {
       return 'Temat*';
     case 'message':
       return 'Wiadomość*';
+    case 'description':
+      return 'Opis oferty';
     case 'title':
       return 'Tytuł';
     case 'company':
@@ -75,7 +80,7 @@ export const getLabel = (variant: Variant) => {
     case 'agreement_type':
       return 'Rodzaj umowy';
     case 'expiration_date':
-      return 'Data wygaśnięcia';
+      return 'Oferta ważna przez';
     case 'duties':
       return 'Obowiązki';
     case 'requirements':

@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 
 import { getPlaceholder } from '@/lib/helpers';
 
-import { Button } from '@/components/ui/button';
+import { SubmitButton } from '@/components/commons/submit-button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
   Form,
@@ -19,7 +19,7 @@ import { useContactLayoutForm } from './contact-layout-form.controller';
 
 export const ContactLayoutForm = () => {
   const t = useTranslations('contact.form');
-  const { fields, form, onSubmit } = useContactLayoutForm();
+  const { fields, form, onSubmit, isPending } = useContactLayoutForm();
 
   return (
     <Card>
@@ -49,14 +49,14 @@ export const ContactLayoutForm = () => {
                 />
               ))}
               <div className="flex justify-center">
-                <Button
-                  type="submit"
+                <SubmitButton
                   variant="accent"
                   size="lg"
                   className="w-56"
+                  isPending={isPending}
                 >
                   {t('send')}
-                </Button>
+                </SubmitButton>
               </div>
             </form>
           </Form>

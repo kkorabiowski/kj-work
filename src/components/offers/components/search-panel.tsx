@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { UseFormReturn } from 'react-hook-form';
 
-import { Button } from '@/components/ui/button';
+import { SubmitButton } from '@/components/commons/submit-button';
 import { Input } from '@/components/ui/input';
 
 import { TOffersFormSchema } from '../offers.controller';
@@ -23,14 +23,14 @@ export const SearchPanel = ({ form }: Props) => {
               {...form.register('filters.query')}
             />
           </div>
-          <Button
-            variant="accent"
+          <SubmitButton
+            isPending={false}
             size="lg"
             className="mx-auto w-40 md:w-auto rounded-none"
             type="submit"
           >
             {t('search')}
-          </Button>
+          </SubmitButton>
         </div>
       </div>
     </div>

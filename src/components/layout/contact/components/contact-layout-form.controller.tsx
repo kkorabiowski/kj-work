@@ -7,7 +7,7 @@ import { useContactLayoutFormMutation } from '@/hooks/mutations/use-contact-layo
 
 export const useContactLayoutForm = () => {
   const t = useTranslations('form.validation');
-  const { mutate } = useContactLayoutFormMutation();
+  const { mutate, isPending } = useContactLayoutFormMutation();
   const fields = ['name', 'email', 'phone'] as const;
 
   const formSchema = z.object({
@@ -31,5 +31,5 @@ export const useContactLayoutForm = () => {
     mutate(values);
   }
 
-  return { fields, form, onSubmit };
+  return { fields, form, onSubmit, isPending };
 };

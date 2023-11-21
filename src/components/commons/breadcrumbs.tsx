@@ -1,5 +1,6 @@
-import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
+
+import { Link } from '@/navigation';
 
 type Props = {
   offerId: string;

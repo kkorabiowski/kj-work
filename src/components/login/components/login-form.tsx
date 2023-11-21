@@ -1,7 +1,6 @@
 'use client';
 
-import { Icons } from '@/components/commons/icons';
-import { Button } from '@/components/ui/button';
+import { SubmitButton } from '@/components/commons/submit-button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Form,
@@ -16,7 +15,7 @@ import { Input } from '@/components/ui/input';
 import { useLoginForm } from './login-form.controller';
 
 export function LoginForm() {
-  const { fields, form, onSubmit, isPending } = useLoginForm();
+  const { fields, form, isPending, onSubmit } = useLoginForm();
 
   return (
     <Card className="mx-auto w-full max-w-lg">
@@ -52,12 +51,7 @@ export function LoginForm() {
                 )}
               />
             ))}
-            <Button type="submit" disabled={isPending}>
-              {isPending ? (
-                <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-              ) : null}{' '}
-              Zaloguj się
-            </Button>
+            <SubmitButton isPending={isPending}>Zaloguj się</SubmitButton>
           </form>
         </Form>
       </CardContent>

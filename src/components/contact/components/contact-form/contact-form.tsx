@@ -3,8 +3,7 @@ import { useTranslations } from 'next-intl';
 
 import { getLabel, getPlaceholder } from '@/lib/helpers';
 
-import { Icons } from '@/components/commons/icons';
-import { Button } from '@/components/ui/button';
+import { SubmitButton } from '@/components/commons/submit-button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
   Form,
@@ -73,18 +72,14 @@ export function ContactForm() {
                 <p className="text-sm">* - {t('requiredFields')}</p>
               </div>
               <div className="flex justify-center">
-                <Button
-                  type="submit"
+                <SubmitButton
                   variant="accent"
-                  disabled={isPending}
                   size="lg"
                   className="w-56"
+                  isPending={isPending}
                 >
-                  {isPending ? (
-                    <Icons.spinner className="w-4 h-4 animate-spin" />
-                  ) : null}{' '}
                   {t('send')}
-                </Button>
+                </SubmitButton>
               </div>
             </form>
           </Form>

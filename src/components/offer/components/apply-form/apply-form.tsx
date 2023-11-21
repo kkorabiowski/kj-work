@@ -1,8 +1,7 @@
 'use client';
 import { getLabel, getPlaceholder } from '@/lib/helpers';
 
-import { Icons } from '@/components/commons/icons';
-import { Button } from '@/components/ui/button';
+import { SubmitButton } from '@/components/commons/submit-button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import {
   Form,
@@ -54,17 +53,13 @@ export const ApplyForm = ({ offerId }: { offerId: string }) => {
                   />
                 ))}
                 <div className="flex justify-center">
-                  <Button
-                    type="submit"
+                  <SubmitButton
                     variant="accent"
-                    disabled={isPending}
+                    isPending={isPending}
                     className="w-44 h-12"
                   >
-                    {isPending ? (
-                      <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-                    ) : null}
                     {t('apply')}
-                  </Button>
+                  </SubmitButton>
                 </div>
               </form>
             </Form>

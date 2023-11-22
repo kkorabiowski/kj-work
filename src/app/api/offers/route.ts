@@ -31,23 +31,27 @@ const schema = z.object({
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
-    const page = Number(searchParams.get('page')) - 1;
+    const page = Number(searchParams.get('page')) || 1;
+    const orderBy = searchParams.get('orderBy') || 'newest';
+    const query = searchParams.get('query') || undefined;
     const take = 10;
 
     const offers = await prisma.offer.findMany({
-      // take,
-      // skip: page * 10 || 0,
-      orderBy: { created_at: 'asc' },
-      // where: {
-      //   title: {
-      //     contains: 'manager',
-      //     mode: 'insensitive',
-      //   },
-      // },
+      take,
+      skip: page === 1 ? undefined : (page - 1) * take,
+      orderBy: {
+        created_at: orderBy === 'newest' ? 'desc' : 'asc',
+      },
+      where: {
+        title: {
+          contains: query,
+          mode: 'insensitive',
+        },
+      },
     });
 
     return NextResponse.json({
-      count: prisma.offer.count(),
+      count: offers.length,
       message: 'Success!',
       offers,
     });

@@ -2,23 +2,18 @@
 
 import { useTranslations } from 'next-intl';
 
-import { useWindowSize } from '@/hooks/use-window-size';
-
 import { Container } from '@/components/commons/container';
+import { Form } from '@/components/ui/form';
 
-import { OffersFilterBar } from './components/offers-filter-bar';
-import { OffersFilters } from './components/offers-filters';
-import { OffersListing } from './components/offers-listing';
-import { SearchPanel } from './components/search-panel';
+import { OffersFilters } from './components/list/filters/offers-filters';
+import { ResultsBar } from './components/list/filters/results-bar';
+import { SearchPanel } from './components/list/filters/search-panel';
+import { OffersList } from './components/list/offers-list';
 import { useOffers } from './offers.controller';
-import { Form } from '../ui/form';
-
-// TODO: MENU DYNAMIC IMPORT
 
 export const Offers = () => {
   const t = useTranslations('offers');
-  const size = useWindowSize();
-  const { form, onSubmit } = useOffers();
+  const { form, width, offers, isError, isPending, onSubmit } = useOffers();
 
   return (
     <Container className="mt-10">
@@ -33,16 +28,16 @@ export const Offers = () => {
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <SearchPanel form={form} />
+          <SearchPanel isPending={isPending} />
           <div className="pt-10 pb-20">
             <section className="space-y-2.5 rounded-sm">
               <div className="flex gap-5">
-                {typeof size.width === 'number' && size?.width > 768 ? (
+                {typeof width === 'number' && width > 768 ? (
                   <OffersFilters />
                 ) : null}
                 <div className="w-full space-y-5">
-                  <OffersFilterBar results={10} />
-                  <OffersListing />
+                  <ResultsBar results={offers?.count || '0'} />
+                  <OffersList offers={offers?.offers} isError={isError} />
                 </div>
               </div>
             </section>

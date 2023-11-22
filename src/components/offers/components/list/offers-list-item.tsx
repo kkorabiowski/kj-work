@@ -26,7 +26,7 @@ type Props = {
   created_at?: string;
 };
 
-export const OfferItem = ({
+export const OfferListItem = ({
   title,
   agreement_type,
   company,

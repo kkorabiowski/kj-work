@@ -117,6 +117,6 @@ export const getIndustryName = (industry: Industry) => {
     case 'it':
       return 'IT';
     default:
-      return '';
+      return industry;
   }
 };

@@ -11,7 +11,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
 
 import { AgreementTypeMobileFilters } from './agreement-type-mobile-filters/agreement-type-mobile-filters';
 import { IndustryFilters } from './industry-filters/industry-filters';
@@ -32,7 +31,6 @@ export const MobileFilters = () => {
         </DialogHeader>
         <DialogDescription>
           <div className="space-y-5">
-            <Input placeholder="Wyszukaj po nazwie stanowiska" />
             <AgreementTypeMobileFilters />
             <IndustryFilters />
           </div>

@@ -1,6 +1,7 @@
+'use client';
 import { useTranslations } from 'next-intl';
 
-import { useWindowSize } from '@/hooks/use-window-size';
+import { useWindowWidth } from '@/hooks/use-window-width';
 
 import { SortSelect } from '@/components/commons/sort-select';
 
@@ -10,9 +11,9 @@ type Props = {
   results: number;
 };
 
-export const OffersFilterBar = ({ results = 0 }: Props) => {
+export const ResultsBar = ({ results = 0 }: Props) => {
   const t = useTranslations('offers.filters');
-  const size = useWindowSize();
+  const width = useWindowWidth();
 
   return (
     <div className="flex justify-between items-center">
@@ -20,7 +21,7 @@ export const OffersFilterBar = ({ results = 0 }: Props) => {
         <h5>{t('availableOffers')}</h5>
         <p className="text-muted-foreground">{t('results', { results })}</p>
       </div>
-      {typeof size.width === 'number' && size?.width > 768 ? (
+      {typeof width === 'number' && width > 768 ? (
         <SortSelect />
       ) : (
         <MobileFilters />

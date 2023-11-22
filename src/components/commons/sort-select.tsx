@@ -1,5 +1,6 @@
 import { ArrowUpDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { useFormContext } from 'react-hook-form';
 
 import { cn } from '@/lib/utils';
 
@@ -12,29 +13,51 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
+import { FormField, FormItem } from '../ui/form';
+
 type Props = {
   isMobile?: boolean;
 };
 
 export const SortSelect = ({ isMobile }: Props) => {
   const t = useTranslations('form.sort');
+  const form = useFormContext();
+
   return (
     <div>
       <div className="flex gap-1.5 items-center">
         {!isMobile ? (
           <ArrowUpDown className="text-muted-foreground w-5 h-5" />
         ) : null}
-        <Select>
-          <SelectTrigger className={cn('w-[180px]', isMobile && 'w-full')}>
-            <SelectValue defaultValue="new" placeholder={t('sortBy')} />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectItem value="new">{t('newest')}</SelectItem>
-              <SelectItem value="old">{t('oldest')}</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+        <FormField
+          control={form.control}
+          name="orderBy"
+          render={({ field }) => (
+            <FormItem>
+              <Select
+                onValueChange={value => {
+                  form.setValue('orderBy', value);
+                }}
+                defaultValue={field.value}
+              >
+                <SelectTrigger
+                  className={cn('w-[180px]', isMobile && 'w-full')}
+                >
+                  <SelectValue
+                    defaultValue={field.value}
+                    placeholder={t('sortBy')}
+                  />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectItem value="newest">{t('newest')}</SelectItem>
+                    <SelectItem value="oldest">{t('oldest')}</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </FormItem>
+          )}
+        />
       </div>
     </div>
   );

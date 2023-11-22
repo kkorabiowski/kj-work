@@ -1,4 +1,5 @@
 'use client';
+import { getIndustryName, Industry } from '@/lib/helpers';
 import { useOffersQuery } from '@/hooks/queries/use-offers-query';
 
 import { TableCell, TableRow } from '@/components/ui/table';
@@ -11,11 +12,11 @@ type Offer = {
   title: string;
   company: {
     name: string;
-    picture: string;
+    picture?: string;
   };
   agreement_type: string;
   location: string;
-  category: string;
+  industry: string;
   created_at: Date;
   expiration_date?: string;
 };
@@ -24,13 +25,13 @@ export const TableData = () => {
   const { data, error, refetch } = useOffersQuery();
 
   if (error) {
-    return <h1>Coś poszło nie tak...</h1>;
+    return <p className="text-center">Coś poszło nie tak...</p>;
   }
 
   return data?.offers ? (
     data.offers.map(
       ({
-        category,
+        industry,
         company,
         created_at,
         id,
@@ -41,7 +42,9 @@ export const TableData = () => {
           <TableCell className="font-medium">{id}</TableCell>
           <TableCell>{title}</TableCell>
           <TableCell>{company.name}</TableCell>
-          <TableCell>{category || 'brak'}</TableCell>
+          <TableCell>
+            {getIndustryName(industry as Industry) || 'brak'}
+          </TableCell>
           <TableCell>{created_at.toString().slice(0, 10)}</TableCell>
           <TableCell>{expiration_date || 'brak'}</TableCell>
           <TableCell>Aktywna</TableCell>

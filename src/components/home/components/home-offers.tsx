@@ -1,14 +1,15 @@
 'use client';
 import { Container } from 'lucide-react';
-import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 
 import { useHomeOffersQuery } from '@/hooks/queries/use-home-offers-query';
 
-import { Skeleton } from '@/components/commons/skeleton';
-import { OfferItem } from '@/components/offers/components/offer-item';
-import { Offer } from '@/components/offers/components/offers-listing';
+import { Offer } from '@/components/offers/components/list/offers-list';
+import { OfferListItem } from '@/components/offers/components/list/offers-list-item';
+import { OffersListSkeleton } from '@/components/offers/components/list/offers-list-skeleton';
 import { Button } from '@/components/ui/button';
+
+import { Link } from '@/navigation';
 
 export const HomeOffers = () => {
   const t = useTranslations('home.offers');
@@ -30,7 +31,9 @@ export const HomeOffers = () => {
           <div className="space-y-2.5">
             {data?.offers
               ?.slice(0, 3)
-              ?.map((offer: Offer) => <OfferItem key={offer.id} {...offer} />)}
+              ?.map((offer: Offer) => (
+                <OfferListItem key={offer.id} {...offer} />
+              ))}
           </div>
           <div className="flex items-center justify-end pt-10">
             <Link href="/oferty-pracy">
@@ -39,11 +42,7 @@ export const HomeOffers = () => {
           </div>
         </div>
       ) : (
-        <div className="space-y-2.5">
-          <Skeleton className="w-full h-20" />
-          <Skeleton className="w-full h-20" />
-          <Skeleton className="w-full h-20" />
-        </div>
+        <OffersListSkeleton />
       )}
     </section>
   );

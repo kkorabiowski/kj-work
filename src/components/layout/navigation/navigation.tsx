@@ -3,7 +3,7 @@ import React from 'react';
 
 import { cn } from '@/lib/utils';
 import { useWindowScroll } from '@/hooks/use-scroll';
-import { useWindowSize } from '@/hooks/use-window-size';
+import { useWindowWidth } from '@/hooks/use-window-width';
 
 import { Container } from '@/components/commons/container';
 import { Icon } from '@/components/commons/icon/icon';
@@ -14,7 +14,7 @@ import { DesktopMenu } from './components/desktop-menu';
 import { MobileMenu } from './components/mobile-menu';
 
 export const Navigation = () => {
-  const size = useWindowSize();
+  const width = useWindowWidth();
   const scroll = useWindowScroll();
 
   return (
@@ -33,10 +33,9 @@ export const Navigation = () => {
             />
           </Link>
         </div>
-
-        {size?.width && typeof size.width === 'number' && size.width > 1024 ? (
+        {typeof width === 'number' && width > 1024 ? (
           <DesktopMenu />
-        ) : size?.width ? (
+        ) : width ? (
           <MobileMenu />
         ) : null}
       </Container>

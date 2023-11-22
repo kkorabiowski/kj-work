@@ -10,6 +10,7 @@ const AddOfferPage = async () => {
   if (!session) {
     redirect('/');
   }
+
   return <AddOffer />;
 };
 export default AddOfferPage;

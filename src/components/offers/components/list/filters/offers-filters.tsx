@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { useFormContext } from 'react-hook-form';
 
 import { filters } from '@/lib/constants';
 
@@ -8,6 +9,7 @@ import { FilterItem } from './filter-item';
 
 export const OffersFilters = () => {
   const t = useTranslations('offers.filters');
+  const form = useFormContext();
 
   return (
     <div className="w-80 space-y-3">

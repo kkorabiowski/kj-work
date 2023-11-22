@@ -1,16 +1,18 @@
 'use client';
 import { useQuery } from '@tanstack/react-query';
 
-const fetchOffers = async () => {
+const fetchOffers = async (queryParams: string) => {
   try {
-    const response = await fetch('/api/offers?page=1&take=10');
-    const data = await response.json();
-    return data;
+    const response = await fetch(`/api/offers?${queryParams}`);
+    return await response.json();
   } catch (error) {
     console.log(error);
   }
 };
 
-export const useOffersQuery = () => {
-  return useQuery({ queryKey: ['offers'], queryFn: fetchOffers });
+export const useOffersQuery = (queryParams: string) => {
+  return useQuery({
+    queryKey: ['offers'],
+    queryFn: () => fetchOffers(queryParams),
+  });
 };

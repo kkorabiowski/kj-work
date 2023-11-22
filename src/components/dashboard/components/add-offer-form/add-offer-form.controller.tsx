@@ -28,9 +28,6 @@ const formSchema = z.object({
   agreement_type: z.string().min(1, {
     message: 'Pole wymagane',
   }),
-  expiration_date: z.string().min(1, {
-    message: 'Pole wymagane',
-  }),
   duties: z.string().array().optional(),
   requirements: z.string().array().optional(),
   offer: z.string().array().optional(),
@@ -52,10 +49,6 @@ export const useAddOfferForm = () => {
       industry: '',
       location: '',
       agreement_type: '',
-      expiration_date: '',
-      duties: [''],
-      offer: [''],
-      requirements: [''],
       summary: '',
     },
   });

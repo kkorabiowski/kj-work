@@ -13,6 +13,8 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { toast } from '@/components/ui/use-toast';
 
+import { Link } from '@/navigation';
+
 type Props = {
   offerId: string;
   refresh: () => void;
@@ -48,7 +50,9 @@ export const RowAction = ({ offerId, refresh }: Props) => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
-        <DropdownMenuItem>Edytuj</DropdownMenuItem>
+        <Link href={`/oferty-pracy/${offerId}`}>
+          <DropdownMenuItem>Zobacz</DropdownMenuItem>
+        </Link>
         <DropdownMenuItem className="text-destructive" onClick={handleClick}>
           Usuń
         </DropdownMenuItem>

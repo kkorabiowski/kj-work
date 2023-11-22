@@ -18,12 +18,12 @@ export type TOffer = {
   title: string;
   agreement_type: string;
   location: string;
-  category: string;
+  industry: string;
   created_at: string;
   expiration_date: string;
   company: {
     name: string;
-    picture: string;
+    picture?: string;
   };
   requirements?: string[];
   duties?: string[];

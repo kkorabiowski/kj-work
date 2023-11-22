@@ -6,7 +6,6 @@ type TAddOffer = {
   industry: string;
   location: string;
   agreement_type: string;
-  expiration_date: string;
 };
 
 const addOffer = async (offerValues: TAddOffer) => {

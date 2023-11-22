@@ -1,6 +1,6 @@
 'use client';
 
-import { agreement_types, exp_dates, industries } from '@/lib/constants';
+import { agreement_types, industries } from '@/lib/constants';
 
 import { SubmitButton } from '@/components/commons/submit-button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -30,7 +30,6 @@ export const AddOfferForm = () => {
               ))}
               <SelectField fieldName="industry" items={industries} />
               <SelectField fieldName="agreement_type" items={agreement_types} />
-              <SelectField fieldName="expiration_date" items={exp_dates} />
               <Description />
             </div>
             <ArrayField

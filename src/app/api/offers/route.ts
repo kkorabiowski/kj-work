@@ -35,8 +35,8 @@ export async function GET(request: NextRequest) {
     const take = 10;
 
     const offers = await prisma.offer.findMany({
-      take,
-      skip: page * 10 || 0,
+      // take,
+      // skip: page * 10 || 0,
       orderBy: { created_at: 'asc' },
       // where: {
       //   title: {
@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
   }
 }
 
-export async function POST(req: NextRequest) {
+export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession();
 
@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
       throw new Error('Unauthorized');
     }
 
-    const body = await req.json();
+    const body = await request.json();
     const parsed = schema.safeParse(body);
 
     if (!body || !parsed.success) {
@@ -80,8 +80,6 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-
-    console.log(parsed);
 
     const offer = await prisma.offer.create({
       data: { ...body, company: { name: body.company } },
@@ -92,6 +90,7 @@ export async function POST(req: NextRequest) {
       offer,
     });
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.log(error);
     return NextResponse.json(
       {

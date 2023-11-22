@@ -9,20 +9,19 @@ generator client {
 }
 
 model Offer {
-  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
   title          String
   company        Company
   agreement_type String
   location       String
   industry       String?
-
-  description  String
-  duties       String[]
-  requirements String[]
-  offer        String[]
-  summary      String
-  created_at   DateTime  @default(now())
-  updated_at   DateTime? @updatedAt
+  description    String
+  duties         String[]
+  requirements   String[]
+  offer          String[]
+  summary        String
+  created_at     DateTime  @default(now())
+  updated_at     DateTime? @updatedAt
 
   @@fulltext([title])
 }

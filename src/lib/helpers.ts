@@ -16,6 +16,14 @@ type Variant =
   | 'offer'
   | 'summary';
 
+export type Industry =
+  | 'construction'
+  | 'transport'
+  | 'gastronomy'
+  | 'logistic'
+  | 'production'
+  | 'it';
+
 export const getPlaceholder = (variant: Variant) => {
   switch (variant) {
     case 'name':
@@ -89,6 +97,25 @@ export const getLabel = (variant: Variant) => {
       return 'Oferta';
     case 'summary':
       return 'Podsumowanie';
+    default:
+      return '';
+  }
+};
+
+export const getIndustryName = (industry: Industry) => {
+  switch (industry) {
+    case 'construction':
+      return 'Budownictwo';
+    case 'transport':
+      return 'Transport';
+    case 'gastronomy':
+      return 'Gastronomia';
+    case 'logistic':
+      return 'Logistyka';
+    case 'production':
+      return 'Produkcja';
+    case 'it':
+      return 'IT';
     default:
       return '';
   }

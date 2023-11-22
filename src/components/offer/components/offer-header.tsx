@@ -2,6 +2,8 @@
 import { Briefcase, Clock4, MapPin, ScrollText } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
+import { getIndustryName, Industry } from '@/lib/helpers';
+
 import { Breadcrumbs } from '@/components/commons/breadcrumbs';
 import { TOffer } from '@/components/offer/offer';
 
@@ -10,7 +12,7 @@ import { OfferHeaderItem } from './offer-header-item';
 type Props = Pick<
   TOffer,
   | 'title'
-  | 'category'
+  | 'industry'
   | 'company'
   | 'agreement_type'
   | 'location'
@@ -20,13 +22,14 @@ type Props = Pick<
 export const OfferHeader = ({
   id,
   agreement_type,
-  category,
+  industry,
   company,
   location,
   title,
   expiration_date,
 }: Props) => {
   const t = useTranslations('offer.header');
+
   return (
     <div>
       <Breadcrumbs offerId={id} />
@@ -37,7 +40,7 @@ export const OfferHeader = ({
       <div className="grid gap-5 md:grid-cols-4 md:gap-10">
         <OfferHeaderItem
           {...{
-            category: category,
+            category: getIndustryName(industry as Industry),
             name: t('industry'),
             icon: Briefcase,
           }}

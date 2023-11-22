@@ -15,11 +15,9 @@ export const TrustedUs = () => {
           {t('trustedUs')}
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-5">
-          <TrustedUsItem icon={Building2} companyName="Nazwa" />
-          <TrustedUsItem icon={Building2} companyName="Nazwa" />
-          <TrustedUsItem icon={Building2} companyName="Nazwa" />
-          <TrustedUsItem icon={Building2} companyName="Nazwa" />
-          <TrustedUsItem icon={Building2} companyName="Nazwa" />
+          {[0, 1, 2, 3, 5].map(item => (
+            <TrustedUsItem key={item} icon={Building2} companyName="Nazwa" />
+          ))}
         </div>
       </Container>
     </section>

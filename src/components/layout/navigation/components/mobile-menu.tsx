@@ -42,8 +42,13 @@ export const MobileMenu = () => {
             <Link href="/oferty-pracy">
               <Button variant="accent">{t('offersLabel')}</Button>
             </Link>
-            <NavItem label="Dashboard" href="/dashboard" />
-            {session.data ? <LogOutBtn /> : null}
+
+            {session.data ? (
+              <>
+                <NavItem label="Dashboard" href="/dashboard" />
+                <LogOutBtn />
+              </>
+            ) : null}
           </div>
         </SheetContent>
       </Sheet>

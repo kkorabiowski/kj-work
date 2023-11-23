@@ -12,16 +12,17 @@ import {
 type Props = {
   label: string;
   value: string;
+  formKey: string;
 };
 
-export const FilterItem = ({ label, value }: Props) => {
+export const FilterItem = ({ label, value, formKey }: Props) => {
   const form = useFormContext();
 
   return (
     <div>
       <FormField
         control={form.control}
-        name={`filters.industry.${value}`}
+        name={`filters.${formKey}.${value}`}
         render={({ field }) => (
           <FormItem className="flex items-center space-x-3">
             <FormControl>

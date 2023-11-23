@@ -18,11 +18,7 @@ export const DesktopMenu = () => {
 
   return (
     <div className="flex items-center gap-8">
-      {session?.data ? (
-        <Link href="/dashboard">
-          <NavItem label="Dashboard" href="/dashboard" />
-        </Link>
-      ) : null}
+      {session?.data ? <NavItem label="Dashboard" href="/dashboard" /> : null}
       {navItems.map(navItem => (
         <NavItem key={navItem.id} {...navItem} />
       ))}

@@ -25,6 +25,7 @@ export const PaginationButton = ({
     size="icon"
     type="button"
     onClick={handleClick}
+    disabled={isDisabled}
     {...props}
   >
     {isPrev ? <ArrowLeft size={16} /> : null}

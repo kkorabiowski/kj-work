@@ -1,12 +1,11 @@
 'use client';
 
-import { Link } from '@/navigation';
-
 import { Container } from '@/components/commons/container';
+
+import { Link } from '@/navigation';
 
 export default function GlobalErrorPage({
   error,
-  reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;

@@ -27,7 +27,6 @@ export const RowAction = ({ offerId, refresh }: Props) => {
       { offerId },
       {
         onSuccess: () => {
-          console.log('success');
           refresh();
           toast({
             title: 'Usunięto ofertę',

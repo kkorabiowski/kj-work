@@ -46,9 +46,11 @@ export async function POST(request: NextRequest) {
     await new Promise((resolve, reject) => {
       transporter.verify(function (error, success) {
         if (error) {
+          // eslint-disable-next-line no-console
           console.log(error);
           reject(error);
         } else {
+          // eslint-disable-next-line no-console
           console.log('Server is ready to take our messages');
           resolve(success);
         }
@@ -60,6 +62,7 @@ export async function POST(request: NextRequest) {
         if (err) {
           reject(err);
         } else {
+          // eslint-disable-next-line no-console
           console.log(info);
           resolve(info);
         }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useFormContext } from 'react-hook-form';
 
 import { Checkbox } from '@/components/ui/checkbox';
 import {
@@ -11,43 +11,47 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 
-import { useIndustryFilters } from './industry-filters.controller';
+type TCheckboxItem = {
+  label: string;
+  value: string;
+};
 
-export const IndustryFilters = () => {
-  const t = useTranslations('offers');
-  const { form, items } = useIndustryFilters();
+type Props = {
+  groupLabel: string;
+  checkboxItems: TCheckboxItem[];
+  formKey: string;
+};
+
+export const MobileFiltersSection = ({
+  groupLabel,
+  checkboxItems,
+  formKey,
+}: Props) => {
+  const form = useFormContext();
 
   return (
     <div className="space-y-4">
-      <h6>{t('industryType')}</h6>
+      <p className="text-base font-semibold">{groupLabel}</p>
       <FormField
         control={form.control}
-        name="items"
+        name={`filters.${formKey}`}
         render={() => (
           <FormItem>
-            {items.map(item => (
+            {checkboxItems.map(item => (
               <FormField
-                key={item.id}
+                key={item.value}
                 control={form.control}
-                name="items"
+                name={`filters.${formKey}.${item.value}`}
                 render={({ field }) => {
                   return (
                     <FormItem
-                      key={item.id}
+                      key={item.value}
                       className="flex flex-row items-start space-x-3 space-y-0"
                     >
                       <FormControl>
                         <Checkbox
-                          checked={field.value?.includes(item.id)}
-                          onCheckedChange={checked => {
-                            // return checked
-                            //   ? field.onChange([...field.value, item.id])
-                            //   : field.onChange(
-                            //       field.value?.filter(
-                            //         value => value !== item.id
-                            //       )
-                            //     );
-                          }}
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
                         />
                       </FormControl>
                       <FormLabel className="text-sm font-normal">

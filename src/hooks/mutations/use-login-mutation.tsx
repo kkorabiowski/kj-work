@@ -22,6 +22,7 @@ const login = async ({ credentials }: Props) => {
       throw new Error('Error creating review');
     }
     if (callback?.ok) {
+      // eslint-disable-next-line no-console
       console.log('ok');
     }
   });

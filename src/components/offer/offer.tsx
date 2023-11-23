@@ -36,8 +36,6 @@ export const Offer = ({ id }: { id: string }) => {
   const { data, error } = useOfferQuery(id);
   const offer: TOffer = data?.offer;
 
-  console.log(error);
-
   if (error) {
     return (
       <Container className="pt-10 pb-20">

@@ -5,11 +5,13 @@ import { useWindowWidth } from '@/hooks/use-window-width';
 
 import { SortSelect } from '@/components/commons/sort-select';
 
-import { MobileFilters } from './mobile-filters';
+import { MobileFilters } from './mobile-filters/mobile-filters';
 
 type Props = {
   results: number;
 };
+
+// TODO: DYNAMIC IMPORT FOR FILTERS
 
 export const ResultsBar = ({ results = 0 }: Props) => {
   const t = useTranslations('offers.filters');

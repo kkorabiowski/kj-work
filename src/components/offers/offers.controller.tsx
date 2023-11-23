@@ -14,8 +14,8 @@ const formSchema = z.object({
   orderBy: z.string().optional(),
   query: z.string().optional(),
   filters: z.object({
-    agreement_type: z.string().array().optional(),
-    industry: z.string().array().optional(),
+    agreement_type: z.object({}),
+    industry: z.object({}),
   }),
 });
 
@@ -23,6 +23,9 @@ export type TOffersFormSchema = z.infer<typeof formSchema>;
 
 export const useOffers = () => {
   const searchParams = useSearchParams();
+  const width = useWindowWidth();
+  const pathname = usePathname();
+  const { replace } = useRouter();
 
   const {
     data: offers,
@@ -32,10 +35,6 @@ export const useOffers = () => {
     refetch,
   } = useOffersQuery(searchParams.toString());
 
-  const width = useWindowWidth();
-  const pathname = usePathname();
-  const { replace } = useRouter();
-
   const form = useForm<TOffersFormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -43,8 +42,19 @@ export const useOffers = () => {
       query: searchParams.get('query') || '',
       orderBy: searchParams.get('orderBy') || 'newest',
       filters: {
-        agreement_type: [],
-        industry: [],
+        agreement_type: {
+          'contract-of-employment': false,
+          'mandate-contract': false,
+          temporary: false,
+        },
+        industry: {
+          construction: false,
+          gastronomy: false,
+          it: false,
+          logistic: false,
+          production: false,
+          transport: false,
+        },
       },
     },
   });
@@ -71,14 +81,24 @@ export const useOffers = () => {
     } else {
       params.set('query', values?.query || '');
     }
+
     replace(`${pathname}?${params.toString()}`);
     refetch();
   };
 
   useEffect(() => {
     onSubmit(form.getValues());
+    // eslint-disable-next-line no-console
+    console.log('refetch');
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams, formValues.page, formValues.orderBy, formValues.query]);
+  }, [
+    searchParams,
+    formValues.page,
+    formValues.orderBy,
+    formValues.query,
+    formValues.filters.industry,
+    formValues.filters.agreement_type,
+  ]);
 
   return { form, width, offers, isPending, isRefetching, isError, onSubmit };
 };

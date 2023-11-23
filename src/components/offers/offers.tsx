@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Container } from '@/components/commons/container';
 import { Form } from '@/components/ui/form';
 
-import { OffersFilters } from './components/list/filters/offers-filters';
+import { DesktopFilters } from './components/list/filters/desktop-filters/desktop-filters';
 import { ResultsBar } from './components/list/filters/results-bar';
 import { SearchPanel } from './components/list/filters/search-panel';
 import { OffersList } from './components/list/offers-list';
@@ -34,7 +34,7 @@ export const Offers = () => {
             <section className="space-y-2.5 rounded-sm">
               <div className="flex gap-5">
                 {typeof width === 'number' && width > 768 ? (
-                  <OffersFilters />
+                  <DesktopFilters />
                 ) : null}
                 <div className="w-full space-y-5">
                   <ResultsBar results={offers?.count || '0'} />

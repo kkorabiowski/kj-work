@@ -83,7 +83,6 @@ export const usePagination = ({
     scrollTo({
       behavior: 'smooth',
       top: 200,
-      left: 0,
     });
   };
 

@@ -1,11 +1,11 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 import prisma from '@/lib/prisma';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   const offers = await prisma.offer.findMany({
     take: 3,
-    orderBy: { created_at: 'asc' },
+    orderBy: { created_at: 'desc' },
   });
 
   return NextResponse.json({

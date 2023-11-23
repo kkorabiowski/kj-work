@@ -71,7 +71,6 @@ export const useOffers = () => {
     } else {
       params.set('query', values?.query || '');
     }
-
     replace(`${pathname}?${params.toString()}`);
     refetch();
   };

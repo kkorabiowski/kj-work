@@ -22,15 +22,9 @@ type Props = {
   offers: Offer[];
   offersCount?: number;
   isError?: boolean;
-  isRefetching?: boolean;
 };
 
-export const OffersList = ({
-  offers,
-  offersCount = 0,
-  isError,
-  isRefetching,
-}: Props) => {
+export const OffersList = ({ offers, offersCount = 0, isError }: Props) => {
   const form = useFormContext();
   const values = form.getValues();
 
@@ -46,7 +40,7 @@ export const OffersList = ({
   return (
     <section className="offers-list">
       <div className="space-y-2.5">
-        {offers || isRefetching ? (
+        {offers ? (
           offers.map((offer: Offer) => (
             <OfferListItem key={offer.id} {...offer} />
           ))

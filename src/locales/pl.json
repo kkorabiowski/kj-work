@@ -231,7 +231,7 @@
     "sort": {
       "sortBy": "Sortuj",
       "oldest": "Od najstarszych",
-      "newest": "On najnowszych"
+      "newest": "Od najnowszych"
     },
     "validation": {
       "min2Length": "Minimum 2 znaki",

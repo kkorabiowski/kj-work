@@ -1,7 +1,7 @@
+'use client';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useMemo } from 'react';
 import { useFormContext } from 'react-hook-form';
-import { scroller } from 'react-scroll';
 
 import { useWindowWidth } from '@/hooks/use-window-width';
 
@@ -77,19 +77,14 @@ export const usePagination = ({
     }
   }, [totalCount, pageSize, siblingCount, currentPage]);
 
-  const handleScroll = () => {
-    scroller.scrollTo('offers-list', {
-      duration: 300,
-      delay: 50,
-      smooth: true,
-      offset: -200,
-    });
-  };
-
   const handleChangePage = (page: number) => {
     form.setValue('page', page);
     replace(`${pathname}?${params.toString()}`);
-    handleScroll();
+    scrollTo({
+      behavior: 'smooth',
+      top: 200,
+      left: 0,
+    });
   };
 
   useEffect(() => {
@@ -99,7 +94,6 @@ export const usePagination = ({
       currentPage > Number(paginationRange[paginationRange.length - 1])
     ) {
       form.setValue('page', paginationRange[paginationRange.length - 1]);
-      handleScroll();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageSize]);

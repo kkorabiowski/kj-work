@@ -1,9 +1,10 @@
 'use client';
 
-import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 
 import { Container } from '@/components/commons/container';
+
+import { Link } from '@/navigation';
 
 export default function NotFound() {
   const t = useTranslations('error');

@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# KJWorkGroup - job agency
 
-## Getting Started
+## Live Demo
 
-First, run the development server:
+- [KJWorkGroup](https://kj-work.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Technologies Used](#technologies-used)
+- [Naming Convention](#naming-convention)
+- [Directory Structure](#directory-structure)
+- [Install project](#install-project)
+- [How to use plop to generate components](#how-to-use-plop-to-generate-components)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Next.js
+- React Query
+- Prisma
+- Zustand
+- TailwindCSS
+- ShadcnUI
 
-## Learn More
+## Components Naming Convention
 
-To learn more about Next.js, take a look at the following resources:
+We will use a **PascalCase**. Names in pascal case start with a capital letter. In case of the names with multiple words, all words will start with capital letters.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Here are some examples of pascal case: `FirstName` and `LastName`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Folders Naming Convention
 
-## Deploy on Vercel
+**kebab-case** is a naming convention for identifiers (such as variable names) in which multiple words are separated by hyphens ("-"). It is also known as hyphen case or spinal case. In kebab case, each word is typically lowercase, and the hyphen serves as the separator between words.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Here are some examples of kebab case: `first-name` and `last-name`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Directory Structure
+
+- `src/app/components` - folder with the all components
+- `src/lib` - folder with additional settings
+- `src/app/[locale]` - folder with the all pages
+- `src/app/globals.css` - file with the global styles
+- `src/locales` - folder with the namespaces files
+- `.env.example` - configuration file
+- `.env.example` - configuration file
+
+## Prerequisites
+
+- [Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Install Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [Install pnpm](https://pnpm.io/installation)
+
+## Install project
+
+1. Clone repository
+2. Run `pnpm` to install project dependencies.
+3. Make copy of `.env.example` file with name `.env.local` (e.g. by executing command `cp .env.example .env.local`)
+4. Open .env file and edit api url (prefix `API_BASE_URL`)
+5. Run `pnpm dev` to run dev server or `pnpm build` for production purposes.

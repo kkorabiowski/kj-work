@@ -5,5 +5,6 @@ export async function POST(req: NextRequest) {
 
   return NextResponse.json({
     message: 'Success!',
+    body,
   });
 }

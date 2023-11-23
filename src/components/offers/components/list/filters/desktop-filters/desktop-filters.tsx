@@ -14,7 +14,7 @@ export const DesktopFilters = () => {
       {filters.map(({ groupLabel, items }) => (
         <div key={groupLabel} className="space-y-2">
           <p className="font-semibold">{groupLabel}</p>
-          {items.map(({ label, value }, index) => (
+          {items.map(({ label, value }) => (
             <FilterItem
               key={value}
               label={label}

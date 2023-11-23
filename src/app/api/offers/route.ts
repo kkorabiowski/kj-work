@@ -36,6 +36,15 @@ export async function GET(request: NextRequest) {
     const query = searchParams.get('query') || undefined;
     const take = 10;
 
+    const totalCountOffers = await prisma.offer.findMany({
+      where: {
+        title: {
+          contains: query,
+          mode: 'insensitive',
+        },
+      },
+    });
+
     const offers = await prisma.offer.findMany({
       take,
       skip: page === 1 ? undefined : (page - 1) * take,
@@ -51,7 +60,7 @@ export async function GET(request: NextRequest) {
     });
 
     return NextResponse.json({
-      count: offers.length,
+      count: totalCountOffers.length,
       message: 'Success!',
       offers,
     });

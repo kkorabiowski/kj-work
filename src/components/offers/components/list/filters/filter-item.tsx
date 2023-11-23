@@ -18,19 +18,19 @@ export const FilterItem = ({ label, value }: Props) => {
   const form = useFormContext();
 
   return (
-    <div className="flex items-center space-x-2">
+    <div>
       <FormField
         control={form.control}
         name={`filters.industry.${value}`}
         render={({ field }) => (
-          <FormItem className="flex flex-row items-center space-x-3 space-y-2">
+          <FormItem className="flex items-center space-x-3">
             <FormControl>
               <Checkbox
                 checked={field.value}
                 onCheckedChange={field.onChange}
               />
             </FormControl>
-            <div className="space-y-1 leading-none">
+            <div className="leading-none">
               <FormLabel>{label}</FormLabel>
             </div>
           </FormItem>

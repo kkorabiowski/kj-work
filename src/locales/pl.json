@@ -61,6 +61,7 @@
   },
   "offers": {
     "agreementType": "Typ umowy",
+    "industryType": "Wybierz branżę",
     "filters": {
       "headlineFilters": "Filtruj wyniki wyszukiwania",
       "saveFilters": "Zapisz filtry",

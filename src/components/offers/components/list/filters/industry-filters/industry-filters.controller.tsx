@@ -1,6 +1,4 @@
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+import { useFormContext } from 'react-hook-form';
 
 export const useIndustryFilters = () => {
   const items = [
@@ -12,22 +10,7 @@ export const useIndustryFilters = () => {
     { label: 'IT', id: 'it' },
   ] as const;
 
-  const formSchema = z.object({
-    items: z.array(z.string()).refine(value => value.some(item => item), {
-      message: 'You have to select at least one item.',
-    }),
-  });
+  const form = useFormContext();
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      items: ['recents', 'home'],
-    },
-  });
-
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    console.log(data);
-  }
-
-  return { items, form, onSubmit };
+  return { items, form };
 };

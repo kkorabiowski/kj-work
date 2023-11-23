@@ -18,7 +18,15 @@ export const SearchPanel = ({ isPending }: Props) => {
         <h4 className="text-primary">{t('searchByName')}</h4>
         <div className="flex flex-col md:flex-row gap-2.5 md:items-center">
           <div className="flex-1">
-            <Input placeholder={t('typeName')} {...form.register('query')} />
+            <Input
+              type="search"
+              placeholder={t('typeName')}
+              {...form.register('query')}
+              onChange={e => {
+                form.setValue('page', 1);
+                form.setValue('query', e.target.value);
+              }}
+            />
           </div>
           <SubmitButton
             isPending={isPending}

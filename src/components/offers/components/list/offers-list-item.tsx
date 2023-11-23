@@ -7,6 +7,8 @@ import {
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
+import { getIndustryName, Industry } from '@/lib/helpers';
+
 import { Avatar } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -47,7 +49,7 @@ export const OfferListItem = ({
           </div>
           <div>
             <Link href={`/oferty-pracy/${id}`}>
-              <h3>{title}</h3>
+              <h3 className="md:text-xl lg:md:text-2xl">{title}</h3>
             </Link>
             <div className="md:flex hidden md:flex-row flex-col gap-2.5 md:items-center">
               <p className="text-muted-foreground">{company.name}</p>
@@ -65,7 +67,7 @@ export const OfferListItem = ({
                 <div className="flex items-center gap-1.5">
                   <Briefcase className="inline-block w-3 h-3" />
                   <p className="text-sm md:text-base text-muted-foreground">
-                    {industry}
+                    {getIndustryName(industry as Industry)}
                   </p>
                 </div>
               ) : null}

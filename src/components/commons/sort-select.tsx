@@ -34,12 +34,7 @@ export const SortSelect = ({ isMobile }: Props) => {
           name="orderBy"
           render={({ field }) => (
             <FormItem>
-              <Select
-                onValueChange={value => {
-                  form.setValue('orderBy', value);
-                }}
-                defaultValue={field.value}
-              >
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <SelectTrigger
                   className={cn('w-[180px]', isMobile && 'w-full')}
                 >

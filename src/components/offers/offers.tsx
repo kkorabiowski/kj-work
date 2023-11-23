@@ -13,7 +13,8 @@ import { useOffers } from './offers.controller';
 
 export const Offers = () => {
   const t = useTranslations('offers');
-  const { form, width, offers, isError, isPending, onSubmit } = useOffers();
+  const { form, width, offers, isError, isPending, isRefetching, onSubmit } =
+    useOffers();
 
   return (
     <Container className="mt-10">
@@ -28,7 +29,7 @@ export const Offers = () => {
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <SearchPanel isPending={isPending} />
+          <SearchPanel isPending={isPending || isRefetching} />
           <div className="pt-10 pb-20">
             <section className="space-y-2.5 rounded-sm">
               <div className="flex gap-5">
@@ -37,7 +38,11 @@ export const Offers = () => {
                 ) : null}
                 <div className="w-full space-y-5">
                   <ResultsBar results={offers?.count || '0'} />
-                  <OffersList offers={offers?.offers} isError={isError} />
+                  <OffersList
+                    offers={offers?.offers}
+                    offersCount={offers?.count || 0}
+                    isError={isError}
+                  />
                 </div>
               </div>
             </section>

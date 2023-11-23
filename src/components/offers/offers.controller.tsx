@@ -28,6 +28,7 @@ export const useOffers = () => {
     data: offers,
     isError,
     isPending,
+    isRefetching,
     refetch,
   } = useOffersQuery(searchParams.toString());
 
@@ -48,28 +49,37 @@ export const useOffers = () => {
     },
   });
 
+  const formValues = form.getValues();
+
   const onSubmit = (values: TOffersFormSchema) => {
     const params = new URLSearchParams(searchParams);
 
-    const updateParam = (param: string, value: string) => {
-      if (value === '') {
-        params.delete(param);
-      } else {
-        params.set(param, value);
-      }
-    };
+    if (values.page === 1) {
+      params.delete('page');
+    } else {
+      params.set('page', String(values.page));
+    }
 
-    updateParam('page', values.page === 1 ? '' : String(values.page));
-    updateParam('orderBy', values.orderBy === 'asc' ? '' : 'desc');
-    updateParam('query', values?.query || '');
+    if (values.orderBy === 'newest') {
+      params.delete('orderBy');
+    } else {
+      params.set('orderBy', 'oldest');
+    }
+
+    if (values.query === '') {
+      params.delete('query');
+    } else {
+      params.set('query', values?.query || '');
+    }
 
     replace(`${pathname}?${params.toString()}`);
+    refetch();
   };
 
   useEffect(() => {
-    refetch();
+    onSubmit(form.getValues());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [form.getValues()]);
+  }, [searchParams, formValues.page, formValues.orderBy, formValues.query]);
 
-  return { form, width, offers, isPending, isError, onSubmit };
+  return { form, width, offers, isPending, isRefetching, isError, onSubmit };
 };

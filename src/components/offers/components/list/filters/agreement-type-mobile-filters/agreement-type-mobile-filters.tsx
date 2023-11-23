@@ -18,6 +18,8 @@ export const AgreementTypeMobileFilters = () => {
   const t = useTranslations('offers');
   const { form, items, onSubmit } = useAgreementTypeMobileFilters();
 
+  console.log(form.getValues());
+
   return (
     <div className="space-y-4">
       <h6>{t('agreementType')}</h6>

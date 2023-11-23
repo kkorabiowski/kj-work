@@ -36,7 +36,7 @@ export const MobileFilters = () => {
           </div>
         </DialogDescription>
         <DialogFooter className="flex-row justify-end gap-2.5">
-          <Button>{t('saveFilters')}</Button>
+          <Button type="submit">{t('saveFilters')}</Button>
           <Button variant="destructive">{t('clearFilters')}</Button>
         </DialogFooter>
       </DialogContent>

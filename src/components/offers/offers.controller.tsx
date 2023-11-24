@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+import { createFilterParams, updateParam } from '@/lib/helpers';
 import { useOffersQuery } from '@/hooks/queries/use-offers-query';
 import { useWindowWidth } from '@/hooks/use-window-width';
 
@@ -43,17 +44,18 @@ export const useOffers = () => {
       orderBy: searchParams.get('orderBy') || 'newest',
       filters: {
         agreement_type: {
-          'contract-of-employment': false,
-          'mandate-contract': false,
-          temporary: false,
+          'contract-of-employment':
+            searchParams.get('contract-of-employment') || false,
+          'mandate-contract': searchParams.get('mandate-contract') || false,
+          temporary: searchParams.get('temporary') || false,
         },
         industry: {
-          construction: false,
-          gastronomy: false,
-          it: false,
-          logistic: false,
-          production: false,
-          transport: false,
+          construction: searchParams.get('construction') || false,
+          gastronomy: searchParams.get('gastronomy') || false,
+          it: searchParams.get('it') || false,
+          logistic: searchParams.get('logistic') || false,
+          production: searchParams.get('production') || false,
+          transport: searchParams.get('transport') || false,
         },
       },
     },
@@ -64,23 +66,12 @@ export const useOffers = () => {
   const onSubmit = (values: TOffersFormSchema) => {
     const params = new URLSearchParams(searchParams);
 
-    if (values.page === 1) {
-      params.delete('page');
-    } else {
-      params.set('page', String(values.page));
-    }
+    updateParam(params, 'page', values.page, 1);
+    updateParam(params, 'orderBy', values.orderBy, 'newest');
+    updateParam(params, 'query', values.query);
 
-    if (values.orderBy === 'newest') {
-      params.delete('orderBy');
-    } else {
-      params.set('orderBy', 'oldest');
-    }
-
-    if (values.query === '') {
-      params.delete('query');
-    } else {
-      params.set('query', values?.query || '');
-    }
+    createFilterParams(params, formValues.filters.industry);
+    createFilterParams(params, formValues.filters.agreement_type);
 
     replace(`${pathname}?${params.toString()}`);
     refetch();
@@ -88,7 +79,7 @@ export const useOffers = () => {
 
   useEffect(() => {
     onSubmit(form.getValues());
-    // eslint-disable-next-line no-console
+
     console.log('refetch');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [

@@ -3,17 +3,20 @@ import { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 export const useMobileFilters = () => {
-  const t = useTranslations('offers');
   const [open, setOpen] = useState(false);
   const form = useFormContext();
+  const t = useTranslations('offers');
+
+  console.log(form.getValues());
+
+  const handleClick = () => {
+    form.handleSubmit(values => values);
+    setOpen(false);
+  };
 
   const clearFilters = () => {
     form.reset();
   };
 
-  const handleClick = () => {
-    setOpen(false);
-  };
-
-  return { t, open, form, clearFilters, handleClick, setOpen };
+  return { t, open, form, handleClick, clearFilters, setOpen };
 };

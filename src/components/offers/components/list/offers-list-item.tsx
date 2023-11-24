@@ -7,7 +7,12 @@ import {
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-import { getIndustryName, Industry } from '@/lib/helpers';
+import {
+  getAgreementName,
+  getIndustryName,
+  Industry,
+  TAgreementType,
+} from '@/lib/helpers';
 
 import { Avatar } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -55,7 +60,9 @@ export const OfferListItem = ({
               <p className="text-muted-foreground">{company.name}</p>
               <div className="flex items-center gap-1.5">
                 <ScrollText className="inline-block w-3 h-3" />
-                <p className="text-muted-foreground">{agreement_type}</p>
+                <p className="text-muted-foreground">
+                  {getAgreementName(agreement_type as TAgreementType)}
+                </p>
               </div>
               <div className="flex items-center gap-1.5">
                 <MapPin className="inline-block w-3 h-3" />

@@ -9,11 +9,10 @@ import { MobileFilters } from './mobile-filters/mobile-filters';
 
 type Props = {
   results: number;
+  isPending: boolean;
 };
 
-// TODO: DYNAMIC IMPORT FOR FILTERS
-
-export const ResultsBar = ({ results = 0 }: Props) => {
+export const ResultsBar = ({ results = 0, isPending }: Props) => {
   const t = useTranslations('offers.filters');
   const width = useWindowWidth();
 
@@ -26,7 +25,7 @@ export const ResultsBar = ({ results = 0 }: Props) => {
       {typeof width === 'number' && width > 768 ? (
         <SortSelect />
       ) : (
-        <MobileFilters />
+        <MobileFilters isPending={isPending} />
       )}
     </div>
   );

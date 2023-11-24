@@ -1,8 +1,9 @@
-import { Filter } from 'lucide-react';
+import { FilterIcon } from 'lucide-react';
 
 import { filters } from '@/lib/constants';
 
 import { SortSelect } from '@/components/commons/sort-select';
+import { SubmitButton } from '@/components/commons/submit-button';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -16,13 +17,17 @@ import {
 import { MobileFiltersSection } from './components/mobile-filters-section';
 import { useMobileFilters } from './mobile-filters.controller';
 
-export const MobileFilters = () => {
+type Props = {
+  isPending: boolean;
+};
+
+export const MobileFilters = ({ isPending }: Props) => {
   const { open, t, clearFilters, handleClick, setOpen } = useMobileFilters();
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger>
-        <Filter />
+        <FilterIcon />
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -46,9 +51,9 @@ export const MobileFilters = () => {
           </div>
         </div>
         <DialogFooter className="flex-row justify-end gap-2.5">
-          <Button type="submit" onClick={handleClick}>
+          <SubmitButton isPending={isPending} onClick={handleClick}>
             {t('filters.saveFilters')}
-          </Button>
+          </SubmitButton>
           <Button variant="destructive" onClick={clearFilters}>
             {t('filters.clearFilters')}
           </Button>

@@ -25,8 +25,8 @@ export const useLoginForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: 'hj2023',
-      password: 'hj2023!123',
+      username: '',
+      password: '',
     },
   });
 

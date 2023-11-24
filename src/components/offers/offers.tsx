@@ -37,7 +37,10 @@ export const Offers = () => {
                   <DesktopFilters />
                 ) : null}
                 <div className="w-full space-y-5">
-                  <ResultsBar results={offers?.count || '0'} />
+                  <ResultsBar
+                    results={offers?.count || '0'}
+                    isPending={isPending}
+                  />
                   <OffersList
                     offers={offers?.offers}
                     offersCount={offers?.count || 0}

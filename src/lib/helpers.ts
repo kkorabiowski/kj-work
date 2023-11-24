@@ -24,6 +24,11 @@ export type Industry =
   | 'production'
   | 'it';
 
+export type TAgreementType =
+  | 'contract-of-employment'
+  | 'mandate-contract'
+  | 'temporary';
+
 export const getPlaceholder = (variant: Variant) => {
   switch (variant) {
     case 'name':
@@ -118,5 +123,44 @@ export const getIndustryName = (industry: Industry) => {
       return 'IT';
     default:
       return industry;
+  }
+};
+
+export const getAgreementName = (agreement: TAgreementType) => {
+  switch (agreement) {
+    case 'contract-of-employment':
+      return 'Umowa o pracę';
+    case 'mandate-contract':
+      return 'Umowa zlecenie';
+    case 'temporary':
+      return 'Tymczasowa';
+    default:
+      return agreement;
+  }
+};
+
+export const createFilterParams = (
+  params: URLSearchParams,
+  filtersObj: { [key: string]: boolean }
+) => {
+  for (const filter in filtersObj) {
+    if (filtersObj[filter]) {
+      params.set(filter, 'true');
+    } else {
+      params.delete(filter);
+    }
+  }
+};
+
+export const updateParam = <T>(
+  params: URLSearchParams,
+  param: string,
+  value: T,
+  defaultValue?: T
+): void => {
+  if (value === defaultValue || value === '') {
+    params.delete(param);
+  } else {
+    params.set(param, String(value));
   }
 };

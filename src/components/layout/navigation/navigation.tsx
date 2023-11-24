@@ -10,8 +10,8 @@ import { Icon } from '@/components/commons/icon/icon';
 
 import { Link } from '@/navigation';
 
-import { DesktopMenu } from './components/desktop-menu';
-import { MobileMenu } from './components/mobile-menu';
+import { DesktopMenu } from './components/desktop-menu/desktop-menu';
+import { MobileMenu } from './components/mobile-menu/mobile-menu';
 
 export const Navigation = () => {
   const width = useWindowWidth();

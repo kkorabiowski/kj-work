@@ -4,12 +4,11 @@ import React from 'react';
 
 import { LanguageSelect } from '@/components/commons/language-select';
 import { LogOutBtn } from '@/components/commons/log-out-btn';
+import { NavItem } from '@/components/layout/navigation/components/nav-item';
+import { useNavItems } from '@/components/layout/navigation/navigation.controller';
 import { Button } from '@/components/ui/button';
 
 import { Link } from '@/navigation';
-
-import { NavItem } from './nav-item';
-import { useNavItems } from '../navigation.controller';
 
 export const DesktopMenu = () => {
   const t = useTranslations('layout');

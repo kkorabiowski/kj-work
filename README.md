@@ -17,6 +17,7 @@
 - Next.js
 - React Query
 - Prisma
+- NextAuth
 - Zustand
 - TailwindCSS
 - ShadcnUI

@@ -4,15 +4,17 @@ import { useTranslations } from 'next-intl';
 import { useWindowWidth } from '@/hooks/use-window-width';
 
 import { SortSelect } from '@/components/commons/sort-select';
+import { TOffersFormSchema } from '@/components/offers/offers.controller';
 
 import { MobileFilters } from './mobile-filters/mobile-filters';
 
 type Props = {
   results: number;
   isPending: boolean;
+  onSubmit: (values: TOffersFormSchema) => void;
 };
 
-export const ResultsBar = ({ results = 0, isPending }: Props) => {
+export const ResultsBar = ({ results = 0, isPending, onSubmit }: Props) => {
   const t = useTranslations('offers.filters');
   const width = useWindowWidth();
 
@@ -25,7 +27,7 @@ export const ResultsBar = ({ results = 0, isPending }: Props) => {
       {typeof width === 'number' && width > 768 ? (
         <SortSelect />
       ) : (
-        <MobileFilters isPending={isPending} />
+        <MobileFilters isPending={isPending} onSubmit={onSubmit} />
       )}
     </div>
   );

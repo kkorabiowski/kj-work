@@ -40,6 +40,7 @@ export const Offers = () => {
                   <ResultsBar
                     results={offers?.count || '0'}
                     isPending={isPending}
+                    onSubmit={onSubmit}
                   />
                   <OffersList
                     offers={offers?.offers}

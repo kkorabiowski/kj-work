@@ -65,11 +65,17 @@ export async function GET(request: NextRequest) {
       temporary ? 'temporary' : '',
     ].filter(item => item !== '');
 
-    const totalCountOffers = await prisma.offer.findMany({
+    const totalCount = await prisma.offer.count({
       where: {
         title: {
           contains: query,
           mode: 'insensitive',
+        },
+        industry: {
+          in: industriesFilters.length === 0 ? undefined : industriesFilters,
+        },
+        agreement_type: {
+          in: agreementsFilters.length === 0 ? undefined : agreementsFilters,
         },
       },
     });
@@ -95,7 +101,7 @@ export async function GET(request: NextRequest) {
     });
 
     return NextResponse.json({
-      count: totalCountOffers.length,
+      count: totalCount,
       message: 'Success!',
       offers,
     });

@@ -2,15 +2,21 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-export const useMobileFilters = () => {
+import { TOffersFormSchema } from '@/components/offers/offers.controller';
+
+type Props = {
+  onSubmit: (values: TOffersFormSchema) => void;
+};
+
+export const useMobileFilters = ({ onSubmit }: Props) => {
   const [open, setOpen] = useState(false);
   const form = useFormContext();
   const t = useTranslations('offers');
 
-  console.log(form.getValues());
+  const formValues = form.getValues();
 
   const handleClick = () => {
-    form.handleSubmit(values => values);
+    onSubmit(formValues as TOffersFormSchema);
     setOpen(false);
   };
 

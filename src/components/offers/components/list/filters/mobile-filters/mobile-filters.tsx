@@ -4,6 +4,7 @@ import { filters } from '@/lib/constants';
 
 import { SortSelect } from '@/components/commons/sort-select';
 import { SubmitButton } from '@/components/commons/submit-button';
+import { TOffersFormSchema } from '@/components/offers/offers.controller';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -19,10 +20,13 @@ import { useMobileFilters } from './mobile-filters.controller';
 
 type Props = {
   isPending: boolean;
+  onSubmit: (values: TOffersFormSchema) => void;
 };
 
-export const MobileFilters = ({ isPending }: Props) => {
-  const { open, t, clearFilters, handleClick, setOpen } = useMobileFilters();
+export const MobileFilters = ({ isPending, onSubmit }: Props) => {
+  const { open, t, clearFilters, handleClick, setOpen } = useMobileFilters({
+    onSubmit,
+  });
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

@@ -46,6 +46,7 @@ export const Offers = () => {
                     offers={offers?.offers}
                     offersCount={offers?.count || 0}
                     isError={isError}
+                    isRefetching={isRefetching}
                   />
                 </div>
               </div>

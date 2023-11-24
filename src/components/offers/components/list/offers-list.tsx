@@ -22,9 +22,15 @@ type Props = {
   offers: Offer[];
   offersCount?: number;
   isError?: boolean;
+  isRefetching?: boolean;
 };
 
-export const OffersList = ({ offers, offersCount = 0, isError }: Props) => {
+export const OffersList = ({
+  offers,
+  offersCount = 0,
+  isError,
+  isRefetching,
+}: Props) => {
   const form = useFormContext();
   const values = form.getValues();
 
@@ -34,6 +40,15 @@ export const OffersList = ({ offers, offersCount = 0, isError }: Props) => {
         Brak wyników wyszukiania dla frazy:
         <strong>{values.query}</strong>
       </p>
+    );
+  }
+
+  if (isRefetching) {
+    return (
+      <div className="space-y-2.5">
+        {' '}
+        <OffersListSkeleton />
+      </div>
     );
   }
 

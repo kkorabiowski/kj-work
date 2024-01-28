@@ -1,21 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import { z } from 'zod';
 
-import { emailGenerator } from '@/lib/email-generator';
+import { emailGenerator } from '@/lib/mail';
 
-const schema = z.object({
-  name: z.string(),
-  email: z.string().email(),
-  phone: z.string().optional(),
-  subject: z.string().optional(),
-  message: z.string().optional(),
-});
+import { ContactSchema } from '@/schemas';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const parsed = schema.safeParse(body);
+    const parsed = ContactSchema.safeParse(body);
 
     if (!body || !parsed.success) {
       return NextResponse.json(

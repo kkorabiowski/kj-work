@@ -1,32 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
-import { z } from 'zod';
 
-import prisma from '@/lib/prisma';
+import { db } from '@/lib/prisma';
 
-const schema = z.object({
-  title: z.string(),
-  company: z.string(),
-  agreement_type: z.enum([
-    'contract-of-employment',
-    'mandate-contract',
-    'temporary',
-  ]),
-  location: z.string(),
-  industry: z.enum([
-    'construction',
-    'transport',
-    'gastronomy',
-    'logistic',
-    'production',
-    'it',
-  ]),
-  description: z.string(),
-  duties: z.string().array(),
-  requirements: z.string().array(),
-  offer: z.string().array(),
-  summary: z.string(),
-});
+import { CreateOfferSchema } from '@/schemas';
 
 export async function GET(request: NextRequest) {
   try {
@@ -65,7 +42,7 @@ export async function GET(request: NextRequest) {
       temporary ? 'temporary' : '',
     ].filter(item => item !== '');
 
-    const totalCount = await prisma.offer.count({
+    const totalCount = await db.offer.count({
       where: {
         title: {
           contains: query,
@@ -80,7 +57,7 @@ export async function GET(request: NextRequest) {
       },
     });
 
-    const offers = await prisma.offer.findMany({
+    const offers = await db.offer.findMany({
       take,
       skip: page === 1 ? undefined : (page - 1) * take,
       orderBy: {
@@ -126,7 +103,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const parsed = schema.safeParse(body);
+    const parsed = CreateOfferSchema.safeParse(body);
 
     if (!body || !parsed.success) {
       return NextResponse.json(
@@ -135,7 +112,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const offer = await prisma.offer.create({
+    const offer = await db.offer.create({
       data: { ...body, company: { name: body.company } },
     });
 

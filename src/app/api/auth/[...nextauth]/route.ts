@@ -2,7 +2,7 @@ import NextAuth, { NextAuthOptions } from 'next-auth';
 import { JWT } from 'next-auth/jwt';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
-import prisma from '@/lib/prisma';
+import { db } from '@/lib/prisma';
 
 const authOptions: NextAuthOptions = {
   providers: [
@@ -18,7 +18,7 @@ const authOptions: NextAuthOptions = {
             throw new Error('Not found');
           }
 
-          const user = await prisma.user.findUnique({
+          const user = await db.user.findUnique({
             where: {
               username: credentials?.username,
             },

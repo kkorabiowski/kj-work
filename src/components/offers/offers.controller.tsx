@@ -9,18 +9,9 @@ import { useOffersQuery } from '@/hooks/queries/use-offers-query';
 import { useWindowWidth } from '@/hooks/use-window-width';
 
 import { usePathname, useRouter } from '@/navigation';
+import { FiltersSchema } from '@/schemas';
 
-const formSchema = z.object({
-  page: z.number().optional(),
-  orderBy: z.string().optional(),
-  query: z.string().optional(),
-  filters: z.object({
-    agreement_type: z.object({}),
-    industry: z.object({}),
-  }),
-});
-
-export type TOffersFormSchema = z.infer<typeof formSchema>;
+export type TOffersFormSchema = z.infer<typeof FiltersSchema>;
 
 export const useOffers = () => {
   const searchParams = useSearchParams();
@@ -37,7 +28,7 @@ export const useOffers = () => {
   } = useOffersQuery(searchParams.toString());
 
   const form = useForm<TOffersFormSchema>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(FiltersSchema),
     defaultValues: {
       page: Number(searchParams.get('page')) || 1,
       query: searchParams.get('query') || '',

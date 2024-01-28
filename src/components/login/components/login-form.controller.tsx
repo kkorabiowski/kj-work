@@ -8,29 +8,21 @@ import { useLoginMutation } from '@/hooks/mutations/use-login-mutation';
 import { toast } from '@/components/ui/use-toast';
 
 import { useRouter } from '@/navigation';
+import { LoginSchema } from '@/schemas';
 
 export const useLoginForm = () => {
   const router = useRouter();
-  const { mutate, isPending } = useLoginMutation();
+  const { isPending, mutate } = useLoginMutation();
 
-  const formSchema = z.object({
-    username: z.string().min(2, {
-      message: 'Pole wymagane',
-    }),
-    password: z.string().min(1, {
-      message: 'Pole wymagane',
-    }),
-  });
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof LoginSchema>>({
+    resolver: zodResolver(LoginSchema),
     defaultValues: {
       username: '',
       password: '',
     },
   });
 
-  function onSubmit(credentials: z.infer<typeof formSchema>) {
+  function onSubmit(credentials: z.infer<typeof LoginSchema>) {
     mutate(
       {
         credentials,

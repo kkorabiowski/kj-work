@@ -9,46 +9,23 @@ import { useAddOfferMutation } from '@/hooks/mutations/use-add-offer-mutation';
 
 import { toast } from '@/components/ui/use-toast';
 
-const formSchema = z.object({
-  title: z.string().min(1, {
-    message: 'Pole wymagane',
-  }),
-  description: z.string().min(1, {
-    message: 'Pole wymagane',
-  }),
-  company: z.string().min(1, {
-    message: 'Pole wymagane',
-  }),
-  industry: z.string().min(1, {
-    message: 'Pole wymagane',
-  }),
-  location: z.string().min(1, {
-    message: 'Pole wymagane',
-  }),
-  agreement_type: z.string().min(1, {
-    message: 'Pole wymagane',
-  }),
-  duties: z.string().array().optional(),
-  requirements: z.string().array().optional(),
-  offer: z.string().array().optional(),
-  summary: z.string().optional(),
-});
+import { CreateOfferSchema } from '@/schemas';
 
-export type AddOfferSchemaType = z.infer<typeof formSchema>;
+export type AddOfferSchemaType = z.infer<typeof CreateOfferSchema>;
 
 export const useAddOfferForm = () => {
   const { mutate, isPending } = useAddOfferMutation();
   const router = useRouter();
 
   const form = useForm<AddOfferSchemaType>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(CreateOfferSchema),
     defaultValues: {
       title: '',
       description: '',
       company: '',
-      industry: '',
       location: '',
-      agreement_type: '',
+      industry: undefined,
+      agreement_type: undefined,
       summary: '',
     },
   });

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 
-import prisma from '@/lib/prisma';
+import { db } from '@/lib/prisma';
 
 type TParams = {
   params: {
@@ -11,7 +11,7 @@ type TParams = {
 
 export async function GET(request: NextRequest, { params }: TParams) {
   try {
-    const offer = await prisma.offer.findUnique({
+    const offer = await db.offer.findUnique({
       where: {
         id: params.offerId,
       },
@@ -44,7 +44,7 @@ export async function PATCH(request: NextRequest, { params }: TParams) {
       throw new Error('Unauthorized');
     }
 
-    const offer = await prisma.offer.update({
+    const offer = await db.offer.update({
       data: body,
       where: {
         id: params.offerId,
@@ -74,7 +74,7 @@ export async function DELETE(request: NextRequest, { params }: TParams) {
       throw new Error('Unauthorized');
     }
 
-    const offer = await prisma.offer.delete({
+    const offer = await db.offer.delete({
       where: {
         id: params.offerId,
       },

@@ -5,21 +5,15 @@ import * as z from 'zod';
 
 import { useApplyMutation } from '@/hooks/mutations/use-apply-mutation';
 
+import { ApplyFormClientSchema } from '@/schemas';
+
 export const useApplyForm = (offerId: string) => {
   const t = useTranslations('offer');
   const { mutate, isPending, isSuccess } = useApplyMutation();
   const fields = ['name', 'email', 'phone'] as const;
 
-  const formSchema = z.object({
-    name: z.string().min(2, {
-      message: 'Imię powinno zawierać przynajmniej 2 znaki',
-    }),
-    email: z.string().email({ message: 'Wpisz prawidłowy adres email' }),
-    phone: z.string(),
-  });
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof ApplyFormClientSchema>>({
+    resolver: zodResolver(ApplyFormClientSchema),
     defaultValues: {
       name: '',
       email: '',
@@ -27,7 +21,7 @@ export const useApplyForm = (offerId: string) => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: z.infer<typeof ApplyFormClientSchema>) {
     mutate({ ...values, offerId });
   }
 

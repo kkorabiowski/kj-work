@@ -4,7 +4,6 @@ import { Container } from '@/components/commons/container';
 
 import { ContactForm } from './components/contact-form/contact-form';
 import { ContactInfo } from './components/contact-info/contact-info';
-import { MapComponent } from './components/google-map/google-map';
 import { Team } from './components/team/team';
 
 export const Contact = () => {
@@ -24,9 +23,6 @@ export const Contact = () => {
           <ContactInfo />
           <Team />
         </div>
-      </div>
-      <div className="py-10 h-96 md:mb-0 md:h-96">
-        <MapComponent />
       </div>
     </Container>
   );

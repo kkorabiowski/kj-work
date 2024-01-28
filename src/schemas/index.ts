@@ -76,9 +76,12 @@ export const CreateOfferSchema = z.object({
 });
 
 export const LoginSchema = z.object({
-  username: z.string().min(2, {
-    message: 'Pole wymagane',
-  }),
+  username: z
+    .string()
+    .min(2, {
+      message: 'Pole wymagane',
+    })
+    .max(40, 'Maksymalnie 40 znaków'),
   password: z.string().min(1, {
     message: 'Pole wymagane',
   }),

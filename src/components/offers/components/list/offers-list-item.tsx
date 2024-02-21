@@ -44,7 +44,7 @@ export const OfferListItem = ({
 }: Props) => {
   const t = useTranslations('offer');
   return (
-    <Card>
+    <Card data-test="offer-item">
       <div className="flex justify-between items-center gap-5 p-2.5">
         <div className="flex items-center gap-5">
           <div>

@@ -24,7 +24,7 @@ export const HomeOffers = () => {
   }
 
   return (
-    <section className="space-y-5 py-20">
+    <section className="space-y-5 py-20" data-test="home-offers">
       <h2>{t('headline')}</h2>
       {data ? (
         <div>

@@ -27,7 +27,7 @@ export const ContactSection = () => {
   }
 
   return (
-    <div className="py-10 md:py-20 bg-slate-200">
+    <div className="py-10 md:py-20 bg-slate-200" data-test="contact">
       <Container>
         <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-2.5">

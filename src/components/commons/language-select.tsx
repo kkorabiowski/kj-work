@@ -22,7 +22,7 @@ export const LanguageSelect = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button data-test="language-select" variant="outline" size="icon">
           <Icon name={defaultLocale?.iconName} />
           <span className="sr-only">Language select</span>
         </Button>

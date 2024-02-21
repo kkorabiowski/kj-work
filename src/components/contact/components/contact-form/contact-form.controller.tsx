@@ -7,7 +7,7 @@ import { useContactQuestionMutation } from '@/hooks/mutations/use-contact-questi
 
 export const useContactForm = () => {
   const t = useTranslations('form.validation');
-  const { mutate, isPending, isSuccess } = useContactQuestionMutation();
+  const { isPending, isSuccess, mutate } = useContactQuestionMutation();
 
   const fields = ['name', 'email', 'phone', 'subject', 'message'] as const;
 

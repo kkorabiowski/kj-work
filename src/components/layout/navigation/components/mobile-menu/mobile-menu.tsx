@@ -13,7 +13,7 @@ import { NavItem } from '../nav-item';
 export const MobileMenu = () => {
   const { isOpen, navItems, session, t, setIsOpen } = useMobileMenu();
   return (
-    <div className="flex gap-2.5 items-center">
+    <div data-test="mobile-menu" className="flex gap-2.5 items-center">
       <LanguageSelect />
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>

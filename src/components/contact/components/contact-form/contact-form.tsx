@@ -20,7 +20,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useContactForm } from './contact-form.controller';
 
 export function ContactForm() {
-  const { fields, form, onSubmit, isSuccess, isPending } = useContactForm();
+  const { fields, form, isSuccess, isPending, onSubmit } = useContactForm();
   const t = useTranslations('contact.form');
 
   return (
@@ -37,7 +37,11 @@ export function ContactForm() {
           </div>
         ) : (
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+            <form
+              data-test="contact-form"
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-5"
+            >
               {fields.map(fieldName => (
                 <FormField
                   key={fieldName}
@@ -50,12 +54,14 @@ export function ContactForm() {
                         {fieldName !== 'message' ? (
                           <Input
                             placeholder={getPlaceholder(fieldName)}
+                            data-test={field.name}
                             {...field}
                           />
                         ) : (
                           <Textarea
                             placeholder={getPlaceholder(fieldName)}
                             className="h-48 resize-none"
+                            data-test={field.name}
                             {...field}
                           />
                         )}

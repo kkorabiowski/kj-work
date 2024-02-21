@@ -9,8 +9,9 @@ import { useFooter } from './footer.controller';
 export const Footer = () => {
   const { footerLinks } = useFooter();
   const t = useTranslations('footer');
+  const fullYear = new Date().getFullYear();
   return (
-    <div className="bg-primary">
+    <div className="bg-primary" data-test="footer">
       <Container className="pt-14 pb-5">
         <footer className="h-full">
           <div className="flex flex-col md:flex-row gap-10 md:gap-2.5 pb-5">
@@ -30,6 +31,7 @@ export const Footer = () => {
           </div>
           <div className="flex justify-between items-center py-5 border-t border-muted-foreground/20">
             <p className="text-muted-foreground text-sm">
+              <span data-test="footer-date">{fullYear}</span>{' '}
               {t('rightsReserved')}
             </p>
             <div className="text-muted-foreground">

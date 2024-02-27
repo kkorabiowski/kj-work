@@ -24,7 +24,11 @@ export function LoginForm() {
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="space-y-8"
+            data-test="login-form"
+          >
             {fields.map(fieldName => (
               <FormField
                 key={fieldName}
@@ -43,6 +47,7 @@ export function LoginForm() {
                             ? 'Hasło'
                             : 'Nazwa użytkownika'
                         }
+                        data-test={fieldName}
                         {...field}
                       />
                     </FormControl>
@@ -51,7 +56,9 @@ export function LoginForm() {
                 )}
               />
             ))}
-            <SubmitButton isPending={isPending}>Zaloguj się</SubmitButton>
+            <SubmitButton isPending={isPending} data-test="login-submit">
+              Zaloguj się
+            </SubmitButton>
           </form>
         </Form>
       </CardContent>

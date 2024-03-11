@@ -39,9 +39,16 @@
 declare namespace Cypress {
   interface Chainable {
     getByData(dataTestAttribute: string): Chainable<JQuery<HTMLElement>>;
+    login(username: string, password: string): Chainable<JQuery<HTMLElement>>;
   }
 }
 
 Cypress.Commands.add('getByData', selector => {
   return cy.get(`[data-test=${selector}]`);
+});
+
+Cypress.Commands.add('login', (username, password) => {
+  cy.getByData('username').type(username);
+  cy.getByData('password').type(password);
+  cy.getByData('login-submit').click();
 });

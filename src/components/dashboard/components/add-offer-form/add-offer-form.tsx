@@ -23,7 +23,10 @@ export const AddOfferForm = () => {
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
+          <form
+            data-test="add-offer-form"
+            onSubmit={form.handleSubmit(onSubmit)}
+          >
             <div className="space-y-4">
               {fields.map(fieldName => (
                 <InputFormField key={fieldName} fieldName={fieldName} />

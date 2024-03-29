@@ -7,8 +7,11 @@ describe('Test login API endpoint', () => {
   });
 
   it('should return a 200 status code after correct credentials', () => {
-    cy.intercept('/api/auth/callback/credentials').as('auth');
-    cy.visit('/login'), cy.login('hj2023', 'hj2023!123');
+    cy.intercept('/api/auth/callback/credentials', { statusCode: 200 }).as(
+      'auth'
+    );
+    cy.visit('/login');
+    cy.login('hj2023', 'hj2023!123');
     cy.wait('@auth').its('response.statusCode').should('eq', 200);
     cy.location('pathname').should('eq', 'dashborad');
   });
